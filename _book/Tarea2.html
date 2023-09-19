@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>clase 22 de agosto 2023 – tarea2</title>
+<title>clase 22 de agosto 2023 - 4&nbsp; Tarea 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,10 +62,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tarea2.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea2.html</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tarea2.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea 2</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -120,19 +122,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tarea1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">plt.show()</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarea 1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tarea2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea2.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea 2</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tarea3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea3.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea 3</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,12 +154,83 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea 2</span></h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Sea <span class="math inline">\(Y_{\delta,h}(t)\)</span> una caminata aleatoria. Demuestre que para <span class="math inline">\(\delta\)</span> y <span class="math inline">\(h\)</span> pequeño tenemos</p>
+<p><span class="math display">\[
+E\exp[i\lambda Y_{\delta,h}(t)]\thickapprox\exp\left[-\frac{t\lambda^{2}h^{2}}{2\delta}-\frac{t\lambda^{4}h^{4}}{12\delta}\right]
+\]</span></p>
+<p>Considere una caminata aleatoria que comienza en 0 con saltos <span class="math inline">\(h\)</span> y <span class="math inline">\(-h\)</span> igualmente probables en los momentos <span class="math inline">\(\delta\)</span>, 2 <span class="math inline">\(\delta\)</span>,<span class="math inline">\(\dots\)</span>, donde <span class="math inline">\(h\)</span> y <span class="math inline">\(\delta\)</span> son números positivos. Más precisamente, sea <span class="math inline">\(\{X_{n}\}_{n=1}^{\infty}\)</span> una sucesión de elementos aleatorios independientes e idénticamente distribuidos. variables con <span class="math display">\[
+P\left[X_{i}=h\right]=P\left[X_{i}=-h\right]=\dfrac{1}{2},\forall i,
+\]</span></p>
+<p>Sea <span class="math inline">\(Y_{\delta,h}(0)=0\)</span> y pongamos <span class="math display">\[
+Y_{\delta,h}(n\delta)=X_{1}+X_{2}+\cdots+X_{n}.
+\]</span></p>
+<p>Para <span class="math inline">\(t&gt;0\)</span>, defina <span class="math inline">\(Y_{\delta,h}(t)\)</span> mediante linealización, es decir, para <span class="math inline">\(n\delta&lt;t&lt;(n + 1)\delta\)</span>, defina <span class="math display">\[
+Y_{\delta,h}(t)=\frac{(n+1)\delta-t}{\delta}Y_{\delta,h}(n\delta)+\frac{t-n\delta}{\delta}Y_{\delta,h}((n+1)\delta).
+\]</span></p>
+<p>Calculemos la función característica de <span class="math inline">\(Y_{\delta,h}(t)\)</span>, donde <span class="math inline">\(\lambda\in\mathbb{R}\)</span> fijo y sea <span class="math inline">\(t=n\delta\)</span> así, <span class="math inline">\(n=t/\delta\)</span>. Entonces se tiene que</p>
+<p><span class="math display">\[\begin{eqnarray}\label{1}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right] &amp; = &amp; \prod_{j=1}^{n}Ee^{i\lambda X_{j}},\text{ por ser variables independientes,}\nonumber\\
+    &amp; = &amp; (Ee^{i\lambda X_{j}})^{n},\text{ por ser idénticamente distribuidas,}\nonumber\\
+    &amp; = &amp; \frac{1}{2}(e^{i\lambda h}+e^{-i\lambda h})^{n},\nonumber\\
+    &amp; = &amp; (\cos(\lambda h))^{n},\nonumber\\
+    &amp; = &amp; (\cos(\lambda h))^{t/\delta},
+\end{eqnarray}\]</span></p>
+<p>Por otro lado, sea <span class="math inline">\(u=\left[\cos\left(\lambda h\right)\right]^{1/\delta}\Rightarrow\ln\left(u\right)=\dfrac{1}{\delta}\ln\left[\cos\left(\lambda h\right)\right]\)</span>.</p>
+<p>Usando la expansión de Taylor de <span class="math inline">\(\cos\left(x\right)\)</span> se tiene que <span class="math display">\[
+\cos\left(\lambda h\right)\approx1-\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!},
+\]</span></p>
+<p>entonces <span class="math display">\[\begin{eqnarray}
+    \ln\left(\cos\left(\lambda h\right)\right) &amp; \approx &amp; \ln\left[1-\dfrac{\left(\lambda h\right)^{2}}{2}+\dfrac{\left(\lambda h\right)^{4}}{4!}\right]\nonumber\\
+&amp; \approx &amp; -\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!}-\frac{1}{2}\left(-\frac{\lambda^{2}h^{2}}{2!}+\frac{\lambda^{4}h^{4}}{4!}\right)^{2}\nonumber\\
+  &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2!}+\dfrac{\lambda ^{4}h^{4}}{4!}-\frac{1}{2}\left(\frac{\lambda^{4}h^{4}}{4}-\frac{\lambda^{6}h^{6}}{24^{2}}+\frac{\lambda^{8}h^{8}}{24}\right)\nonumber\\
+   &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2}+\dfrac{\lambda^{4} h^{4}}{24}-\frac{\lambda^{4}h^{4}}{8}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\nonumber\\
+   &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}
+\end{eqnarray}\]</span> para una <span class="math inline">\(h\)</span> pequeña, se satisface que, <span class="math display">\[
+-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\approx 0
+\]</span></p>
+<p>Por lo tanto, <span class="math inline">\(\ln\left(\cos\left(\lambda h\right)\right)\approx -\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\)</span>.\ Así, para <span class="math inline">\(\delta\)</span> y <span class="math inline">\(h\)</span> pequeña, se tiene que <span class="math inline">\(\ln u\approx \dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)\)</span>.\ Entonces</p>
+<p><span class="math display">\[\begin{equation}
+    u\approx\exp\left[\dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)\right]
+\end{equation}\]</span></p>
+<p>Entonces por la ecuación (<span class="math inline">\(\ref{1}\)</span>) <span class="math display">\[\begin{equation}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right]\approx\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]
+\end{equation}\]</span></p>
+<p>Calculando el limite <span class="math display">\[
+\lim_{\delta\to0}E\left[\exp\left(i\lambda Y_{n,\delta}\left(t\right)\right)\right]=\lim_{\delta\to0}\exp\left[-t\left(\left[\dfrac{h^{2}}{\delta}\right]\left(\dfrac{\lambda^{2}}{2}-\dfrac{\lambda^{4}h^{2}}{24}\right)\right)\right],
+\]</span></p>
+<p>Asumamos que <span class="math inline">\(\delta\to0\)</span>, <span class="math inline">\(h\to0\)</span> pero <span class="math inline">\(h^{2}/\delta\to\infty\)</span>. Entonces <span class="math inline">\(\lim_{\delta\to0} Y_{\delta, h}(t)\)</span> no existe. Por otro lado, consideremos la siguiente renormalización,</p>
+<p><span class="math display">\[\begin{eqnarray}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2\delta}\right] &amp; = &amp; E\left[\exp (i\lambda Y_{n,\delta}\left(t\right))\exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\right]\nonumber\\
+    &amp; = &amp; \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)E\exp\left[ i\lambda Y_{n,\delta}\left(t\right)\right]\nonumber\\
+    &amp; \approx &amp; \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]\nonumber\\
+    &amp; = &amp; \exp\left(-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right)
+\end{eqnarray}\]</span></p>
+<p>Así, si <span class="math inline">\(\delta,h\to0\)</span> de tal manera que <span class="math inline">\(h^{2}/\delta\to\infty\)</span> y <span class="math inline">\(h^{4}/\delta\to0\)</span>, entonces <span class="math display">\[
+\lim_{\delta\to0}E\left[\exp\left(i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2}\right)\right]=\lim_{\delta\to0}\exp\left(\dfrac{\left(\lambda h\right)^{4}}{24\delta}\right)=1
+\]</span></p>
 
 
 
@@ -398,12 +471,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Tarea1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">plt.show()</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarea 1</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Tarea3.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea3.html</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea 3</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

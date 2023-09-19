@@ -1,3 +1,5 @@
+# Tarea 1
+
 ```{.python filename="Exploring functions to generate random variables with a Bernoulli distribution.py"}
 import numpy as np
 from scipy.stats import bernoulli

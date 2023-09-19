@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>clase 22 de agosto 2023 – tarea3</title>
+<title>clase 22 de agosto 2023 - 5&nbsp; Tarea 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,10 +62,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tarea3.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea3.html</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tarea3.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea 3</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -120,19 +122,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tarea1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">plt.show()</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarea 1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tarea2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea2.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea 2</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tarea3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea3.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea 3</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,12 +154,227 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea 3</span></h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Si <span class="math inline">\(X\thicksim N(\mu,\sigma)\)</span> entonces <span class="math inline">\(\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)\)</span>.</p>
+<p>Calculemos la función característica de la variable <span class="math inline">\(\dfrac{X-\mu}{\sigma}\)</span>, <span class="math display">\[\begin{eqnarray}\label{1.1}
+\varphi_{\frac{X-\mu}{\sigma}}(t) &amp; = &amp; E\left[e^{it\left(\frac{X-\mu}{\sigma}\right)}\right]\nonumber\\
+&amp; = &amp; E\left[e^{\left(\frac{itX}{\sigma}-\frac{it\mu}{\sigma}\right)}\right]\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}E\left[e^{\left(\frac{itX}{\sigma}\right)}\right]\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{(x-\mu)^{2}-2itx\sigma}{\sigma^{2}}}dx
+\end{eqnarray}\]</span> Observemos que, <span class="math display">\[\begin{eqnarray}\label{1.2}
+\frac{(x-\mu)^{2}-2itx\sigma}{\sigma^{2}} &amp; = &amp; \frac{x^{2}-2x\mu+\mu^{2}-2itx\sigma}{\sigma^{2}}\nonumber\\
+&amp; = &amp; \frac{x^{2}}{\sigma^{2}}-\frac{2x\mu}{\sigma^{2}}+\frac{\mu^{2}}{\sigma^{2}}-\frac{2itx\sigma}{\sigma^{2}}\nonumber\\
+&amp; = &amp; \frac{x^{2}}{\sigma^{2}}-\frac{2x}{\sigma}\left(\frac{\mu+it\sigma}{\sigma^{2}}\right)+\frac{\mu^{2}}{\sigma^{2}}\nonumber\\
+&amp; = &amp; \left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\left(\frac{\mu+it\sigma}{\sigma}\right)^{2}+\frac{\mu^{2}}{\sigma^{2}}\nonumber\\
+&amp; = &amp; \left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\sigma\mu}{\sigma^{2}}-\frac{(it\sigma)^{2}}{\sigma^{2}}\nonumber\\
+&amp; = &amp; \left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\mu}{\sigma}+t^{2}.
+\end{eqnarray}\]</span></p>
+<p>Sustituyendo (<span class="math inline">\(\ref{1.2}\)</span>) en (<span class="math inline">\(\ref{1.1}\)</span>), resulta</p>
+<p><span class="math display">\[\begin{eqnarray}\label{1.3}
+\varphi_{\frac{X-\mu}{\sigma}}(t) &amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\left[\left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\mu}{\sigma}+t^{2}\right]}dx\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}e^{\frac{it\mu}{\sigma}-\frac{t^{2}}{2}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}}dx\nonumber\\
+&amp; = &amp; e^{-\frac{t^{2}}{2}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}}dx
+\end{eqnarray}\]</span></p>
+<p>Sea <span class="math inline">\(u=\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\Longrightarrow du=\frac{1}{\sigma}dx\)</span>, sustituyendo esto en (<span class="math inline">\(\ref{1.3}\)</span>), resulta <span class="math display">\[\begin{equation}\label{1.4}
+\varphi_{\frac{X-\mu}{\sigma}}(t) = e^{-\frac{t^{2}}{2}}\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{u^{2}}{2}}du
+\end{equation}\]</span></p>
+<p>de aquí se sigue que <span class="math inline">\(u\thicksim N(0,1)\)</span>, entonces <span class="math display">\[
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{u^{2}}{2}}dx=1.
+\]</span> sustituyendo esto ultimo en (<span class="math inline">\(\ref{1.4}\)</span>), se tiene,</p>
+<p><span class="math display">\[\begin{equation}\label{1.5}
+\varphi_{\frac{X-\mu}{\sigma}}(t) =e^{-\frac{t^{2}}{2}},
+\end{equation}\]</span> Por otro lado, consideremos <span class="math inline">\(Z\thicksim N(0,1)\)</span>, entonces <span class="math display">\[\begin{equation*}
+\varphi_{Z}(t) =e^{-\frac{t^{2}}{2}}.
+\end{equation*}\]</span></p>
+<p>Entonces <span class="math inline">\(\varphi_{Z}(t)=\varphi_{\frac{X-\mu}{\sigma}}(t)\)</span>, como las funciones características coinciden se concluye que <span class="math inline">\(\frac{X-\mu}{\sigma}\thicksim N(0,1)\)</span>.</p>
+<p>Calculemos la función característica de la variable <span class="math inline">\(\sigma Y+\mu\)</span>, <span class="math display">\[\begin{eqnarray}\label{2.1}
+\varphi_{\sigma Y+\mu}(t) &amp; = &amp; E\left[e^{it(\sigma Y+\mu)}\right]\nonumber\\
+&amp; = &amp; E\left[e^{it\sigma Y+it\mu}\right]\nonumber\\
+&amp; = &amp; e^{it\mu}E\left[e^{it\sigma Y}\right]\nonumber\\
+&amp; = &amp; e^{it\mu}\int_{-\infty}^{\infty}e^{it\sigma y}\frac{1}{\sqrt{2\pi}}e^{\frac{-y^{2}}{2}}dy\nonumber\\
+&amp; = &amp; e^{it\mu}\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}(y^{2}-2yit\sigma) }dy.
+\end{eqnarray}\]</span></p>
+<p>Observemos que, <span class="math display">\[\begin{eqnarray}\label{2.2}
+y^{2}-2yit\sigma &amp; = &amp; (y-it\sigma)^{2}-(it\sigma)^{2}\nonumber\\
+&amp; = &amp; (y-it\sigma)^{2}+t^{2}\sigma^{2}.
+\end{eqnarray}\]</span></p>
+<p>Sustituyendo, (<span class="math inline">\(\ref{2.2}\)</span>) en (<span class="math inline">\(\ref{2.1}\)</span>) resulta <span class="math display">\[\begin{eqnarray}\label{2.3}
+\varphi_{\sigma Y+\mu}(t) &amp; = &amp; e^{it\mu}\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}((y-it\sigma)^{2}+t^{2}\sigma^{2}) }dy\nonumber\\
+&amp; = &amp; e^{it\mu}e^{-\frac{1}{2}t^{2}\sigma^{2}}\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}(y-it\sigma)^{2} }dy
+\end{eqnarray}\]</span></p>
+<p>Tomando <span class="math inline">\(u=y-it\sigma\Longrightarrow du=dy\)</span>, se tiene que <span class="math display">\[
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}(y-it\sigma)^{2} }dy=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{u^{2} }{2}}du,
+\]</span> entonces <span class="math inline">\(U\thicksim N(0,1)\)</span>, por lo tanto, <span class="math display">\[
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}(y-it\sigma)^{2} }dy=1
+\]</span></p>
+<p>sustituyendo esto ultimo en (<span class="math inline">\(\ref{2.3}\)</span>), resulta, <span class="math display">\[
+\varphi_{\sigma Y+\mu}(t)=e^{it\mu}e^{-\frac{1}{2}t^{2}\sigma^{2}}=e^{it\mu-\frac{t^{2}\sigma^{2}}{2}}.
+\]</span> Sea <span class="math inline">\(Z\)</span> una variable aleatoria tal que <span class="math inline">\(Z\thicksim N(\mu,\sigma)\)</span> sabemos que, <span class="math display">\[
+\varphi_{Z}(t)=e^{it\mu-\frac{t^{2}\sigma^{2}}{2}}.
+\]</span> De estas dos ultimas igualdades se sigue que, <span class="math display">\[
+\varphi_{Z}(t)=\varphi_{\sigma Y+\mu}(t).
+\]</span> Dado que tienen iguales funciones características se concluye que, <span class="math display">\[
+\sigma Y+\mu\thicksim N(\mu,\sigma)
+\]</span></p>
+<p>Por definición, se tiene que, <span class="math display">\[\begin{eqnarray}\label{3.1}
+\varphi_{X+Y}(t) &amp; = &amp; E[e^{it(X+Y)}]\nonumber\\
+&amp; = &amp; E[e^{itX}e^{itY}]\text{ por ser independientes, del ejercicio 4}\nonumber\\
+&amp; = &amp; E[e^{itX}]E[e^{itY}]\nonumber\\
+&amp; = &amp;  \varphi_{X}(t) \varphi_{Y}(t).
+\end{eqnarray}\]</span></p>
+<p>Por otro lado, sea <span class="math inline">\(Z\)</span> una variables aleatoria tal que, <span class="math inline">\(Z\thicksim N(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})\)</span>, sabemos que la función característica de <span class="math inline">\(Z\)</span>, esta dada por,</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\varphi_{Z}(t) &amp; = &amp; e^{it(\mu_{1}+\mu_{2})-\frac{t^{2}}{2}(\sigma_{1}^{2}+\sigma_{2}^{2})}\nonumber\\
+&amp; = &amp; e^{it\mu_{1}-\frac{t^{2}\sigma_{1}^{2}}{2}+it\mu_{2}-\frac{t^{2}\sigma_{2}^{2}}{2}}\nonumber\\
+&amp; = &amp; e^{it\mu_{1}-\frac{t^{2}\sigma_{1}^{2}}{2}}e^{it\mu_{2}-\frac{t^{2}\sigma_{2}^{2}}{2}}\\
+&amp; = &amp;  \varphi_{X}(t) \varphi_{Y}(t),
+\end{eqnarray*}\]</span> entonces, de esta ultima igualdad y de (<span class="math inline">\(\ref{3.1}\)</span>) se sigue que, <span class="math display">\[
+\varphi_{Z}(t)= \varphi_{X+Y}(t).
+\]</span></p>
+<p>Como las funciones características coinciden se sigue que, <span class="math inline">\(X+Y\thicksim N(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})\)</span>.</p>
+<p>Primero recordemos que <span class="math display">\[
+E\left(XY\right)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{XY}\left(x,y\right)\mathrm{d}x\mathrm{d}y
+\]</span></p>
+<p>Como <span class="math inline">\(X,Y\)</span> son independientes, sabemos que <span class="math display">\[
+f_{XY}\left(x,y\right)=f_{X}\left(x\right)f_{Y}\left(y\right)
+\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[\begin{align*}
+E\left(XY\right) &amp; =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{XY}\left(x,y\right)\mathrm{d}x\mathrm{d}y\\
+&amp; =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{X}\left(x\right)f_{y}\left(y\right)\mathrm{d}x\mathrm{d}y\\
+&amp; =\left(\int_{-\infty}^{\infty}xf_{X}\left(x\right)\mathrm{d}x\right)\left(\int_{-\infty}^{\infty}yf_{y}\left(y\right)\mathrm{d}y\right)\\
+&amp; =E\left(X\right)E\left(Y\right)
+\end{align*}\]</span></p>
+<p>Teorema 5.1 (Desigualdad de Chebyshev): Sea <span class="math inline">\(X\)</span> una variable aleatoria con esperanza <span class="math inline">\(\mu=E(X)\)</span> y sea <span class="math inline">\(\varepsilon&gt;0\)</span>. Entonces <span class="math display">\[P(|X-\mu|\geq\varepsilon)\leq\frac{Var(X)}{\varepsilon^{2}}\]</span></p>
+<p>Sea <span class="math inline">\(Y=\left|X-\mu\right|\)</span>, observemos que <span class="math inline">\(Y\)</span> es positiva, así por la desigualdad de Markov y dado que <span class="math inline">\(\mathcal{P}\left[\left|X-\mu\right|\geq\epsilon\right] =\mathcal{P}\left[\left|X-\mu\right|^{2}\geq\epsilon^{2}\right]\)</span>, se cumple que</p>
+<p><span class="math display">\[\begin{align*}
+\mathcal{P}\left[\left|X-\mu\right|\geq\epsilon\right] &amp; =\mathcal{P}\left[\left|X-\mu\right|^{2}\geq\epsilon^{2}\right]\\
+&amp; \leq\dfrac{E\left[\left(X-\mu\right)^{2}\right]}{\epsilon^{2}}=\dfrac{\text{Var}\left[X\right]}{\epsilon^{2}}
+\end{align*}\]</span></p>
+<p>Teorema 5.2 (Ley de los grandes números): Sean <span class="math inline">\(X_{1},X_{2},\dots, X_{n}\)</span> procesos de ensayos independientes, con esperanza finita <span class="math inline">\(\mu=E(X_{j})\)</span> y varianza finita <span class="math inline">\(\sigma^{2}=Var(X_{j})\)</span>. Sean <span class="math inline">\(S_{n}=X_{1}+X_{2}+\ldots+X_{n}\)</span>. Entonces para cada <span class="math inline">\(\epsilon&gt;0\)</span>.</p>
+<p><span class="math display">\[
+\mathcal{P}\left[\left|\dfrac{S_{n}}{n}-\mu\right|\geq\epsilon\right]\to0
+\]</span></p>
+<p>Observemos que <span class="math display">\[\begin{align*}
+\text{Var}\left[\dfrac{S_{n}}{n}-\mu\right] &amp; =\dfrac{1}{n^{2}}\text{Var}\left(S_{n}\right)\\
+&amp; =\dfrac{1}{n^{2}}\sum_{i=1}^{n}\text{Var}\left(X_{i}\right),\text{ por ser iid}\\
+&amp; =\dfrac{\sigma^{2}}{n}
+\end{align*}\]</span></p>
+<p>Entonces, por el Teorema 5.1, <span class="math display">\[
+\mathcal{P}\left[\left|\dfrac{S_{n}}{n}-\mu\right|\geq\epsilon\right]\leq\dfrac{\sigma^{2}}{n\epsilon},
+\]</span> así, tomando el limite cuando <span class="math inline">\(n\to\infty\)</span> <span class="math display">\[
+\dfrac{\sigma^{2}}{n\epsilon}\to0.
+\]</span></p>
+<p>Entonces <span class="math display">\[
+\mathcal{P}\left[\left|\dfrac{S_{n}}{n}-\mu\right|\geq\epsilon\right]\to0
+\]</span></p>
+<p>Teorema 5.3 (de Limite Central):</p>
+<p>Sea <span class="math inline">\(\left\{ X_{i}\right\} _{i=1}^{\infty}\)</span> una secuencia de v.a.i.id con media <span class="math inline">\(a\)</span> y varianza <span class="math inline">\(b^{2}\)</span>. Entonces para doo <span class="math inline">\(\alpha,\beta\in\mathbb{R}\)</span>, con <span class="math inline">\(\alpha&lt;\beta\)</span>, entonces <span class="math display">\[
+\mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right)=\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}e^{\left(-\dfrac{1}{2}x^{2}\right)}\mathrm{d}x
+\]</span></p>
+<p>Definamos a <span class="math display">\[
+S_{M}={\displaystyle \sum_{i=1}^{M}}\left[X_{i}-a\right],
+\]</span> y <span class="math display">\[
+Y_{M}=\dfrac{S_{M}}{\sqrt{M}b}.
+\]</span> Sea <span class="math inline">\(\varphi_{Y_{M}}\)</span> la función generadora de momentos de <span class="math inline">\(Y_{M}\)</span> y <span class="math inline">\(\varphi\)</span> la función generadora de momentos de la distribución normal estándar, demostraremos que <span class="math inline">\(\varphi_{Y_{M}}\to\varphi\)</span>.</p>
+<p>Por definición, <span class="math display">\[\begin{align*}
+\varphi_{Y_{M}}\left(t\right) &amp; =E\left[\exp\left(t\dfrac{S_{M}}{\sqrt{Mb}}\right)\right]\\
+&amp; =\varphi_{S_M}\left(\dfrac{t}{\sqrt{M}b}\right)\\
+&amp; =\left[\varphi_{\left(X_{1}-a\right)}\left(\dfrac{t}{\sqrt{M}b}\right)\right]^{M} \text{ ya que, las}X_{i}\text{ son i.i.d}\\
+&amp; =\left[E\left[\exp\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)\right]\right]
+\end{align*}\]</span></p>
+<p>Recordando la serie de Taylor <span class="math display">\[\begin{align*}
+\varphi_{M}\left(t\right) &amp; =\left[\sum_{i=0}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!}\right]^{M}\\
+&amp; =\left[1+\dfrac{1}{2}\left(\dfrac{t}{b\sqrt{M}}\right)^{2}E\left[\left(X_{1}-a\right)^{2}\right]+\epsilon\left(3\right)\right]^{M}\\
+&amp; =\left[1+\dfrac{1}{M}\dfrac{t^{2}}{2}+\epsilon\left(3\right)\right]^{M},
+\end{align*}\]</span></p>
+<p>donde <span class="math display">\[\begin{align*}
+\epsilon\left(3\right) &amp; =\sum_{i=3}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!},
+\end{align*}\]</span></p>
+<p>Sea <span class="math inline">\(s=\dfrac{t}{b\sqrt{M}},\)</span> entonces <span class="math inline">\(s\to0,t\to0\)</span> <span class="math display">\[
+\epsilon\left(3\right)=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i}}{i!}
+\]</span></p>
+<p>Notemos que, si <span class="math inline">\(\varphi_{1}\)</span> existe. Entonces <span class="math display">\[
+\dfrac{\epsilon\left(3\right)}{s^{2}}=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i-2}}{i!}\to0,s\to0.
+\]</span> .</p>
+<p>Además <span class="math inline">\(s\to0\)</span> cuando <span class="math inline">\(M\to\infty\)</span>. <span class="math display">\[
+\Rightarrow\varphi_{M}\left(t\right)=\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M},
+\]</span></p>
+<p>Entonces <span class="math inline">\(\epsilon\left(3\right)s^{-2}=Me\left(3\right)b^{2}t^{-2}\to0\)</span>. Como <span class="math inline">\(b,t\)</span> estan fijas. <span class="math display">\[
+M\epsilon\left(3\right)\to0,M\to\infty,
+\]</span></p>
+<p>por lo tanto <span class="math display">\[\begin{align*}
+\dfrac{t^{2}}{2}+M\epsilon\left(3\right) &amp; \to\dfrac{t^{2}}{2},M\to\infty\\
+\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M} &amp; \to\exp\left(t^{2}\right),M\to\infty\\
+\lim_{M\to\infty}\varphi_{M}\left(t\right) &amp; =\exp\left(t^{2}\right)=\varphi\left(t\right),
+\end{align*}\]</span></p>
+<p>la función generadora de momentos de la distribución normal estándar. Por lo tanto <span class="math display">\[
+F_{M}\left(x\right)\to F_{N\left(0,1\right)}\left(x\right)
+\]</span></p>
+<p><span class="math display">\[\begin{align*}
+F_{M}\left(b\right)-F_{M}\left(a\right) &amp; \to F_{N}\left(b\right)-F_{N}\left(a\right)\\
+\mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right) &amp; =\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}\exp\left(-\dfrac{1}{2}x^{2}\right)\mathrm{d}x
+\end{align*}\]</span></p>
+<p>Teorema 5.4:Sea <span class="math inline">\(\left\{ X_{i}\right\} _{i=1}^{\infty}\)</span> una sucesión de v.a.i.i.d con media <span class="math inline">\(a\)</span>. Entonces <span class="math display">\[
+\mathcal{P}\left[\lim_{M\to\infty}\dfrac{1}{M}\sum_{i=1}^{M}X_{i}=a\right]=1.
+\]</span></p>
+<p>Esto es similar a decir que <span class="math display">\[
+\lim_{M\to\infty}\dfrac{1}{M}\sum_{i=1}^{M}X_{i}\stackrel{\text{c.s}}{=}a
+\]</span></p>
+<p>Sin perdida de generalidad, diremos que <span class="math inline">\(X_{i}\geq0,\forall i\)</span>. Definamos <span class="math display">\[
+Y_{n}=X_{n}I_{\left[\left|X_{n}\right|\leq n\right]},Q_{n}=\sum_{i=1}^{n}Y_{i}
+\]</span></p>
+<p>Por la desigualdad de <span class="math display">\[\begin{align*}
+\sum_{n=1}^{\infty}\mathcal{P}\left[\left|\dfrac{Q_{n}-E\left[Q_{n}\right]}{n}\right|\geq\epsilon\right] &amp; \leq\sum_{n=1}^{\infty}\dfrac{\text{Var}\left(Q_{n}\right)}{\epsilon^{2}n^{2}}=\sum_{n=1}^{\infty}\dfrac{1}{\epsilon^{2}n^{2}}\sum_{i=1}^{n}\text{Var}\left(Y_{i}\right)\\
+&amp; \leq\sum_{n=1}^{\infty}\dfrac{E\left(Y_{n}^{2}\right)}{\epsilon^{2}n^{2}}=\sum_{n=1}^{\infty}\dfrac{1}{\epsilon^{2}n^{2}}\int_{0}^{n}x^{2}\mathrm{d}F\\
+&amp; \leq\sum_{n=1}^{\infty}\dfrac{1}{\epsilon^{2}}\int_{0}^{n}x\mathrm{d}F&lt;\infty,
+\end{align*}\]</span></p>
+<p>donde <span class="math inline">\(F\)</span> es la función de distribución de <span class="math inline">\(X_{i}\)</span>. Luego <span class="math display">\[
+E\left[X_{1}\right]=\lim_{n\to\infty}\int_{0}^{n}x\mathrm{d}F=\lim_{n\to\infty}E\left[Y_{n}\right]=\lim_{n\to\infty}\dfrac{E\left[Q_{n}\right]}{n}.
+\]</span></p>
+<p>Entonces, por el Lema de Borel Canteli. <span class="math inline">\(\mathcal{\mathcal{P}}\left[\limsup\left(\left|\dfrac{Q_{n}-E\left[Q_{n}\right]}{n}\right|\geq\epsilon\right)\right]=0\)</span></p>
+<p><span class="math display">\[
+\lim_{n\to\infty}\dfrac{Q_{n}}{n}=E\left[X_{1}\right],\text{c.s}
+\]</span></p>
+<p>Ahora, calcularemos la siguiente probabilidad <span class="math display">\[
+\sum_{i=1}^{\infty}\mathcal{P}\left[X_{i}\neq Y_{i}\right]=\sum_{i=1}^{\infty}\mathcal{P}\left[X_{i}&gt;n\right]
+\]</span></p>
+<p>como <span class="math inline">\(E\left[X_{i}\right]&lt;\infty\)</span> y <span class="math inline">\(X_{i}\)</span> son v.a.i.i.d.</p>
+<p><span class="math display">\[
+\sum_{i=1}^{\infty}\mathcal{P}\left[X_{i}&gt;n\right]\leq E\left[X_{1}\right]&lt;\infty
+\]</span></p>
+<p>De nuevo, por el Lema de Borel Cantelli. <span class="math display">\[
+\mathcal{P}\left[\limsup\left[X_{i}\neq Y_{i}\right]\right]=0,\forall i
+\]</span></p>
+<p>Entonces <span class="math display">\[\begin{align*}
+X_{i} &amp; =Y_{i},\text{c.s}\\
+\Rightarrow &amp; \dfrac{1}{M}\sum_{i=1}^{M}X_{i}\to E\left[X_{1}\right]=\mu.\text{ c.s}
+\end{align*}\]</span></p>
 
 
 
@@ -398,7 +615,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Tarea2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea2.html</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea 2</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

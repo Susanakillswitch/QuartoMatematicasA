@@ -1,0 +1,96 @@
+# Tarea 2
+
+\newtheorem{demos}{Solución}
+\newtheorem{teor}{Ejercicio}
+
+
+Sea $Y_{\delta,h}(t)$ una caminata aleatoria. Demuestre que para $\delta$ y $h$ pequeño tenemos 
+   
+$$
+E\exp[i\lambda Y_{\delta,h}(t)]\thickapprox\exp\left[-\frac{t\lambda^{2}h^{2}}{2\delta}-\frac{t\lambda^{4}h^{4}}{12\delta}\right]
+$$
+
+
+Considere una caminata aleatoria que comienza en 0 con saltos $h$ y $-h$ igualmente probables
+en los momentos $\delta$, 2 $\delta$,$\dots$, donde $h$ y $\delta$ son números positivos. Más precisamente, sea $\{X_{n}\}_{n=1}^{\infty}$ una sucesión de elementos aleatorios independientes e idénticamente distribuidos.
+variables con
+$$
+P\left[X_{i}=h\right]=P\left[X_{i}=-h\right]=\dfrac{1}{2},\forall i,
+$$
+
+Sea $Y_{\delta,h}(0)=0$ y pongamos 
+$$
+Y_{\delta,h}(n\delta)=X_{1}+X_{2}+\cdots+X_{n}.
+$$
+
+Para $t>0$, defina $Y_{\delta,h}(t)$ mediante linealización, es decir, para $n\delta<t<(n + 1)\delta$, defina
+$$
+Y_{\delta,h}(t)=\frac{(n+1)\delta-t}{\delta}Y_{\delta,h}(n\delta)+\frac{t-n\delta}{\delta}Y_{\delta,h}((n+1)\delta).
+$$
+
+Calculemos la función característica de $Y_{\delta,h}(t)$, donde $\lambda\in\mathbb{R}$ fijo y sea $t=n\delta$ así, $n=t/\delta$. Entonces se tiene que 
+
+\begin{eqnarray}\label{1}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right] & = & \prod_{j=1}^{n}Ee^{i\lambda X_{j}},\text{ por ser variables independientes,}\nonumber\\
+    & = & (Ee^{i\lambda X_{j}})^{n},\text{ por ser idénticamente distribuidas,}\nonumber\\
+    & = & \frac{1}{2}(e^{i\lambda h}+e^{-i\lambda h})^{n},\nonumber\\
+    & = & (\cos(\lambda h))^{n},\nonumber\\
+    & = & (\cos(\lambda h))^{t/\delta},
+\end{eqnarray}
+
+Por otro lado, sea $u=\left[\cos\left(\lambda h\right)\right]^{1/\delta}\Rightarrow\ln\left(u\right)=\dfrac{1}{\delta}\ln\left[\cos\left(\lambda h\right)\right]$. 
+
+Usando la expansión
+de Taylor de $\cos\left(x\right)$ se tiene que
+$$
+\cos\left(\lambda h\right)\approx1-\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!},
+$$
+
+entonces 
+\begin{eqnarray}
+    \ln\left(\cos\left(\lambda h\right)\right) & \approx & \ln\left[1-\dfrac{\left(\lambda h\right)^{2}}{2}+\dfrac{\left(\lambda h\right)^{4}}{4!}\right]\nonumber\\
+ & \approx & -\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!}-\frac{1}{2}\left(-\frac{\lambda^{2}h^{2}}{2!}+\frac{\lambda^{4}h^{4}}{4!}\right)^{2}\nonumber\\
+  & = & -\dfrac{\lambda^{2} h^{2}}{2!}+\dfrac{\lambda ^{4}h^{4}}{4!}-\frac{1}{2}\left(\frac{\lambda^{4}h^{4}}{4}-\frac{\lambda^{6}h^{6}}{24^{2}}+\frac{\lambda^{8}h^{8}}{24}\right)\nonumber\\
+   & = & -\dfrac{\lambda^{2} h^{2}}{2}+\dfrac{\lambda^{4} h^{4}}{24}-\frac{\lambda^{4}h^{4}}{8}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\nonumber\\
+   & = & -\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}
+\end{eqnarray}
+para una $h$ pequeña, se satisface que, 
+$$
+-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\approx 0
+$$
+
+Por lo tanto, $\ln\left(\cos\left(\lambda h\right)\right)\approx -\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}$.\\
+Así, para $\delta$ y $h$ pequeña, se tiene que $\ln u\approx \dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)$.\\
+Entonces 
+
+\begin{equation}
+    u\approx\exp\left[\dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)\right]
+\end{equation}
+
+Entonces por la ecuación (\ref{1})
+\begin{equation}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right]\approx\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]
+\end{equation}
+
+
+Calculando el limite
+$$
+\lim_{\delta\to0}E\left[\exp\left(i\lambda Y_{n,\delta}\left(t\right)\right)\right]=\lim_{\delta\to0}\exp\left[-t\left(\left[\dfrac{h^{2}}{\delta}\right]\left(\dfrac{\lambda^{2}}{2}-\dfrac{\lambda^{4}h^{2}}{24}\right)\right)\right],
+$$
+
+Asumamos que $\delta\to0$, $h\to0$ pero $h^{2}/\delta\to\infty$. Entonces $\lim_{\delta\to0} Y_{\delta, h}(t)$ no existe. Por otro lado, consideremos la siguiente renormalización, 
+
+\begin{eqnarray}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2\delta}\right] & = & E\left[\exp (i\lambda Y_{n,\delta}\left(t\right))\exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\right]\nonumber\\
+    & = & \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)E\exp\left[ i\lambda Y_{n,\delta}\left(t\right)\right]\nonumber\\
+    & \approx & \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]\nonumber\\
+    & = & \exp\left(-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right)
+\end{eqnarray}
+
+Así, si $\delta,h\to0$ de tal manera que $h^{2}/\delta\to\infty$ y $h^{4}/\delta\to0$, entonces
+$$
+\lim_{\delta\to0}E\left[\exp\left(i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2}\right)\right]=\lim_{\delta\to0}\exp\left(\dfrac{\left(\lambda h\right)^{4}}{24\delta}\right)=1
+$$
+
+
+
