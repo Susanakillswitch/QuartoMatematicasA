@@ -161,8 +161,15 @@ E\left(XY\right) & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{XY}\left(
 & =E\left(X\right)E\left(Y\right)
 \end{align*}
 
-Teorema 5.1 (Desigualdad de Chebyshev): Sea $X$ una variable aleatoria con esperanza $\mu=E(X)$ y sea $\varepsilon>0$. Entonces
+::: {#thm-5.1}
+## Desigualdad de Chebyshev
+
+Sea $X$ una variable aleatoria con esperanza $\mu=E(X)$ y sea $\varepsilon>0$. Entonces
 $$P(|X-\mu|\geq\varepsilon)\leq\frac{Var(X)}{\varepsilon^{2}}$$
+
+:::
+
+::: {.proof}
 
 Sea $Y=\left|X-\mu\right|$, observemos que $Y$ es positiva, así por la desigualdad de Markov y dado que $\mathcal{P}\left[\left|X-\mu\right|\geq\epsilon\right] =\mathcal{P}\left[\left|X-\mu\right|^{2}\geq\epsilon^{2}\right]$, se cumple que
 
@@ -171,13 +178,21 @@ Sea $Y=\left|X-\mu\right|$, observemos que $Y$ es positiva, así por la desigual
 & \leq\dfrac{E\left[\left(X-\mu\right)^{2}\right]}{\epsilon^{2}}=\dfrac{\text{Var}\left[X\right]}{\epsilon^{2}}
 \end{align*}
 
-Teorema 5.2 (Ley de los grandes números): Sean $X_{1},X_{2},\dots, X_{n}$ procesos de ensayos independientes, con esperanza finita $\mu=E(X_{j})$ y varianza finita $\sigma^{2}=Var(X_{j})$. Sean $S_{n}=X_{1}+X_{2}+\ldots+X_{n}$.
+:::
+
+::: {#thm-5.2}
+## Ley de los grandes números
+
+Sean $X_{1},X_{2},\dots, X_{n}$ procesos de ensayos independientes, con esperanza finita $\mu=E(X_{j})$ y varianza finita $\sigma^{2}=Var(X_{j})$. Sean $S_{n}=X_{1}+X_{2}+\ldots+X_{n}$.
 Entonces para cada $\epsilon>0$. 
 
 $$
 \mathcal{P}\left[\left|\dfrac{S_{n}}{n}-\mu\right|\geq\epsilon\right]\to0
 $$
 
+:::
+
+::: {.proof}
 
 Observemos que 
 \begin{align*}
@@ -200,15 +215,21 @@ $$
 \mathcal{P}\left[\left|\dfrac{S_{n}}{n}-\mu\right|\geq\epsilon\right]\to0
 $$
 
-Teorema 5.3 (de Limite Central):
+:::
 
-Sea $\left\{ X_{i}\right\} _{i=1}^{\infty}$ una secuencia de v.a.i.id
+::: {#thm-5.3}
+## Teorema del Limite Central
+
+
+ Sea $\left\{ X_{i}\right\} _{i=1}^{\infty}$ una secuencia de v.a.i.id
 con media $a$ y varianza $b^{2}$. Entonces para doo $\alpha,\beta\in\mathbb{R}$,
 con $\alpha<\beta$, entonces 
 $$
 \mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right)=\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}e^{\left(-\dfrac{1}{2}x^{2}\right)}\mathrm{d}x
 $$
+:::
 
+::: {.proof}
 Definamos a 
 $$
 S_{M}={\displaystyle \sum_{i=1}^{M}}\left[X_{i}-a\right],
@@ -281,11 +302,18 @@ F_{M}\left(b\right)-F_{M}\left(a\right) & \to F_{N}\left(b\right)-F_{N}\left(a\r
 \mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right) & =\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}\exp\left(-\dfrac{1}{2}x^{2}\right)\mathrm{d}x
 \end{align*}
 
-Teorema 5.4:Sea $\left\{ X_{i}\right\} _{i=1}^{\infty}$ una sucesión de v.a.i.i.d
+:::
+
+::: {#thm-5.4}
+
+Sea $\left\{ X_{i}\right\} _{i=1}^{\infty}$ una sucesión de v.a.i.i.d
 con media $a$. Entonces 
 $$
 \mathcal{P}\left[\lim_{M\to\infty}\dfrac{1}{M}\sum_{i=1}^{M}X_{i}=a\right]=1.
 $$
+:::
+
+::: {.proof}
 
 Esto es similar a decir que 
 $$
@@ -337,3 +365,4 @@ X_{i} & =Y_{i},\text{c.s}\\
 \Rightarrow & \dfrac{1}{M}\sum_{i=1}^{M}X_{i}\to E\left[X_{1}\right]=\mu.\text{ c.s}
 \end{align*}
 
+:::
