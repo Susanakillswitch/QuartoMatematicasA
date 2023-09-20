@@ -1,11 +1,12 @@
 # Tarea 3
-\newtheorem{demos}{Solución}
 
-
-
+::: {#exr-1}
+## Ejercicio 1:
 Si $X\thicksim N(\mu,\sigma)$ entonces $\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)$.
 
+:::
 
+:::{.proof}
 Calculemos la función característica de la variable $\dfrac{X-\mu}{\sigma}$,
 \begin{eqnarray}\label{1.1}
 \varphi_{\frac{X-\mu}{\sigma}}(t) & = & E\left[e^{it\left(\frac{X-\mu}{\sigma}\right)}\right]\nonumber\\
@@ -55,12 +56,15 @@ Por otro lado, consideremos $Z\thicksim N(0,1)$, entonces
 
 Entonces $\varphi_{Z}(t)=\varphi_{\frac{X-\mu}{\sigma}}(t)$, como las funciones características coinciden se concluye que $\frac{X-\mu}{\sigma}\thicksim N(0,1)$.
 
+:::
 
+::: {#exr-2}
+## Ejercicio 2:
 
-\begin{teor}
 Si $Y\thicksim N(0,1)$ entonces $\sigma Y+\mu \thicksim N(\mu,\sigma)$.
-\end{teor}
+:::
 
+::: {.proof}
 Calculemos la función característica de la variable $\sigma Y+\mu$,
 \begin{eqnarray}\label{2.1}
 \varphi_{\sigma Y+\mu}(t) & = & E\left[e^{it(\sigma Y+\mu)}\right]\nonumber\\
@@ -107,13 +111,18 @@ Dado que tienen iguales funciones características se concluye que,
 $$
 \sigma Y+\mu\thicksim N(\mu,\sigma)
 $$
+:::
 
 
-\begin{teor}
+::: {#exr-3}
+## Ejercicio 3:
+
 Si $X\thicksim N(\mu_{1},\sigma_{1}^{2})$, $Y\thicksim N(\mu_{2},\sigma_{2}^{2})$ además 
 $X$ y $Y$ son independientes entonces $X+Y\thicksim N(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})$.
-\end{teor}
 
+:::
+
+::: {.proof}
 Por definición, se tiene que,
 \begin{eqnarray}\label{3.1}
 \varphi_{X+Y}(t) & = & E[e^{it(X+Y)}]\nonumber\\
@@ -137,11 +146,16 @@ $$
 
 Como las funciones características coinciden se sigue que, $X+Y\thicksim N(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})$.
 
+:::
 
-\begin{teor}
+::: {#exr-4}
+## Ejercicio 4:
+
 Si $X$, $Y$ son variables aleatorias normales entonces $X$, $Y$ son independientes si y solo si $E(XY)=E(X)E(Y)$.
-\end{teor}
 
+:::
+
+::: {.proof}
 Primero recordemos que 
 $$
 E\left(XY\right)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{XY}\left(x,y\right)\mathrm{d}x\mathrm{d}y
@@ -161,11 +175,15 @@ E\left(XY\right) & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{XY}\left(
 & =E\left(X\right)E\left(Y\right)
 \end{align*}
 
+:::
+
 ::: {#thm-5.1}
 ## Desigualdad de Chebyshev
 
 Sea $X$ una variable aleatoria con esperanza $\mu=E(X)$ y sea $\varepsilon>0$. Entonces
-$$P(|X-\mu|\geq\varepsilon)\leq\frac{Var(X)}{\varepsilon^{2}}$$
+$$
+P(|X-\mu|\geq\varepsilon)\leq\frac{Var(X)}{\varepsilon^{2}}
+$$
 
 :::
 
@@ -246,13 +264,13 @@ Por definición,
 \begin{align*}
 \varphi_{Y_{M}}\left(t\right) & =E\left[\exp\left(t\dfrac{S_{M}}{\sqrt{Mb}}\right)\right]\\
 & =\varphi_{S_M}\left(\dfrac{t}{\sqrt{M}b}\right)\\
-& =\left[\varphi_{\left(X_{1}-a\right)}\left(\dfrac{t}{\sqrt{M}b}\right)\right]^{M} \text{ ya que, las}X_{i}\text{ son i.i.d}\\
-& =\left[E\left[\exp\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)\right]\right]
+& =\left[\varphi_{\left(X_{1}-a\right)}\left(\dfrac{t}{\sqrt{M}b}\right)\right]^{M} \text{ ya que, las }X_{i}\text{ son i.i.d}\\
+& =\left[E\left[\exp\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)\right]\right]^{M}
 \end{align*}
 
 Recordando la serie de Taylor 
 \begin{align*}
-\varphi_{M}\left(t\right) & =\left[\sum_{i=0}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!}\right]^{M}\\
+\varphi_{Y_M}\left(t\right) & =\left[\sum_{i=0}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!}\right]^{M}\\
 & =\left[1+\dfrac{1}{2}\left(\dfrac{t}{b\sqrt{M}}\right)^{2}E\left[\left(X_{1}-a\right)^{2}\right]+\epsilon\left(3\right)\right]^{M}\\
 & =\left[1+\dfrac{1}{M}\dfrac{t^{2}}{2}+\epsilon\left(3\right)\right]^{M},
 \end{align*}
@@ -262,45 +280,61 @@ donde
 \epsilon\left(3\right) & =\sum_{i=3}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!},
 \end{align*}
 
-Sea $s=\dfrac{t}{b\sqrt{M}},$ entonces $s\to0,t\to0$
+Ahora sea $s=\dfrac{t}{b\sqrt{M}},$ así,  
 $$
 \epsilon\left(3\right)=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i}}{i!}
 $$
+Además observemos que, cuando $t\to0$, $s\to0$.
 
-Notemos que, si $\varphi_{1}$ existe. Entonces 
-$$
-\dfrac{\epsilon\left(3\right)}{s^{2}}=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i-2}}{i!}\to0,s\to0.
-$$
-. 
 
-Además $s\to0$ cuando $M\to\infty$. 
+Así, de lo anterior, si $\varphi_{1}$ existe, se cumple que, 
 $$
-\Rightarrow\varphi_{M}\left(t\right)=\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M},
-$$
+\dfrac{\epsilon\left(3\right)}{s^{2}}=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i-2}}{i!}\to0,\text{ cuando, }s\to0.
+$$ 
 
-Entonces $\epsilon\left(3\right)s^{-2}=Me\left(3\right)b^{2}t^{-2}\to0$.
-Como $b,t$ estan fijas. 
+Por otro lado,
+ 
 $$
-M\epsilon\left(3\right)\to0,M\to\infty,
+\varphi_{Y_M}\left(t\right)=\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M},
+$$
+y $s\to0$ cuando $M\to\infty$.
+
+
+Entonces $\epsilon\left(3\right)s^{-2}=M\epsilon\left(3\right)b^{2}t^{-2}\to0$.
+Dado que $b,t$ estan fijas, se cumple que
+$$
+M\epsilon\left(3\right)\to0,\text{ cuando, }M\to\infty,
 $$
 
 por lo tanto 
-\begin{align*}
-\dfrac{t^{2}}{2}+M\epsilon\left(3\right) & \to\dfrac{t^{2}}{2},M\to\infty\\
-\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M} & \to\exp\left(t^{2}\right),M\to\infty\\
-\lim_{M\to\infty}\varphi_{M}\left(t\right) & =\exp\left(t^{2}\right)=\varphi\left(t\right),
-\end{align*}
+$$
+\dfrac{t^{2}}{2}+M\epsilon\left(3\right) \to\dfrac{t^{2}}{2},\text{ cuando, }M\to\infty
+$$
+esto implica que,
 
-la función generadora de momentos de la distribución normal estándar.
+$$
+\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M} \to\exp\left(t^{2}/2\right),M\to\infty
+$$
+
+De aqui se concluye que,
+$$
+\lim_{M\to\infty}\varphi_{M}\left(t\right)  =\exp\left(t^{2}/2\right)=\varphi\left(t\right)
+$$
+
+la cual es la función generadora de momentos de la distribución normal estándar.
 Por lo tanto 
 $$
 F_{M}\left(x\right)\to F_{N\left(0,1\right)}\left(x\right)
 $$
+que es equivalente a,
 
-\begin{align*}
-F_{M}\left(b\right)-F_{M}\left(a\right) & \to F_{N}\left(b\right)-F_{N}\left(a\right)\\
-\mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right) & =\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}\exp\left(-\dfrac{1}{2}x^{2}\right)\mathrm{d}x
-\end{align*}
+
+$$
+F_{M}\left(b\right)-F_{M}\left(a\right)  \to F_{N}\left(b\right)-F_{N}\left(a\right)
+$$
+$$
+\mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right) =\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}\exp\left(-\dfrac{1}{2}x^{2}\right)\mathrm{d}x
+$$
 
 :::
 

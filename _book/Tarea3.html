@@ -177,8 +177,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Si <span class="math inline">\(X\thicksim N(\mu,\sigma)\)</span> entonces <span class="math inline">\(\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)\)</span>.</p>
-<p>Calculemos la función característica de la variable <span class="math inline">\(\dfrac{X-\mu}{\sigma}\)</span>, <span class="math display">\[\begin{eqnarray}\label{1.1}
+<div id="exr-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.1 (Ejercicio 1:) </strong></span>Si <span class="math inline">\(X\thicksim N(\mu,\sigma)\)</span> entonces <span class="math inline">\(\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Calculemos la función característica de la variable <span class="math inline">\(\dfrac{X-\mu}{\sigma}\)</span>, <span class="math display">\[\begin{eqnarray}\label{1.1}
 \varphi_{\frac{X-\mu}{\sigma}}(t) &amp; = &amp; E\left[e^{it\left(\frac{X-\mu}{\sigma}\right)}\right]\nonumber\\
 &amp; = &amp; E\left[e^{\left(\frac{itX}{\sigma}-\frac{it\mu}{\sigma}\right)}\right]\nonumber\\
 &amp; = &amp; e^{-\frac{it\mu}{\sigma}}E\left[e^{\left(\frac{itX}{\sigma}\right)}\right]\nonumber\\
@@ -212,7 +215,12 @@ ul.task-list li input[type="checkbox"] {
 \varphi_{Z}(t) =e^{-\frac{t^{2}}{2}}.
 \end{equation*}\]</span></p>
 <p>Entonces <span class="math inline">\(\varphi_{Z}(t)=\varphi_{\frac{X-\mu}{\sigma}}(t)\)</span>, como las funciones características coinciden se concluye que <span class="math inline">\(\frac{X-\mu}{\sigma}\thicksim N(0,1)\)</span>.</p>
-<p>Calculemos la función característica de la variable <span class="math inline">\(\sigma Y+\mu\)</span>, <span class="math display">\[\begin{eqnarray}\label{2.1}
+</div>
+<div id="exr-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.2 (Ejercicio 2:) </strong></span>Si <span class="math inline">\(Y\thicksim N(0,1)\)</span> entonces <span class="math inline">\(\sigma Y+\mu \thicksim N(\mu,\sigma)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Calculemos la función característica de la variable <span class="math inline">\(\sigma Y+\mu\)</span>, <span class="math display">\[\begin{eqnarray}\label{2.1}
 \varphi_{\sigma Y+\mu}(t) &amp; = &amp; E\left[e^{it(\sigma Y+\mu)}\right]\nonumber\\
 &amp; = &amp; E\left[e^{it\sigma Y+it\mu}\right]\nonumber\\
 &amp; = &amp; e^{it\mu}E\left[e^{it\sigma Y}\right]\nonumber\\
@@ -241,7 +249,12 @@ y^{2}-2yit\sigma &amp; = &amp; (y-it\sigma)^{2}-(it\sigma)^{2}\nonumber\\
 \]</span> Dado que tienen iguales funciones características se concluye que, <span class="math display">\[
 \sigma Y+\mu\thicksim N(\mu,\sigma)
 \]</span></p>
-<p>Por definición, se tiene que, <span class="math display">\[\begin{eqnarray}\label{3.1}
+</div>
+<div id="exr-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.3 (Ejercicio 3:) </strong></span>Si <span class="math inline">\(X\thicksim N(\mu_{1},\sigma_{1}^{2})\)</span>, <span class="math inline">\(Y\thicksim N(\mu_{2},\sigma_{2}^{2})\)</span> además <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> son independientes entonces <span class="math inline">\(X+Y\thicksim N(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Por definición, se tiene que, <span class="math display">\[\begin{eqnarray}\label{3.1}
 \varphi_{X+Y}(t) &amp; = &amp; E[e^{it(X+Y)}]\nonumber\\
 &amp; = &amp; E[e^{itX}e^{itY}]\text{ por ser independientes, del ejercicio 4}\nonumber\\
 &amp; = &amp; E[e^{itX}]E[e^{itY}]\nonumber\\
@@ -257,7 +270,12 @@ y^{2}-2yit\sigma &amp; = &amp; (y-it\sigma)^{2}-(it\sigma)^{2}\nonumber\\
 \varphi_{Z}(t)= \varphi_{X+Y}(t).
 \]</span></p>
 <p>Como las funciones características coinciden se sigue que, <span class="math inline">\(X+Y\thicksim N(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})\)</span>.</p>
-<p>Primero recordemos que <span class="math display">\[
+</div>
+<div id="exr-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.4 (Ejercicio 4:) </strong></span>Si <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> son variables aleatorias normales entonces <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> son independientes si y solo si <span class="math inline">\(E(XY)=E(X)E(Y)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Primero recordemos que <span class="math display">\[
 E\left(XY\right)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{XY}\left(x,y\right)\mathrm{d}x\mathrm{d}y
 \]</span></p>
 <p>Como <span class="math inline">\(X,Y\)</span> son independientes, sabemos que <span class="math display">\[
@@ -270,8 +288,11 @@ E\left(XY\right) &amp; =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{XY}\l
 &amp; =\left(\int_{-\infty}^{\infty}xf_{X}\left(x\right)\mathrm{d}x\right)\left(\int_{-\infty}^{\infty}yf_{y}\left(y\right)\mathrm{d}y\right)\\
 &amp; =E\left(X\right)E\left(Y\right)
 \end{align*}\]</span></p>
+</div>
 <div id="thm-5.1" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5.1 (Desigualdad de Chebyshev) </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con esperanza <span class="math inline">\(\mu=E(X)\)</span> y sea <span class="math inline">\(\varepsilon&gt;0\)</span>. Entonces <span class="math display">\[P(|X-\mu|\geq\varepsilon)\leq\frac{Var(X)}{\varepsilon^{2}}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 5.1 (Desigualdad de Chebyshev) </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con esperanza <span class="math inline">\(\mu=E(X)\)</span> y sea <span class="math inline">\(\varepsilon&gt;0\)</span>. Entonces <span class="math display">\[
+P(|X-\mu|\geq\varepsilon)\leq\frac{Var(X)}{\varepsilon^{2}}
+\]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Sea <span class="math inline">\(Y=\left|X-\mu\right|\)</span>, observemos que <span class="math inline">\(Y\)</span> es positiva, así por la desigualdad de Markov y dado que <span class="math inline">\(\mathcal{P}\left[\left|X-\mu\right|\geq\epsilon\right] =\mathcal{P}\left[\left|X-\mu\right|^{2}\geq\epsilon^{2}\right]\)</span>, se cumple que</p>
@@ -315,41 +336,48 @@ Y_{M}=\dfrac{S_{M}}{\sqrt{M}b}.
 <p>Por definición, <span class="math display">\[\begin{align*}
 \varphi_{Y_{M}}\left(t\right) &amp; =E\left[\exp\left(t\dfrac{S_{M}}{\sqrt{Mb}}\right)\right]\\
 &amp; =\varphi_{S_M}\left(\dfrac{t}{\sqrt{M}b}\right)\\
-&amp; =\left[\varphi_{\left(X_{1}-a\right)}\left(\dfrac{t}{\sqrt{M}b}\right)\right]^{M} \text{ ya que, las}X_{i}\text{ son i.i.d}\\
-&amp; =\left[E\left[\exp\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)\right]\right]
+&amp; =\left[\varphi_{\left(X_{1}-a\right)}\left(\dfrac{t}{\sqrt{M}b}\right)\right]^{M} \text{ ya que, las }X_{i}\text{ son i.i.d}\\
+&amp; =\left[E\left[\exp\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)\right]\right]^{M}
 \end{align*}\]</span></p>
 <p>Recordando la serie de Taylor <span class="math display">\[\begin{align*}
-\varphi_{M}\left(t\right) &amp; =\left[\sum_{i=0}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!}\right]^{M}\\
+\varphi_{Y_M}\left(t\right) &amp; =\left[\sum_{i=0}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!}\right]^{M}\\
 &amp; =\left[1+\dfrac{1}{2}\left(\dfrac{t}{b\sqrt{M}}\right)^{2}E\left[\left(X_{1}-a\right)^{2}\right]+\epsilon\left(3\right)\right]^{M}\\
 &amp; =\left[1+\dfrac{1}{M}\dfrac{t^{2}}{2}+\epsilon\left(3\right)\right]^{M},
 \end{align*}\]</span></p>
 <p>donde <span class="math display">\[\begin{align*}
 \epsilon\left(3\right) &amp; =\sum_{i=3}^{\infty}\dfrac{E\left[\left(\dfrac{t}{b\sqrt{M}}\left(X_{1}-a\right)\right)^{i}\right]}{i!},
 \end{align*}\]</span></p>
-<p>Sea <span class="math inline">\(s=\dfrac{t}{b\sqrt{M}},\)</span> entonces <span class="math inline">\(s\to0,t\to0\)</span> <span class="math display">\[
+<p>Ahora sea <span class="math inline">\(s=\dfrac{t}{b\sqrt{M}},\)</span> así,<br>
+<span class="math display">\[
 \epsilon\left(3\right)=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i}}{i!}
+\]</span> Además observemos que, cuando <span class="math inline">\(t\to0\)</span>, <span class="math inline">\(s\to0\)</span>.</p>
+<p>Así, de lo anterior, si <span class="math inline">\(\varphi_{1}\)</span> existe, se cumple que, <span class="math display">\[
+\dfrac{\epsilon\left(3\right)}{s^{2}}=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i-2}}{i!}\to0,\text{ cuando, }s\to0.
 \]</span></p>
-<p>Notemos que, si <span class="math inline">\(\varphi_{1}\)</span> existe. Entonces <span class="math display">\[
-\dfrac{\epsilon\left(3\right)}{s^{2}}=\sum_{i=3}^{\infty}\dfrac{E\left[\left(X_{1}-a\right)^{i}\right]s^{i-2}}{i!}\to0,s\to0.
-\]</span> .</p>
-<p>Además <span class="math inline">\(s\to0\)</span> cuando <span class="math inline">\(M\to\infty\)</span>. <span class="math display">\[
-\Rightarrow\varphi_{M}\left(t\right)=\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M},
+<p>Por otro lado,</p>
+<p><span class="math display">\[
+\varphi_{Y_M}\left(t\right)=\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M},
+\]</span> y <span class="math inline">\(s\to0\)</span> cuando <span class="math inline">\(M\to\infty\)</span>.</p>
+<p>Entonces <span class="math inline">\(\epsilon\left(3\right)s^{-2}=M\epsilon\left(3\right)b^{2}t^{-2}\to0\)</span>. Dado que <span class="math inline">\(b,t\)</span> estan fijas, se cumple que <span class="math display">\[
+M\epsilon\left(3\right)\to0,\text{ cuando, }M\to\infty,
 \]</span></p>
-<p>Entonces <span class="math inline">\(\epsilon\left(3\right)s^{-2}=Me\left(3\right)b^{2}t^{-2}\to0\)</span>. Como <span class="math inline">\(b,t\)</span> estan fijas. <span class="math display">\[
-M\epsilon\left(3\right)\to0,M\to\infty,
+<p>por lo tanto <span class="math display">\[
+\dfrac{t^{2}}{2}+M\epsilon\left(3\right) \to\dfrac{t^{2}}{2},\text{ cuando, }M\to\infty
+\]</span> esto implica que,</p>
+<p><span class="math display">\[
+\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M} \to\exp\left(t^{2}/2\right),M\to\infty
 \]</span></p>
-<p>por lo tanto <span class="math display">\[\begin{align*}
-\dfrac{t^{2}}{2}+M\epsilon\left(3\right) &amp; \to\dfrac{t^{2}}{2},M\to\infty\\
-\left[1+\dfrac{1}{M}\left[\dfrac{t^{2}}{2}+M\epsilon\left(3\right)\right]\right]^{M} &amp; \to\exp\left(t^{2}\right),M\to\infty\\
-\lim_{M\to\infty}\varphi_{M}\left(t\right) &amp; =\exp\left(t^{2}\right)=\varphi\left(t\right),
-\end{align*}\]</span></p>
-<p>la función generadora de momentos de la distribución normal estándar. Por lo tanto <span class="math display">\[
+<p>De aqui se concluye que, <span class="math display">\[
+\lim_{M\to\infty}\varphi_{M}\left(t\right)  =\exp\left(t^{2}/2\right)=\varphi\left(t\right)
+\]</span></p>
+<p>la cual es la función generadora de momentos de la distribución normal estándar. Por lo tanto <span class="math display">\[
 F_{M}\left(x\right)\to F_{N\left(0,1\right)}\left(x\right)
+\]</span> que es equivalente a,</p>
+<p><span class="math display">\[
+F_{M}\left(b\right)-F_{M}\left(a\right)  \to F_{N}\left(b\right)-F_{N}\left(a\right)
+\]</span> <span class="math display">\[
+\mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right) =\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}\exp\left(-\dfrac{1}{2}x^{2}\right)\mathrm{d}x
 \]</span></p>
-<p><span class="math display">\[\begin{align*}
-F_{M}\left(b\right)-F_{M}\left(a\right) &amp; \to F_{N}\left(b\right)-F_{N}\left(a\right)\\
-\mathcal{P}\left(\lim_{M\to\infty}\alpha\le\dfrac{{\displaystyle \sum_{i=1}^{M}}X_{i}-Ma}{\sqrt{M}b}\leq\beta\right) &amp; =\dfrac{1}{\sqrt{2\pi}}\int_{\alpha}^{\beta}\exp\left(-\dfrac{1}{2}x^{2}\right)\mathrm{d}x
-\end{align*}\]</span></p>
 </div>
 <div id="thm-5.4" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5.4 </strong></span>Sea <span class="math inline">\(\left\{ X_{i}\right\} _{i=1}^{\infty}\)</span> una sucesión de v.a.i.i.d con media <span class="math inline">\(a\)</span>. Entonces <span class="math display">\[
