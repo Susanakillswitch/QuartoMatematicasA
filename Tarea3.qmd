@@ -8,6 +8,21 @@ Si $X\thicksim N(\mu,\sigma)$ entonces $\left(\dfrac{X-\mu}{\sigma}\right)\thick
 
 :::{.proof}
 Calculemos la función característica de la variable $\dfrac{X-\mu}{\sigma}$,
+
+$$
+
+     \begin{aligned}
+    \varphi_{\frac{X-\mu}{\sigma}}(t) & = & E\left[e^{it\left(\frac{X-\mu}{\sigma}\right)}\right]\nonumber\\
+    & = & E\left[e^{\left(\frac{itX}{\sigma}-\frac{it\mu}{\sigma}\right)}\right]\nonumber\\
+    & = & e^{-\frac{it\mu}{\sigma}}E\left[e^{\left(\frac{itX}{\sigma}\right)}\right]\nonumber\\
+    & = & e^{-\frac{it\mu}{\sigma}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+    & = & e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+    & = & e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+    & = & e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{(x-\mu)^{2}-2itx\sigma}{\sigma^{2}}}dx
+     \end{aligned}
+$${#eq-1.1}
+
+
 \begin{eqnarray}\label{1.1}
 \varphi_{\frac{X-\mu}{\sigma}}(t) & = & E\left[e^{it\left(\frac{X-\mu}{\sigma}\right)}\right]\nonumber\\
 & = & E\left[e^{\left(\frac{itX}{\sigma}-\frac{it\mu}{\sigma}\right)}\right]\nonumber\\
@@ -27,7 +42,7 @@ Observemos que,
 & = & \left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\mu}{\sigma}+t^{2}.
 \end{eqnarray}
 
-Sustituyendo (\ref{1.2}) en (\ref{1.1}), resulta 
+Sustituyendo (\ref{1.2}) en (@eq-{1.1}), resulta 
 
 \begin{eqnarray}\label{1.3}
 \varphi_{\frac{X-\mu}{\sigma}}(t) & = & e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\left[\left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\mu}{\sigma}+t^{2}\right]}dx\nonumber\\

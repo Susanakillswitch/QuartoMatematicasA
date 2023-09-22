@@ -181,7 +181,19 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="theorem-title"><strong>Exercise 5.1 (Ejercicio 1:) </strong></span>Si <span class="math inline">\(X\thicksim N(\mu,\sigma)\)</span> entonces <span class="math inline">\(\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Calculemos la función característica de la variable <span class="math inline">\(\dfrac{X-\mu}{\sigma}\)</span>, <span class="math display">\[\begin{eqnarray}\label{1.1}
+<p><span class="proof-title"><em>Proof</em>. </span>Calculemos la función característica de la variable <span class="math inline">\(\dfrac{X-\mu}{\sigma}\)</span>,</p>
+<p>$$</p>
+<pre><code> \begin{aligned}
+\varphi_{\frac{X-\mu}{\sigma}}(t) &amp; = &amp; E\left[e^{it\left(\frac{X-\mu}{\sigma}\right)}\right]\nonumber\\
+&amp; = &amp; E\left[e^{\left(\frac{itX}{\sigma}-\frac{it\mu}{\sigma}\right)}\right]\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}E\left[e^{\left(\frac{itX}{\sigma}\right)}\right]\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\nonumber\\
+&amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{(x-\mu)^{2}-2itx\sigma}{\sigma^{2}}}dx
+ \end{aligned}</code></pre>
+<p>$${#eq-1.1}</p>
+<p><span class="math display">\[\begin{eqnarray}\label{1.1}
 \varphi_{\frac{X-\mu}{\sigma}}(t) &amp; = &amp; E\left[e^{it\left(\frac{X-\mu}{\sigma}\right)}\right]\nonumber\\
 &amp; = &amp; E\left[e^{\left(\frac{itX}{\sigma}-\frac{it\mu}{\sigma}\right)}\right]\nonumber\\
 &amp; = &amp; e^{-\frac{it\mu}{\sigma}}E\left[e^{\left(\frac{itX}{\sigma}\right)}\right]\nonumber\\
@@ -197,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 &amp; = &amp; \left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\sigma\mu}{\sigma^{2}}-\frac{(it\sigma)^{2}}{\sigma^{2}}\nonumber\\
 &amp; = &amp; \left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\mu}{\sigma}+t^{2}.
 \end{eqnarray}\]</span></p>
-<p>Sustituyendo (<span class="math inline">\(\ref{1.2}\)</span>) en (<span class="math inline">\(\ref{1.1}\)</span>), resulta</p>
+<p>Sustituyendo (<span class="math inline">\(\ref{1.2}\)</span>) en (<span class="citation" data-cites="eq">(<a href="references.html#ref-eq" role="doc-biblioref"><strong>eq?</strong></a>)</span>-{1.1}), resulta</p>
 <p><span class="math display">\[\begin{eqnarray}\label{1.3}
 \varphi_{\frac{X-\mu}{\sigma}}(t) &amp; = &amp; e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\left[\left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}-\frac{2 it\mu}{\sigma}+t^{2}\right]}dx\nonumber\\
 &amp; = &amp; e^{-\frac{it\mu}{\sigma}}e^{\frac{it\mu}{\sigma}-\frac{t^{2}}{2}}\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{1}{2}\left(\frac{x}{\sigma}-\left(\frac{\mu+it\sigma}{\sigma}\right)\right)^{2}}dx\nonumber\\
