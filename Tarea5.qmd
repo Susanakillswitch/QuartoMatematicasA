@@ -8,6 +8,31 @@ E[|W(t)-W(s)|^{2}]=|t-s|.
 $$
 
 :::
+::: {.proof}
+Consideremos dos casos:\\
+Si $t>s$. 
+$$
+\begin{align*}
+E\left[\left|W\left(t\right)-W\left(s\right)\right|^{2}\right] & =E\left[\left(W\left(t\right)-W\left(s\right)\right)^{2}\right]\\
+ & =t-s,
+\end{align*}
+$$
+ya que, $W(t)-W(s)\thicksim N(0,t-s)$.\\
+Mientras que si $t\leq s$. 
+$$
+\begin{align*}
+E\left[\left(W\left(t\right)-W\left(s\right)\right)^{2}\right] & =E\left[\left(W\left(s\right)-W\left(t\right)\right)^{2}\right]\\
+ & =s-t,
+\end{align*}
+$$
+
+por lo tanto 
+$$
+
+E\left[\left|W\left(t\right)-W\left(s\right)\right|^{2}\right]=\left|t-s\right|
+
+$$
+:::
 
 ::: {#exr-2}
 ## Ejercicio 2:
@@ -16,6 +41,33 @@ $$
 W(t_{i+\frac{1}{2}}):=\frac{1}{2}(W(t_{i})+W(t_{i+1}))+\frac{1}{2}\sqrt{\delta t\xi},\quad\xi\thicksim N(0,1)
 $$
 satisface las tres condiciones C1, C2, C3 de la definicion de movimiento Browniano.
+:::
+:::{.proof}
+(C1) Veamos que $W\left(0\right)=0$, cuando $t=0$.\\
+Se tiene por definicion del proceso que,
+$$
+W\left(0\right)=\frac{1}{2}(W(0)+W(0))+\frac{1}{2}\sqrt{\delta(0)\xi}=0.
+$$
+Por la propiedad C1 se satisface.\newline
+\\
+(C2) Que tenga incrementos estacionarios.\\
+Notemos que 
+$$
+\begin{align*}
+W(t_{i+\frac{i}{2}})-W(t_{i}) & = \dfrac{1}{2}\left[W\left(t_{i+1}\right)+W\left(t_{i}\right)\right]+\dfrac{1}{2}\sqrt{\Delta t}\xi-\frac{1}{2}(W(t_{i})+W(t_{i}))\\
+& = \dfrac{1}{2}\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]+\dfrac{1}{2}\sqrt{\Delta t}\xi,
+\end{align*}
+$$
+
+
+Sabemos que la combinación lineal de normales es una nornal. Luego,
+partiendo que $t_{i+1}-t_{i}=\Delta t$.
+\begin{align*}
+E\left[W_{i+\frac{i}{2}}-W_{i}\right] & =0,\\
+\text{Var}\left[W_{i+\frac{i}{2}}-W_{i}\right] & =\dfrac{1}{4}\Delta t+\dfrac{1}{4}\Delta t=\dfrac{1}{2}\Delta t,
+\end{align*}
+
+Por lo tanto $W_{i+\frac{1}{2}}-W_{i}\sim N\left(0,\dfrac{\Delta t}{2}\right)$. 
 :::
 
 ::: {#exr-3}
