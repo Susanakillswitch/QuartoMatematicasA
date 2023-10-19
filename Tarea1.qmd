@@ -1,5 +1,7 @@
 # Tarea 1
-
+::: {#exr-1}
+Se generan variables aleatorias Bernoulli y el histograma de los valores que toma con paremetro $p=0.3$.
+:::
 ```{.python filename="Exploring functions to generate random variables with a Bernoulli distribution.py"}
 import numpy as np
 from scipy.stats import bernoulli
@@ -21,6 +23,10 @@ plt.show()
 ```
 ![Figura 1](figura1.png)
 ![Figura 2](F2.png)
+
+::: {#exr-2}
+Se generan variables aleatorias normales y el histograma de los valores que toma.
+:::
 
 ```{.python filename="Exploring functions to generate random variables with a Gaussian distribution.py"}
 import numpy as np
@@ -54,6 +60,15 @@ plt.show()
 ```
 ![Figura 3](Figure_3.png)
 
+::: {#exr-3}
+Modificando reproducir el gráfico de una distribución gaussiana bivariada con media vectorial $\mu[0.1, 0.5]$ y matriz de covarianza
+$$\Sigma=
+\begin{bmatrix}
+3.0 & 0.3\\
+0.75 & 1.5
+\end{bmatrix}
+$$
+:::
 ```{.python filename="Revising multivariate Gaussian.py"}
 import numpy as np
 import matplotlib.pyplot as plt
@@ -70,7 +85,7 @@ ax.plot(x, y)
 
 x, y = np.mgrid[-5:5:.1, -5:5:.1]
 pos = np.dstack((x, y))
-rv = multivariate_normal([0.5, -0.2], [[2.0, 0.3], [0.3, 0.5]])
+rv = multivariate_normal([0.1, 0.5], [[3.0, 0.3], [0.75, 1.5]])
 fig2 = plt.figure()
 ax2 = fig2.add_subplot(111)
 ax2.contourf(x, y, rv.pdf(pos))

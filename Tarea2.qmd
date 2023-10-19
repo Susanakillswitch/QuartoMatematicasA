@@ -28,16 +28,16 @@ $$
 
 Calculemos la función característica de $Y_{\delta,h}(t)$, donde $\lambda\in\mathbb{R}$ fijo y sea $t=n\delta$ así, $n=t/\delta$. Entonces se tiene que 
 
-\begin{eqnarray}
-    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right] & = & \prod_{j=1}^{n}Ee^{i\lambda X_{j}},\text{ por ser variables independientes,}\nonumber\\
-    & = & (Ee^{i\lambda X_{j}})^{n},\text{ por ser idénticamente distribuidas,}\nonumber\\
-    & = & \frac{1}{2}(e^{i\lambda h}+e^{-i\lambda h})^{n},\nonumber\\
-    & = & (\cos(\lambda h))^{n},\nonumber\\
-    & = & (\cos(\lambda h))^{t/\delta},
-\end{eqnarray}
 $$
-.
-$${#eq-1}
+\begin{align}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right] & = \prod_{j=1}^{n}Ee^{i\lambda X_{j}},\text{ por ser variables independientes,}\nonumber\\
+    & = (Ee^{i\lambda X_{j}})^{n},\text{ por ser idénticamente distribuidas,}\nonumber\\
+    & =  \frac{1}{2}(e^{i\lambda h}+e^{-i\lambda h})^{n},\nonumber\\
+    & =  (\cos(\lambda h))^{n},\nonumber\\
+    & =  (\cos(\lambda h))^{t/\delta},
+\end{align}
+$${#eq-4.1}
+
 Por otro lado, sea $u=\left[\cos\left(\lambda h\right)\right]^{1/\delta}\Rightarrow\ln\left(u\right)=\dfrac{1}{\delta}\ln\left[\cos\left(\lambda h\right)\right]$. 
 
 Usando la expansión 
@@ -47,6 +47,7 @@ $$
 $$
 
 entonces 
+$$
 \begin{eqnarray}
     \ln\left(\cos\left(\lambda h\right)\right) & \approx & \ln\left[1-\dfrac{\left(\lambda h\right)^{2}}{2}+\dfrac{\left(\lambda h\right)^{4}}{4!}\right]\nonumber\\
  & \approx & -\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!}-\frac{1}{2}\left(-\frac{\lambda^{2}h^{2}}{2!}+\frac{\lambda^{4}h^{4}}{4!}\right)^{2}\nonumber\\
@@ -54,6 +55,7 @@ entonces
    & = & -\dfrac{\lambda^{2} h^{2}}{2}+\dfrac{\lambda^{4} h^{4}}{24}-\frac{\lambda^{4}h^{4}}{8}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\nonumber\\
    & = & -\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}
 \end{eqnarray}
+$$
 para una $h$ pequeña, se satisface que, 
 $$
 -\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\approx 0
@@ -63,15 +65,17 @@ Por lo tanto, $\ln\left(\cos\left(\lambda h\right)\right)\approx -\dfrac{\lambda
 Así, para $\delta$ y $h$ pequeña, se tiene que $\ln u\approx \dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)$.\\
 Entonces 
 
+$$
 \begin{equation}
     u\approx\exp\left[\dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)\right]
 \end{equation}
-
-Entonces por la ecuación (@eq-1)
+$$
+Entonces por la ecuación (@eq-4.1),
+$$
 \begin{equation}
     E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right]\approx\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]
 \end{equation}
-
+$$
 
 Calculando el limite
 $$
@@ -80,12 +84,14 @@ $$
 
 Asumamos que $\delta\to0$, $h\to0$ pero $h^{2}/\delta\to\infty$. Entonces $\lim_{\delta\to0} Y_{\delta, h}(t)$ no existe. Por otro lado, consideremos la siguiente renormalización, 
 
+$$
 \begin{eqnarray}
     E\exp\left[i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2\delta}\right] & = & E\left[\exp (i\lambda Y_{n,\delta}\left(t\right))\exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\right]\nonumber\\
     & = & \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)E\exp\left[ i\lambda Y_{n,\delta}\left(t\right)\right]\nonumber\\
     & \approx & \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]\nonumber\\
     & = & \exp\left(-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right)
 \end{eqnarray}
+$$
 
 Así, si $\delta,h\to0$ de tal manera que $h^{2}/\delta\to\infty$ y $h^{4}/\delta\to0$, entonces
 $$

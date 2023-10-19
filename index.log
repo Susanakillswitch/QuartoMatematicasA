@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.10) (preloaded format=xelatex 2023.8.31)  18 OCT 2023 11:35
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.10) (preloaded format=xelatex 2023.8.31)  19 OCT 2023 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,8 +675,8 @@ Package: amsthm 2020/05/29 v2.20.6
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 )
 Class scrreprt Info: amsthm's \deferred@thm@head patched.
-\c@exercise=\count323
-\c@theorem=\count324
+\c@theorem=\count323
+\c@exercise=\count324
 (C:\Users\susy_\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
@@ -1470,9 +1470,9 @@ chapter 2.
 ]
 chapter 3.
 Package hyperref Info: bookmark level for unknown codelisting defaults to 0 on 
-input line 274.
+input line 281.
 
-Underfull \hbox (badness 1748) in paragraph at lines 274--274
+Underfull \hbox (badness 1748) in paragraph at lines 281--281
 []\TU/lmr/bx/n/10.95 Listing 3.1 \TU/lmtt/m/n/10.95 Exploring functions to gene
 rate random variables with a Bernoulli
  []
@@ -1482,141 +1482,25 @@ File: figura1.png Graphic file (type bmp)
 File: F2.png Graphic file (type bmp)
 <F2.png>
 
-Overfull \hbox (408.71985pt too wide) in paragraph at lines 299--300
+Overfull \hbox (408.71985pt too wide) in paragraph at lines 306--307
 [][] [] 
  []
-
-
-Underfull \hbox (badness 6236) in paragraph at lines 303--303
-[]\TU/lmr/bx/n/10.95 Listing 3.2 \TU/lmtt/m/n/10.95 Exploring functions to gene
-rate random variables with a Gaussian
- []
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 336.
-
-
-LaTeX Warning: Float too large for page by 4731.71991pt on input line 338.
 
 [6
 
 ]
+Underfull \hbox (badness 6236) in paragraph at lines 317--317
+[]\TU/lmr/bx/n/10.95 Listing 3.2 \TU/lmtt/m/n/10.95 Exploring functions to gene
+rate random variables with a Gaussian
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: Figure_3.png Graphic file (type bmp)
 <Figure_3.png>
 
-LaTeX Warning: Float too large for page by 102.69238pt on input line 404.
+LaTeX Warning: Float too large for page by 135.07324pt on input line 431.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1628,129 +1512,12 @@ File: Figure_5.png Graphic file (type bmp)
 File: Figure_6.png Graphic file (type bmp)
 <Figure_6.png>
 
-Overfull \hbox (10.97221pt too wide) in paragraph at lines 406--408
+Overfull \hbox (10.97221pt too wide) in paragraph at lines 433--435
 [] 
  []
 
-[7] [8] [9] [10] [11] [12
-
-] [13]
+[7] [8] [9] [10] [11] [12] [13]
 chapter 4.
-[14
-
-]
-
-LaTeX Warning: Reference `eq-1' on page 15 undefined on input line 484.
-
-[15] [16]
-chapter 5.
-
-Overfull \hbox (145.36105pt too wide) in paragraph at lines 529--529
-[]\TU/lmtt/m/n/10.95 \varphi_{\frac{X-\mu}{\sigma}}(t) & =  E\left[e^{it\left(\
-frac{X-\mu}{\sigma}\right)}\right]\nonumber\\[] 
- []
-
-
-Overfull \hbox (41.8836pt too wide) in paragraph at lines 530--530
-[]\TU/lmtt/m/n/10.95 & = E\left[e^{\left(\frac{itX}{\sigma}-\frac{it\mu}{\sigma
-}\right)}\right]\nonumber\\[] 
- []
-
-
-Overfull \hbox (70.62732pt too wide) in paragraph at lines 531--531
-[]\TU/lmtt/m/n/10.95 & =  e^{-\frac{it\mu}{\sigma}}E\left[e^{\left(\frac{itX}{\
-sigma}\right)}\right]\nonumber\\[] 
- []
-
-
-Overfull \hbox (421.30096pt too wide) in paragraph at lines 532--532
-[]\TU/lmtt/m/n/10.95 & =  e^{-\frac{it\mu}{\sigma}}\int_{-\infty}^{\infty}e^{\f
-rac{itx}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}
-}dx\nonumber\\[] 
- []
-
-
-Overfull \hbox (421.30096pt too wide) in paragraph at lines 533--533
-[]\TU/lmtt/m/n/10.95 & =  e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\
-int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}
-}dx\nonumber\\[] 
- []
-
-
-Overfull \hbox (398.30597pt too wide) in paragraph at lines 534--534
-[]\TU/lmtt/m/n/10.95 & =  e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\
-int_{-\infty}^{\infty}e^{\frac{itx}{\sigma}-\frac{(x-\mu)^{2}}{2\sigma^{2}}}dx\
-nonumber\\[] 
- []
-
-
-Overfull \hbox (352.316pt too wide) in paragraph at lines 535--535
-[]\TU/lmtt/m/n/10.95 & =  e^{-\frac{it\mu}{\sigma}}\frac{1}{\sigma\sqrt{2\pi}}\
-int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{(x-\mu)^{2}-2itx\sigma}{\sigma^{2}}}
-dx[] 
- []
-
-[17
-
-]
-
-LaTeX Warning: Reference `1.2' on page 18 undefined on input line 558.
-
-
-LaTeX Warning: Reference `1.3' on page 18 undefined on input line 568.
-
-
-LaTeX Warning: Reference `1.4' on page 18 undefined on input line 574.
-
-[18]
-
-LaTeX Warning: Reference `2.2' on page 19 undefined on input line 612.
-
-
-LaTeX Warning: Reference `2.1' on page 19 undefined on input line 612.
-
-
-LaTeX Warning: Reference `2.3' on page 19 undefined on input line 624.
-
-[19]
-
-LaTeX Warning: Reference `3.1' on page 20 undefined on input line 664.
-
-[20] [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 799--800
-
- []
-
-[23] [24] [25] [26]
-chapter 6.
-
-Overfull \hbox (23.37697pt too wide) detected at line 940
-[]
- []
-
-
-Overfull \hbox (10.95pt too wide) in paragraph at lines 940--940
-[] 
- []
-
-[27
-
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure_T4-1.png Graphic file (type bmp)
-<Figure_T4-1.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure_2_T4.png Graphic file (type bmp)
-<Figure_2_T4.png>
-[28] [29] [30] [31] [32] [33]
-chapter 7.
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -1759,15 +1526,15 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1112 \end{align*}
-                    
+l.483 \end{align}
+                  
 Here is how much of TeX's memory you used:
- 37841 strings out of 410532
- 775222 string characters out of 2813299
- 1482863 words of memory out of 3000000
- 58503 multiletter control sequences out of 15000+600000
- 475706 words of font info for 80 fonts, out of 8000000 for 9000
+ 37735 strings out of 410532
+ 772963 string characters out of 2813299
+ 1446835 words of memory out of 3000000
+ 58405 multiletter control sequences out of 15000+600000
+ 475690 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,15n,121p,10902b,1285s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 108i,7n,121p,10902b,1252s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on index.pdf (33 pages).
+Output written on index.pdf (13 pages).

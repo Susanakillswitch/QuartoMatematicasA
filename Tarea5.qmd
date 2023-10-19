@@ -118,29 +118,170 @@ $$
 satisface las tres condiciones que define un movimiento Browniano.
 :::
 :::{.proof}
-
+Observemos que 
+$$
+t_{i+\alpha}=\alpha t_{i+1}+(1-\alpha)t_{i},
+$$ 
+y
+$$
+W(t_{i+\alpha})-W(t_{i}) \sim \alpha\sqrt{ dt}N(0,1)
+$$
+Definamos a
+$$
+W(t_{i+\alpha})=W\left(t_{i}+\alpha\Delta t\right) :=\left(1-\alpha\right)W(t_{i})+\alpha W(t_{i+1})+Y.
+$$
+donde $Y$ será una v.a independiente de $W\left(t\right)$.\
+Dado que,
+$$
+\begin{align*}
+W(t_{i+\alpha})-W(t_{i}) & =\left(1-\alpha\right)W(t_{i})+\alpha W(t_{i+1})+Y-W_{i}\\
+ & =\alpha\left(W_{i+1}-W(t_{i})\right)+Y.
+\end{align*}
+$$
+Entonces, 
+$$
+E\left[W(t_{i+\alpha})-W(t_{i})\right]-E[\alpha\left(W(t_{i+1})-W(t_{i})\right)]=E\left[Y\right]\Longrightarrow E[Y]=0,
+$$
+y
+$$
+Var\left[W(t_{i+\alpha})-W(t_{i})\right]=\alpha^{2}d t+Var\left[Y\right],
+$$
+Así,
+$$
+Var\left[Y\right]=d t\left(\alpha-\alpha^{2}\right),
+$$
+entonces $Y=\sqrt{\alpha\left(1-\alpha\right)dt}\xi,\xi\sim N\left(0,1\right)$.\
+Con esto se cumple $C1$.
+$$
+W\left(0\right)=0.
+$$
+y por construcción análogamente que el ejercicio anterior se satisfacen las propiedades C2 y C3.
 :::
 
 
 ::: {#exr-4}
-Suponga que $X\thicksim N(0,1)$. Sabemos que $E[X]=0$ y $E(X^{2})=1$. Además de la definción, el pésimo-momento satisface 
+Suponga que $X\thicksim N(0,1)$, sabemos que $E[X]=0$ y $E(X^{2})=1$.\
+Además de la definción, el pésimo-momento satisface 
 $$
 E[X^{p}]=\frac{1}{\pi}\int_{-\infty}^{\infty}x^{p}\exp(-x^{2}/2)dx.
 $$
-Usando esta relación, demuestre que $E[X^{3}]=0$ y $E[X^{4}]$. Entonces deduce que un incremento Browniano $\delta W_{i}:=W(t_{i+1})-W(t_{i})$ satisface $-E[\delta Wt_{i}^{3}]=0$ $-E[\delta Wt_{i}^{4}]=3\delta t{2}$. Entonces encuentre una expresion para $E[X^{p}]$ para un entero positivo $p$ 
+Usando esta relación, demuestre que $E[X^{3}]=0$ y $E[X^{4}]=3$. Entonces deduce que un incremento Browniano $\delta W_{i}:=W(t_{i+1})-W(t_{i})$ satisface que $E[\delta Wt_{i}^{3}]=0$ y $E[\delta Wt_{i}^{4}]=3\delta t^{2}$. Entonces encuentre una expresion para $E[X^{p}]$ para un entero positivo $p$ 
 :::
 :::{.proof}
-
+De la definición del $p$-esimo momento se tiene para $p=4$, que
+$$
+E\left[X^{4}\right]=\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}x^{4}\exp\left(-\frac{x^{2}}{2}\right)d x.
+$$
+resolviendo esta integral por el método integración por partes, se tiene que $E\left[X^{4}\right]=uv-\int vdu$ , donde $u=x^{3}\Longrightarrow du=3x^{2}dx$ y $dv=x\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx$, calculemos primero $v$,
+$$
+\begin{eqnarray*}
+v & = & \int x\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
+& = & \dfrac{1}{\sqrt{2\pi}}\int x\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\quad\text{ sea } y=-\dfrac{x^{2}}{2}\Longrightarrow dy=-xdx\\
+& = & -\dfrac{1}{\sqrt{2\pi}}\int \exp{\left(y\right)}dy\\
+& = & -\dfrac{1}{\sqrt{2\pi}} \exp{\left(y\right)}\\
+& = &  -\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}.
+\end{eqnarray*}
+$$
+Sustituyendo todo lo anterior se tiene que,
+$$
+\begin{eqnarray*}
+    E\left[X^{4}\right] & = & \left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}-\int_{-\infty}^{\infty} -\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}3x^{2}dx\\
+     & = & \left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}+3\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} x^{2}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
+     & = & \left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}+3E[X^{2}],
+\end{eqnarray*}
+$$
+por otro lado,
+$$
+\left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}=\lim_{x\to\infty}-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}+\lim_{x\to-\infty}x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}=0.
+$$
+Por lo tanto, dado que $E[X^{2}]=1$, se concluye que
+$$ 
+E\left[X^{4}\right]=3.
+$$
+Procediendo de igual manera que el caso anterior, se tiene que:
+$$
+E\left[X^{3}\right]=\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}x^{3}\exp\left(-\frac{x^{2}}{2}\right)d x.
+$$
+tomando $u=x^{2}\Longrightarrow du=2xdx$ y $dv$, $v$ igual al caso anterior, se tiene que
+$$
+\begin{eqnarray*}
+    E\left[X^{3}\right] & = & \left.-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}-\int_{-\infty}^{\infty} -2x\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
+     & = & \left.-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}+2E[X]\\
+     & = & 0,
+\end{eqnarray*}
+$$
+usando el hecho que $E[X]=0$ y
+$$
+\left.-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}=\lim_{x\to\infty}-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}+\lim_{x\to-\infty}x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}=0.
+$$
+Por lo tanto,
+$$
+ E\left[X^{3}\right]=0.
+ $$
+De manera general se tiene que,
+$$
+\begin{eqnarray*}
+    E\left[X^{p}\right] & = & \left.-x^{p-1}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}-\int_{-\infty}^{\infty} -(p-1)x^{p-2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
+     & = & 0+(p-1)E[X^{p-2}]\\
+     & = & (p-1)E[X^{p-2}].
+\end{eqnarray*}
+$$
+Por otro lado, observemos que $\delta W_{i}\sim N\left(0,\delta t\right)$, donde $\delta t=t_{i+1}-t_{i}$, entonces
+$$
+Z=\dfrac{\delta W_{i}}{\sqrt{\delta t}}\sim N\left(0,1\right),
+$$
+que por lo visto anteriormente, para $p=4$. 
+$$
+E\left[Z^{4}\right]=3\Longrightarrow E[(\delta W_{i})^{4}]=E[Z^{4}](\delta t )^{2}=3(\delta t )^{2}
+$$
+y para $p=3$, resulta
+$$
+E[Z^{3}]=0\Longrightarrow E[(\delta W_{i})^{3}]=E[Z^{3}](\delta t )^{3/2}=0.
+$$
 :::
 
 ::: {#exr-5}
-## Ejercicio 5:
+
 Suponga que $X\thicksim N(0,1)$. Demuestre que para $a, b\in\mathbb{R}$,
 $$
 E[\exp(a+bX)]=\exp\left(a+\frac{1}{2}b^{2}\right).
 $$
-Por lo tanto dedusca que
+Por lo tanto deduzca que
 $$
 E[\exp(t+\frac{1}{4}W_{t})]=\exp\left(\frac{32}{33}t\right).
+$$
+:::
+
+:::{.proof}
+Se tiene que
+$$
+E\left[\exp\left(a+bX\right)\right]=\exp{(a)}E\left[\exp\left(bX\right)\right],
+$$
+observemos que $bX\sim N\left(0,b^{2}\right)$ además, $E\left[\exp\left(bX\right)\right]$ es la función
+generadora de momentos cuando $t=1$ 
+$$
+M_{bX}\left(1\right)=E\left[\exp\left(bX\right)\right]=\exp\left(\dfrac{b^{2}}{2}\right),
+$$
+sustituyendo, resulta
+$$
+E\left[\exp\left(a+bX\right)\right]=\exp{(a)}\exp\left(\dfrac{b^{2}}{2}\right)=\exp\left(a+\dfrac{1}{2}b^{2}\right).
+$$
+Ahora calculemos $E\left[\exp\left(t+\dfrac{1}{4}W_{t}\right)\right]$, se tiene que,
+$$
+E\left[\exp\left(t+\dfrac{1}{4}W_{t}\right)\right]=E\left[\exp\left(t+\dfrac{1}{4}\left(W_{t}-W_{0}\right)\right)\right],
+$$
+entonces consideremos a $\dfrac{W_{t}-W_{0}}{\sqrt{t}}$, observemos que, $\dfrac{W_{t}-W_{0}}{\sqrt{t}}\sim N\left(0,1\right),$ por lo tanto, podemos usar
+la fórmula anterior con $a=t$ y $b=\dfrac{1}{4}\sqrt{t}$,
+$$
+\begin{align*}
+E\left[\exp\left(t+\dfrac{1}{4}\left(W_{t}-W_{0}\right)\right)\right] & = E\left[\exp\left(t+\dfrac{1}{4}\sqrt{t}\left(\dfrac{W_{t}-W_{0}}{\sqrt{t}}\right)\right)\right]\\
+& =\exp\left(t+\dfrac{1}{2}\left(\dfrac{1}{16}t\right)\right)\\
+ & =\exp\left(t+\dfrac{1}{32}t\right)\\
+ & =\exp\left(\dfrac{33}{32}t\right).
+\end{align*}
+$$
+Por lo tanto se concluye que,
+$$
+E\left[\exp\left(t+\dfrac{1}{4}W_{t}\right)\right]=\exp\left(\dfrac{33}{32}t\right).
 $$
 :::
