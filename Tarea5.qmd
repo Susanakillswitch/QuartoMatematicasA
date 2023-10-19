@@ -1,7 +1,6 @@
 # Tarea 5
 
 ::: {#exr-1}
-## Ejercicio 1:
 Demuestre que el movimiento browniano satisface 
 $$
 E[|W(t)-W(s)|^{2}]=|t-s|.
@@ -9,7 +8,7 @@ $$
 
 :::
 ::: {.proof}
-Consideremos dos casos:\\
+Consideremos dos casos:\
 Si $t>s$. 
 $$
 \begin{align*}
@@ -17,7 +16,7 @@ E\left[\left|W\left(t\right)-W\left(s\right)\right|^{2}\right] & =E\left[\left(W
  & =t-s,
 \end{align*}
 $$
-ya que, $W(t)-W(s)\thicksim N(0,t-s)$.\\
+ya que, $W(t)-W(s)\thicksim N(0,t-s)$.\
 Mientras que si $t\leq s$. 
 $$
 \begin{align*}
@@ -28,14 +27,11 @@ $$
 
 por lo tanto 
 $$
-
 E\left[\left|W\left(t\right)-W\left(s\right)\right|^{2}\right]=\left|t-s\right|
-
 $$
 :::
 
 ::: {#exr-2}
-## Ejercicio 2:
 Dados $W(t_{i})$ y $W(t_{i+1})$, demuestre que la variable aleatoria 
 $$
 W(t_{i+\frac{1}{2}}):=\frac{1}{2}(W(t_{i})+W(t_{i+1}))+\frac{1}{2}\sqrt{\delta t\xi},\quad\xi\thicksim N(0,1)
@@ -43,14 +39,14 @@ $$
 satisface las tres condiciones C1, C2, C3 de la definicion de movimiento Browniano.
 :::
 :::{.proof}
-(C1) Veamos que $W\left(0\right)=0$, cuando $t=0$.\\
+(C1) Veamos que $W\left(0\right)=0$, cuando $t=0$.\
 Se tiene por definicion del proceso que,
 $$
 W\left(0\right)=\frac{1}{2}(W(0)+W(0))+\frac{1}{2}\sqrt{\delta(0)\xi}=0.
 $$
-Por la propiedad C1 se satisface.\newline
-\\
-(C2) Que tenga incrementos estacionarios.\\
+Por la propiedad C1 se satisface.\
+\
+(C2) Que tenga incrementos estacionarios.\
 Notemos que 
 $$
 \begin{align*}
@@ -79,15 +75,15 @@ Var\left[W(t_{i+\frac{1}{2}})-W(t_{i})\right]& = & Var\left[\dfrac{1}{2}\left[W\
 $$
 
 Además, sabemos que la combinación lineal de normales es una nornal.\\
-Por lo tanto $W(t_{i+\frac{i}{2}})-W(t_{i})\sim N\left(0,\dfrac{\delta t}{2}\right)$, con esto C2 se cumple.\newline
-\\
-(C3) Que tenga incrementos independientes.\\
+Por lo tanto $W(t_{i+\frac{i}{2}})-W(t_{i})\sim N\left(0,\dfrac{\delta t}{2}\right)$, con esto C2 se cumple.\
+\
+(C3) Que tenga incrementos independientes.\
 Para esta parte usaremos que dos variables aleatorias $X$ y $Y$ son independientes si y solo si 
 $$ 
 E(XY)=E(X)E(Y)
 $$
 
-calculemos $ E\left[\left(W\left(t_{i+1}\right)-W\left(t_{i+\frac{1}{2}}\right)\right)\left(W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\right)\right]$ y definamos a $\Delta W(t_{i}):=W(t_{i+1})-W(t_{i})$.\\
+calculemos $ E\left[\left(W\left(t_{i+1}\right)-W\left(t_{i+\frac{1}{2}}\right)\right)\left(W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\right)\right]$ y definamos a $\Delta W(t_{i}):=W(t_{i+1})-W(t_{i})$.\
 Por lo anterior se tiene que:
 $$
 \begin{eqnarray*}
@@ -100,40 +96,41 @@ $$
 \begin{eqnarray*}
 E\left[\left(\Delta W(t_{i+\frac{1}{2}})\right)\left(\Delta W(t_{j+\frac{1}{2}})\right)\right]& = & E\left[\dfrac{1}{4}\Delta W(t_{i})\Delta W(t_{j})+\dfrac{1}{4}\Delta W(t_{i})\sqrt{\delta t}\xi\right.\\
 & & \left.+\dfrac{1}{4}\Delta W(t_{j})\sqrt{\delta t}\xi+\left(\frac{1}{2}\sqrt{\delta t}\xi\right)^{2}\right]\\
-\text{ya que, }\Delta W(t_{i}),\Delta W(t_{j})\text{ son independientes} & = & \dfrac{1}{4}E\left[\Delta W(t_{i})\right]E\left[\Delta W(t_{j})\right]+\dfrac{1}{4}E\left[\Delta W(t_{i})\right]\sqrt{\delta t}E\left[\xi\right]\\
- & & +\dfrac{1}{4}E\left[\Delta W(t_{j})\right]\sqrt{\delta t}E\left[\xi\right]+\dfrac{\delta t}{4}\left(E\left[\xi\right]\right)^{2}\\
-  & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\dfrac{1}{2}\Delta W(t_{j})+\frac{1}{2}\sqrt{\delta t}\xi\right]\\
-  & & +E\left[\dfrac{1}{2}\Delta W(t_{j})\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]+\dfrac{\delta t}{4}\left(E\left[\xi\right]\right)^{2}\\
-  & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]\\
-  & & +E\left[\dfrac{1}{2}\Delta W(t_{j})\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]+\dfrac{\delta t}{4}\left(E\left[\xi\right]\right)^{2}\\
- & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]\\
- & & +E\left[\dfrac{1}{2}\Delta W(t_{j})+\frac{1}{2}\sqrt{\delta t}\xi\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]\\
- & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]\\
- & & +E\left[\Delta W(t_{j+\frac{1}{2}})\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]\\
+\text{ya que, }\Delta W(t_{i}),\Delta W(t_{j})\text{ son independientes} & = & \dfrac{1}{4}E\left[\Delta W(t_{i})\right]E\left[\Delta W(t_{j})\right]+\dfrac{1}{4}E\left[\Delta W(t_{i})\right]\sqrt{\delta t}E\left[\xi\right]+\dfrac{1}{4}E\left[\Delta W(t_{j})\right]\sqrt{\delta t}E\left[\xi\right]+\dfrac{\delta t}{4}\left(E\left[\xi\right]\right)^{2}\\
+  & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\dfrac{1}{2}\Delta W(t_{j})+\frac{1}{2}\sqrt{\delta t}\xi\right]+E\left[\dfrac{1}{2}\Delta W(t_{j})\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]+\dfrac{\delta t}{4}\left(E\left[\xi\right]\right)^{2}\\
+  & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]+E\left[\dfrac{1}{2}\Delta W(t_{j})\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]+\dfrac{\delta t}{4}\left(E\left[\xi\right]\right)^{2}\\
+ & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right] +E\left[\dfrac{1}{2}\Delta W(t_{j})+\frac{1}{2}\sqrt{\delta t}\xi\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]\\
+ & = & E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]+E\left[\Delta W(t_{j+\frac{1}{2}})\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]\\
  & = & E\left[\dfrac{1}{2}\Delta W(t_{i})+\frac{1}{2}\sqrt{\delta t}\xi\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]\\
  & = & E\left[\Delta W(t_{i+\frac{1}{2}})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right].
 \end{eqnarray*}
 $$
 
-Por lo tanto $E\left[\left(\Delta W(t_{i+\frac{1}{2}})\right)\left(\Delta W(t_{j+\frac{1}{2}})\right)\right]= E\left[\Delta W(t_{i+\frac{1}{2}})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]$, con lo que se concluye que se satisface la propiedad C3.\\
+Por lo tanto $E\left[\left(\Delta W(t_{i+\frac{1}{2}})\right)\left(\Delta W(t_{j+\frac{1}{2}})\right)\right]= E\left[\Delta W(t_{i+\frac{1}{2}})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]$, con lo que se concluye que se satisface la propiedad C3.
 Con todo lo anterior se concluye que $W(t_{i+\frac{1}{2}})$ define un Movimiento Browniano.
+:::
 
 ::: {#exr-3}
-## Ejercicio 3:
-Generalice la formula en el {@exr-3} para el caso, dado $W(t_{i}), W(t_{i+1})$, y $\alpha\in(0,1)$ el valor 
+Generalice la formula en el {@exr-2} para el caso, dado $W(t_{i}), W(t_{i+1})$, y $\alpha\in(0,1)$ el valor 
 $$
 W(t_{i}+\alpha dt)
 $$
-satisface las tres condiciones que definie un movimiento Browniano.
+satisface las tres condiciones que define un movimiento Browniano.
+:::
+:::{.proof}
+
 :::
 
+
 ::: {#exr-4}
-## Ejercicio 4:
 Suponga que $X\thicksim N(0,1)$. Sabemos que $E[X]=0$ y $E(X^{2})=1$. Además de la definción, el pésimo-momento satisface 
 $$
 E[X^{p}]=\frac{1}{\pi}\int_{-\infty}^{\infty}x^{p}\exp(-x^{2}/2)dx.
 $$
 Usando esta relación, demuestre que $E[X^{3}]=0$ y $E[X^{4}]$. Entonces deduce que un incremento Browniano $\delta W_{i}:=W(t_{i+1})-W(t_{i})$ satisface $-E[\delta Wt_{i}^{3}]=0$ $-E[\delta Wt_{i}^{4}]=3\delta t{2}$. Entonces encuentre una expresion para $E[X^{p}]$ para un entero positivo $p$ 
+:::
+:::{.proof}
+
 :::
 
 ::: {#exr-5}
