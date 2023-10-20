@@ -1,6 +1,6 @@
 # Tarea 4
 
-## Ejercicio 1
+::: {#exr-1}
 
 Sea $W(t)$ un movimiento Browniano estándar en $[0,T]$. Pruebe que para cualquier $c>0$ fijo, 
 $$
@@ -8,27 +8,31 @@ V(t) = \dfrac{1}{c} W(c^2 t)
 $$
 
 es un movimiento Browniano sobre $[0,T]$. 
+:::
 
-### Demostración
-Veamos que $V$ cumple las propiedades del movimiento Browniano. 
-
-#### Propiedad 1 (Que comience en 0)
-Se tiene que, $V(0) = \dfrac{1}{c} W (c^2\cdot0)=0$.
-
-#### Propiedad 2 (Incrementos Independientes)
+:::{.proof}
+\
+Veamos que $V$ cumple las propiedades del movimiento Browniano.\ 
+\
+Propiedad C1 (Que comience en 0).\
+Se tiene que, $V(0) = \dfrac{1}{c} W (c^2\cdot0)=0$.\
+\
+Propiedad C2 (Incrementos Independientes).\
 Sean $s<t<u<v$, por definición de $V$, se tiene que,
 $$
 E[\left(V(t)-V(s)\right)\left(V(v)-V(u)\right)]=\dfrac{1}{c^2}E[\left(W(c^2 t)-W(c^2 s)\right)\left(W(c^2 v)-W(c^2 u)\right)]
 $$ 
 
-Dado que $W$ tiene incrementos independientes, se cumple que.
+Dado que $W$ tiene incrementos independientes, se cumple que,
+$$
 \begin{align*}
 \dfrac{1}{c^{2}}E\left[\left(W(c^{2}t)-W(c^{2}s)\right)\left(W(c^{2}v)-W(c^{2}u)\right)\right] & =\dfrac{1}{c^{2}}E\left[\left(W(c^{2}t)-W(c^{2}s)\right)\right]E\left[\left(W(c^{2}v)-W(c^{2}u)\right)\right]
 \end{align*}
+$$
 
-Entonces $V$ tiene incrementos independientes.
-
-#### Propiedad 3 (Incrementos estacionarios)
+Entonces $V$ tiene incrementos independientes.\
+\
+Propiedad C3 (Incrementos estacionarios).\
 Sea $s<t$. 
 $$
 V(t)-V(s)=\dfrac{1}{c}\left[W(c^2 t) - W(c^2 s)\right]
@@ -36,17 +40,22 @@ $$
 
 Por las propiedades de la definicion del movimiento Browniano.
 
+$$
 \begin{align*}
 E\left[V(t)-V(s)\right] & =\dfrac{1}{c}E\left[W(c^{2}t)-W(c^{2}s)\right]=0\\
 \text{Var}\left[V(t)-V(s)\right] & =\dfrac{1}{c^{2}}\text{Var}\left[W(c^{2}t)-W(c^{2}s)\right]=\dfrac{1}{c^{2}}\left(c^{2}\left(t-s\right)\right)=t-s
 \end{align*}
+$$
 
 Entonces $V$ tiene incrementos estacionarios. 
 
 Con todo lo anterior se concluye que, $V$ es un movimiento browniano.
+:::
 
-## Ejercicio 2
+::: {#exr-2}
 Hacer un script para ilustrar la propiedad de escalado del movimiento Browniano para el caso de $c = \dfrac{1}{5}$. Estar seguro que usa el mismo camino browniano discretizado en cada subplot.
+:::
+
 ```{.python filename="Browniano escalado, con c=1/5.py"}
 import numpy as np
 import matplotlib.pyplot as plt
@@ -73,9 +82,10 @@ plt.show()
 ![Figura 1](Figure_T4-1.png)
 
 
-## Ejercicio 3
+::: {#exr-3}
 
 Modifique el script `half_brownian_refinement.py` encapsulando el código en una función. Esta función deberá recibir el extremo derecho del intervalo $[0, T]$ y el número de incrementos $N$ de un camino browniano base. El propósito es calcular los incrementos de relleno de una refinamiento con $2N$ incrementos. 
+:::
 
 ```{.python filename="Browniano refinado, con refinamiento 2N.py"}
 import numpy as np
@@ -100,9 +110,10 @@ def refined_brownian_2n(T,L):
 
 ```
 
-## Ejercicio 4
+::: {#exr-4}
 
 En un script separado, incluya la función de arriba y grafique una figura con la trayectoria del browniano con 100 incrementos y muestre su refinamiento correspondiente.
+:::
 
 ````{.python filename="Browniano refinado, con refinamiento 2N y 100 incrementos.py"}
 import numpy as np

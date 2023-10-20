@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <div id="exr-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5.1 (Ejercicio 1:) </strong></span>Si <span class="math inline">\(X\thicksim N(\mu,\sigma^{2})\)</span> entonces <span class="math inline">\(\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 5.1 </strong></span>Si <span class="math inline">\(X\thicksim N(\mu,\sigma^{2})\)</span> entonces <span class="math inline">\(\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Calculemos la función característica de la variable <span class="math inline">\(\dfrac{X-\mu}{\sigma}\)</span>,</p>
@@ -437,7 +437,7 @@ F_{M}\left(b\right)-F_{M}\left(a\right)  \to F_{N}\left(b\right)-F_{N}\left(a\ri
 <p>Sin perdida de generalidad, diremos que <span class="math inline">\(X_{i}\geq0,\forall i\)</span>. Definamos <span class="math display">\[
 Y_{n}=X_{n}I_{\left[\left|X_{n}\right|\leq n\right]},Q_{n}=\sum_{i=1}^{n}Y_{i}
 \]</span></p>
-<p>Por la desigualdad de <span class="math display">\[
+<p>Por la desigualdad de Chebyshev <span class="math display">\[
 \begin{align*}
 \sum_{n=1}^{\infty}\mathcal{P}\left[\left|\dfrac{Q_{n}-E\left[Q_{n}\right]}{n}\right|\geq\epsilon\right] &amp; \leq\sum_{n=1}^{\infty}\dfrac{\text{Var}\left(Q_{n}\right)}{\epsilon^{2}n^{2}}=\sum_{n=1}^{\infty}\dfrac{1}{\epsilon^{2}n^{2}}\sum_{i=1}^{n}\text{Var}\left(Y_{i}\right)\\
 &amp; \leq\sum_{n=1}^{\infty}\dfrac{E\left(Y_{n}^{2}\right)}{\epsilon^{2}n^{2}}=\sum_{n=1}^{\infty}\dfrac{1}{\epsilon^{2}n^{2}}\int_{0}^{n}x^{2}\mathrm{d}F\\

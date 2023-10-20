@@ -227,7 +227,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -545,7 +545,7 @@ Así, si \(\delta,h\to0\) de tal manera que \(h^{2}/\delta\to\infty\) y
 \hypertarget{tarea-3}{%
 \chapter{Tarea 3}\label{tarea-3}}
 
-\begin{exercise}[Ejercicio 1:]\protect\hypertarget{exr-1}{}\label{exr-1}
+\begin{exercise}[]\protect\hypertarget{exr-1}{}\label{exr-1}
 
 Si \(X\thicksim N(\mu,\sigma^{2})\) entonces
 \(\left(\dfrac{X-\mu}{\sigma}\right)\thicksim N(0,1)\).
@@ -924,7 +924,7 @@ Definamos \[
 Y_{n}=X_{n}I_{\left[\left|X_{n}\right|\leq n\right]},Q_{n}=\sum_{i=1}^{n}Y_{i}
 \]
 
-Por la desigualdad de \[
+Por la desigualdad de Chebyshev \[
 \begin{align*}
 \sum_{n=1}^{\infty}\mathcal{P}\left[\left|\dfrac{Q_{n}-E\left[Q_{n}\right]}{n}\right|\geq\epsilon\right] & \leq\sum_{n=1}^{\infty}\dfrac{\text{Var}\left(Q_{n}\right)}{\epsilon^{2}n^{2}}=\sum_{n=1}^{\infty}\dfrac{1}{\epsilon^{2}n^{2}}\sum_{i=1}^{n}\text{Var}\left(Y_{i}\right)\\
 & \leq\sum_{n=1}^{\infty}\dfrac{E\left(Y_{n}^{2}\right)}{\epsilon^{2}n^{2}}=\sum_{n=1}^{\infty}\dfrac{1}{\epsilon^{2}n^{2}}\int_{0}^{n}x^{2}\mathrm{d}F\\
@@ -971,8 +971,7 @@ X_{i} & =Y_{i},\text{c.s}\\
 \hypertarget{tarea-4}{%
 \chapter{Tarea 4}\label{tarea-4}}
 
-\hypertarget{ejercicio-1-1}{%
-\section{Ejercicio 1}\label{ejercicio-1-1}}
+\begin{exercise}[]\protect\hypertarget{exr-1}{}\label{exr-1}
 
 Sea \(W(t)\) un movimiento Browniano estándar en \([0,T]\). Pruebe que
 para cualquier \(c>0\) fijo, \[
@@ -981,57 +980,55 @@ V(t) = \dfrac{1}{c} W(c^2 t)
 
 es un movimiento Browniano sobre \([0,T]\).
 
-\hypertarget{demostraciuxf3n-1}{%
-\subsection{Demostración}\label{demostraciuxf3n-1}}
+\end{exercise}
 
-Veamos que \(V\) cumple las propiedades del movimiento Browniano.
+\begin{proof}
 
-\hypertarget{propiedad-1-que-comience-en-0}{%
-\subsubsection{Propiedad 1 (Que comience en
-0)}\label{propiedad-1-que-comience-en-0}}
-
-Se tiene que, \(V(0) = \dfrac{1}{c} W (c^2\cdot0)=0\).
-
-\hypertarget{propiedad-2-incrementos-independientes}{%
-\subsubsection{Propiedad 2 (Incrementos
-Independientes)}\label{propiedad-2-incrementos-independientes}}
-
+\hfill\break
+Veamos que \(V\) cumple las propiedades del movimiento Browniano.~\\
+Propiedad C1 (Que comience en 0).\\
+Se tiene que, \(V(0) = \dfrac{1}{c} W (c^2\cdot0)=0\).\\
+\strut \\
+Propiedad C2 (Incrementos Independientes).\\
 Sean \(s<t<u<v\), por definición de \(V\), se tiene que, \[
 E[\left(V(t)-V(s)\right)\left(V(v)-V(u)\right)]=\dfrac{1}{c^2}E[\left(W(c^2 t)-W(c^2 s)\right)\left(W(c^2 v)-W(c^2 u)\right)]
 \]
 
-Dado que \(W\) tiene incrementos independientes, se cumple que.
+Dado que \(W\) tiene incrementos independientes, se cumple que, \[
 \begin{align*}
 \dfrac{1}{c^{2}}E\left[\left(W(c^{2}t)-W(c^{2}s)\right)\left(W(c^{2}v)-W(c^{2}u)\right)\right] & =\dfrac{1}{c^{2}}E\left[\left(W(c^{2}t)-W(c^{2}s)\right)\right]E\left[\left(W(c^{2}v)-W(c^{2}u)\right)\right]
 \end{align*}
+\]
 
-Entonces \(V\) tiene incrementos independientes.
-
-\hypertarget{propiedad-3-incrementos-estacionarios}{%
-\subsubsection{Propiedad 3 (Incrementos
-estacionarios)}\label{propiedad-3-incrementos-estacionarios}}
-
+Entonces \(V\) tiene incrementos independientes.\\
+\strut \\
+Propiedad C3 (Incrementos estacionarios).\\
 Sea \(s<t\). \[
 V(t)-V(s)=\dfrac{1}{c}\left[W(c^2 t) - W(c^2 s)\right]
 \]
 
 Por las propiedades de la definicion del movimiento Browniano.
 
+\[
 \begin{align*}
 E\left[V(t)-V(s)\right] & =\dfrac{1}{c}E\left[W(c^{2}t)-W(c^{2}s)\right]=0\\
 \text{Var}\left[V(t)-V(s)\right] & =\dfrac{1}{c^{2}}\text{Var}\left[W(c^{2}t)-W(c^{2}s)\right]=\dfrac{1}{c^{2}}\left(c^{2}\left(t-s\right)\right)=t-s
 \end{align*}
+\]
 
 Entonces \(V\) tiene incrementos estacionarios.
 
 Con todo lo anterior se concluye que, \(V\) es un movimiento browniano.
 
-\hypertarget{ejercicio-2}{%
-\section{Ejercicio 2}\label{ejercicio-2}}
+\end{proof}
+
+\begin{exercise}[]\protect\hypertarget{exr-2}{}\label{exr-2}
 
 Hacer un script para ilustrar la propiedad de escalado del movimiento
 Browniano para el caso de \(c = \dfrac{1}{5}\). Estar seguro que usa el
 mismo camino browniano discretizado en cada subplot.
+
+\end{exercise}
 
 \begin{codelisting}
 
@@ -1074,14 +1071,15 @@ mismo camino browniano discretizado en cada subplot.
 
 \end{figure}
 
-\hypertarget{ejercicio-3}{%
-\section{Ejercicio 3}\label{ejercicio-3}}
+\begin{exercise}[]\protect\hypertarget{exr-3}{}\label{exr-3}
 
 Modifique el script \texttt{half\_brownian\_refinement.py} encapsulando
 el código en una función. Esta función deberá recibir el extremo derecho
 del intervalo \([0, T]\) y el número de incrementos \(N\) de un camino
 browniano base. El propósito es calcular los incrementos de relleno de
 una refinamiento con \(2N\) incrementos.
+
+\end{exercise}
 
 \begin{codelisting}
 
@@ -1113,12 +1111,13 @@ una refinamiento con \(2N\) incrementos.
 
 \end{codelisting}
 
-\hypertarget{ejercicio-4-1}{%
-\section{Ejercicio 4}\label{ejercicio-4-1}}
+\begin{exercise}[]\protect\hypertarget{exr-4}{}\label{exr-4}
 
 En un script separado, incluya la función de arriba y grafique una
 figura con la trayectoria del browniano con 100 incrementos y muestre su
 refinamiento correspondiente.
+
+\end{exercise}
 
 \begin{codelisting}
 
@@ -1230,8 +1229,8 @@ Var\left[W(t_{i+\frac{1}{2}})-W(t_{i})\right]& = & Var\left[\dfrac{1}{2}\left[W\
 \end{eqnarray}
 \]
 
-Además, sabemos que la combinación lineal de normales es una
-nornal.\textbackslash{} Por lo tanto
+Además, sabemos que la combinación lineal de normales es una nornal.\\
+Por lo tanto
 \(W(t_{i+\frac{i}{2}})-W(t_{i})\sim N\left(0,\dfrac{\delta t}{2}\right)\),
 con esto C2 se cumple.\\
 \strut \\
@@ -1241,8 +1240,8 @@ independientes si y solo si \[
 E(XY)=E(X)E(Y)
 \]
 
-calculemos \$
-E\left[\left(W\left(t_{i+1}\right)-W\left(t_{i+\frac{1}{2}}\right)\right)\left(W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\right)\right]\$
+calculemos
+\(E\left[\left(W\left(t_{i+1}\right)-W\left(t_{i+\frac{1}{2}}\right)\right)\left(W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\right)\right]\)
 y definamos a \(\Delta W(t_{i}):=W(t_{i+1})-W(t_{i})\).\\
 Por lo anterior se tiene que: \[
 \begin{eqnarray*}

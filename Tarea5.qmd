@@ -74,7 +74,7 @@ Var\left[W(t_{i+\frac{1}{2}})-W(t_{i})\right]& = & Var\left[\dfrac{1}{2}\left[W\
 \end{eqnarray}
 $$
 
-Además, sabemos que la combinación lineal de normales es una nornal.\\
+Además, sabemos que la combinación lineal de normales es una nornal.\
 Por lo tanto $W(t_{i+\frac{i}{2}})-W(t_{i})\sim N\left(0,\dfrac{\delta t}{2}\right)$, con esto C2 se cumple.\
 \
 (C3) Que tenga incrementos independientes.\
@@ -83,7 +83,7 @@ $$
 E(XY)=E(X)E(Y)
 $$
 
-calculemos $ E\left[\left(W\left(t_{i+1}\right)-W\left(t_{i+\frac{1}{2}}\right)\right)\left(W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\right)\right]$ y definamos a $\Delta W(t_{i}):=W(t_{i+1})-W(t_{i})$.\
+calculemos $E\left[\left(W\left(t_{i+1}\right)-W\left(t_{i+\frac{1}{2}}\right)\right)\left(W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\right)\right]$ y definamos a $\Delta W(t_{i}):=W(t_{i+1})-W(t_{i})$.\
 Por lo anterior se tiene que:
 $$
 \begin{eqnarray*}
