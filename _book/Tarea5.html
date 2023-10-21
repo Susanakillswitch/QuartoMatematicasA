@@ -190,18 +190,17 @@ E[|W(t)-W(s)|^{2}]=|t-s|.
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Consideremos dos casos:<br>
-Si <span class="math inline">\(t&gt;s\)</span>. <span class="math display">\[
-\begin{align*}
+Si <span class="math inline">\(t&gt;s\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
 E\left[\left|W\left(t\right)-W\left(s\right)\right|^{2}\right] &amp; =E\left[\left(W\left(t\right)-W\left(s\right)\right)^{2}\right]\\
 &amp; =t-s,
-\end{align*}
-\]</span> ya que, <span class="math inline">\(W(t)-W(s)\thicksim N(0,t-s)\)</span>.<br>
-Mientras que si <span class="math inline">\(t\leq s\)</span>. <span class="math display">\[
-\begin{align*}
+\end{align*}\]</span></p>
+<p>ya que, <span class="math inline">\(W(t)-W(s)\thicksim N(0,t-s)\)</span>.<br>
+Mientras que si <span class="math inline">\(t\leq s\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
 E\left[\left(W\left(t\right)-W\left(s\right)\right)^{2}\right] &amp; =E\left[\left(W\left(s\right)-W\left(t\right)\right)^{2}\right]\\
 &amp; =s-t,
-\end{align*}
-\]</span></p>
+\end{align*}\]</span></p>
 <p>por lo tanto <span class="math display">\[
 E\left[\left|W\left(t\right)-W\left(s\right)\right|^{2}\right]=\left|t-s\right|
 \]</span></p>
@@ -218,27 +217,26 @@ W\left(0\right)=\frac{1}{2}(W(0)+W(0))+\frac{1}{2}\sqrt{\delta(0)\xi}=0.
 \]</span> Por la propiedad C1 se satisface.<br>
 <br>
 (C2) Que tenga incrementos estacionarios.<br>
-Notemos que <span class="math display">\[
-\begin{align*}
+Notemos que</p>
+<p><span class="math display">\[\begin{align*}
 W(t_{i+\frac{1}{2}})-W(t_{i}) &amp; = \dfrac{1}{2}\left[W\left(t_{i+1}\right)+W\left(t_{i}\right)\right]+\dfrac{1}{2}\sqrt{\delta t}\xi-\frac{1}{2}(W(t_{i})+W(t_{i}))\\
 &amp; = \dfrac{1}{2}\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]+\dfrac{1}{2}\sqrt{\delta t}\xi,
-\end{align*}
-\]</span> Entonces <span class="math display">\[
-\begin{eqnarray*}
+\end{align*}\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[\begin{eqnarray*}
 E\left[W(t_{i+\frac{1}{2}})-W(t_{i})\right] &amp; = &amp; E\left[\dfrac{1}{2}\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]+\dfrac{1}{2}\sqrt{\delta t}\xi\right]\\
 &amp; = &amp; E\left[\dfrac{1}{2}\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]\right]+E\left[\dfrac{1}{2}\sqrt{\delta t}\xi\right]\\
 &amp; = &amp; \dfrac{1}{2}E\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]+\dfrac{1}{2}\sqrt{\delta t}E\left[\xi\right]\\
 &amp; = &amp; 0\quad\text{ya que, }E\left[\xi\right]=0\text{ y }E\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]=0.
-\end{eqnarray*}
-\]</span> y <span class="math display">\[
-\begin{eqnarray}
+\end{eqnarray*}\]</span></p>
+<p>y</p>
+<p><span class="math display">\[\begin{eqnarray}
 Var\left[W(t_{i+\frac{1}{2}})-W(t_{i})\right]&amp; = &amp; Var\left[\dfrac{1}{2}\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]+\dfrac{1}{2}\sqrt{\delta t}\xi\right]\\
 &amp; = &amp; Var\left[\dfrac{1}{2}\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]\right]+Var\left[\dfrac{1}{2}\sqrt{\delta t}\xi\right]\\
 &amp; = &amp; \dfrac{1}{4}Var\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]+\dfrac{1}{4}\delta t Var\left[\xi\right]\\
 &amp; = &amp; \dfrac{1}{4}\delta t+\dfrac{1}{4}\delta t\quad\text{ya que, }Var\left[\xi\right]=1\text{ y }Var\left[W\left(t_{i+1}\right)-W\left(t_{i}\right)\right]=\delta t\\
 &amp; = &amp; \dfrac{1}{2}\delta t.
-\end{eqnarray}
-\]</span></p>
+\end{eqnarray}\]</span></p>
 <p>Además, sabemos que la combinación lineal de normales es una nornal.<br>
 Por lo tanto <span class="math inline">\(W(t_{i+\frac{i}{2}})-W(t_{i})\sim N\left(0,\dfrac{\delta t}{2}\right)\)</span>, con esto C2 se cumple.<br>
 <br>
@@ -247,12 +245,12 @@ Para esta parte usaremos que dos variables aleatorias <span class="math inline">
 E(XY)=E(X)E(Y)
 \]</span></p>
 <p>calculemos <span class="math inline">\(E\left[\left(W\left(t_{i+1}\right)-W\left(t_{i+\frac{1}{2}}\right)\right)\left(W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\right)\right]\)</span> y definamos a <span class="math inline">\(\Delta W(t_{i}):=W(t_{i+1})-W(t_{i})\)</span>.<br>
-Por lo anterior se tiene que: <span class="math display">\[
-\begin{eqnarray*}
+Por lo anterior se tiene que:</p>
+<p><span class="math display">\[\begin{eqnarray*}
     E\left[\left(\Delta W\left(t_{i+\frac{1}{2}}\right)\right)\left(\Delta W\left(t_{j+\frac{1}{2}}\right)\right)\right]&amp; = &amp; E\left[\left(\dfrac{1}{2}\Delta W\left(t_{i}\right)+\frac{1}{2}\sqrt{\delta t}\xi\right)\left(\dfrac{1}{2}\Delta W\left(t_{j}\right)+\frac{1}{2}\sqrt{\delta t}\xi\right)\right],
-\end{eqnarray*}
-\]</span> donde <span class="math inline">\(\Delta W\left(t_{i+\frac{1}{2}}\right)=W(t_{i+1})-W\left(t_{i+\frac{1}{2}}\right)\)</span> y <span class="math inline">\(\Delta W\left(t_{j+\frac{1}{2}}\right)=W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\)</span>.\ Desarrollando la parte derecha de la igualdad anterior, resulta <span class="math display">\[
-\begin{eqnarray*}
+\end{eqnarray*}\]</span></p>
+<p>donde <span class="math inline">\(\Delta W\left(t_{i+\frac{1}{2}}\right)=W(t_{i+1})-W\left(t_{i+\frac{1}{2}}\right)\)</span> y <span class="math inline">\(\Delta W\left(t_{j+\frac{1}{2}}\right)=W(t_{j+1})-W\left(t_{j+\frac{1}{2}}\right)\)</span>.\ Desarrollando la parte derecha de la igualdad anterior, resulta</p>
+<p><span class="math display">\[\begin{eqnarray*}
 E\left[\left(\Delta W(t_{i+\frac{1}{2}})\right)\left(\Delta W(t_{j+\frac{1}{2}})\right)\right]&amp; = &amp; E\left[\dfrac{1}{4}\Delta W(t_{i})\Delta W(t_{j})+\dfrac{1}{4}\Delta W(t_{i})\sqrt{\delta t}\xi\right.\\
 &amp; &amp; \left.+\dfrac{1}{4}\Delta W(t_{j})\sqrt{\delta t}\xi+\left(\frac{1}{2}\sqrt{\delta t}\xi\right)^{2}\right]\\
 \text{ya que, }\Delta W(t_{i}),\Delta W(t_{j})\text{ son independientes} &amp; = &amp; \dfrac{1}{4}E\left[\Delta W(t_{i})\right]E\left[\Delta W(t_{j})\right]+\dfrac{1}{4}E\left[\Delta W(t_{i})\right]\sqrt{\delta t}E\left[\xi\right]+\dfrac{1}{4}E\left[\Delta W(t_{j})\right]\sqrt{\delta t}E\left[\xi\right]+\dfrac{\delta t}{4}\left(E\left[\xi\right]\right)^{2}\\
@@ -262,12 +260,11 @@ E\left[\left(\Delta W(t_{i+\frac{1}{2}})\right)\left(\Delta W(t_{j+\frac{1}{2}})
 &amp; = &amp; E\left[\dfrac{1}{2}\Delta W(t_{i})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]+E\left[\Delta W(t_{j+\frac{1}{2}})\right]\frac{1}{2}\sqrt{\delta t}E\left[\xi\right]\\
 &amp; = &amp; E\left[\dfrac{1}{2}\Delta W(t_{i})+\frac{1}{2}\sqrt{\delta t}\xi\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]\\
 &amp; = &amp; E\left[\Delta W(t_{i+\frac{1}{2}})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right].
-\end{eqnarray*}
-\]</span></p>
+\end{eqnarray*}\]</span></p>
 <p>Por lo tanto <span class="math inline">\(E\left[\left(\Delta W(t_{i+\frac{1}{2}})\right)\left(\Delta W(t_{j+\frac{1}{2}})\right)\right]= E\left[\Delta W(t_{i+\frac{1}{2}})\right]E\left[\Delta W(t_{j+\frac{1}{2}})\right]\)</span>, con lo que se concluye que se satisface la propiedad C3. Con todo lo anterior se concluye que <span class="math inline">\(W(t_{i+\frac{1}{2}})\)</span> define un Movimiento Browniano.</p>
 </div>
 <div id="exr-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.3 </strong></span>Generalice la formula en el {<a href="#exr-2">Exercise&nbsp;<span class="quarto-unresolved-ref">exr-2</span></a>} para el caso, dado <span class="math inline">\(W(t_{i}), W(t_{i+1})\)</span>, y <span class="math inline">\(\alpha\in(0,1)\)</span> el valor <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercise 7.3 </strong></span>Generalice la formula en el {<a href="#exr-2">Exercise&nbsp;<span>7.2</span></a>} para el caso, dado <span class="math inline">\(W(t_{i}), W(t_{i+1})\)</span>, y <span class="math inline">\(\alpha\in(0,1)\)</span> el valor <span class="math display">\[
 W(t_{i}+\alpha dt)
 \]</span> satisface las tres condiciones que define un movimiento Browniano.</p>
 </div>
@@ -279,12 +276,11 @@ W(t_{i+\alpha})-W(t_{i}) \sim \alpha\sqrt{ dt}N(0,1)
 \]</span> Definamos a <span class="math display">\[
 W(t_{i+\alpha})=W\left(t_{i}+\alpha\Delta t\right) :=\left(1-\alpha\right)W(t_{i})+\alpha W(t_{i+1})+Y.
 \]</span> donde <span class="math inline">\(Y\)</span> será una v.a independiente de <span class="math inline">\(W\left(t\right)\)</span>.<br>
-Dado que, <span class="math display">\[
-\begin{align*}
+Dado que,</p>
+<p><span class="math display">\[\begin{align*}
 W(t_{i+\alpha})-W(t_{i}) &amp; =\left(1-\alpha\right)W(t_{i})+\alpha W(t_{i+1})+Y-W_{i}\\
 &amp; =\alpha\left(W_{i+1}-W(t_{i})\right)+Y.
-\end{align*}
-\]</span></p>
+\end{align*}\]</span></p>
 <p>Entonces, <span class="math display">\[
 E\left[W(t_{i+\alpha})-W(t_{i})\right]-E[\alpha\left(W(t_{i+1})-W(t_{i})\right)]=E\left[Y\right]\Longrightarrow E[Y]=0,
 \]</span> y <span class="math display">\[
@@ -305,43 +301,42 @@ E[X^{p}]=\frac{1}{\pi}\int_{-\infty}^{\infty}x^{p}\exp(-x^{2}/2)dx.
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>De la definición del <span class="math inline">\(p\)</span>-esimo momento se tiene para <span class="math inline">\(p=4\)</span>, que <span class="math display">\[
 E\left[X^{4}\right]=\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}x^{4}\exp\left(-\frac{x^{2}}{2}\right)d x.
-\]</span> resolviendo esta integral por el método integración por partes, se tiene que <span class="math inline">\(E\left[X^{4}\right]=uv-\int vdu\)</span> , donde <span class="math inline">\(u=x^{3}\Longrightarrow du=3x^{2}dx\)</span> y <span class="math inline">\(dv=x\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\)</span>, calculemos primero <span class="math inline">\(v\)</span>, <span class="math display">\[
-\begin{eqnarray*}
+\]</span> resolviendo esta integral por el método integración por partes, se tiene que <span class="math inline">\(E\left[X^{4}\right]=uv-\int vdu\)</span> , donde <span class="math inline">\(u=x^{3}\Longrightarrow du=3x^{2}dx\)</span> y <span class="math inline">\(dv=x\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\)</span>, calculemos primero <span class="math inline">\(v\)</span>,</p>
+<p><span class="math display">\[\begin{eqnarray*}
 v &amp; = &amp; \int x\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
 &amp; = &amp; \dfrac{1}{\sqrt{2\pi}}\int x\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\quad\text{ sea } y=-\dfrac{x^{2}}{2}\Longrightarrow dy=-xdx\\
 &amp; = &amp; -\dfrac{1}{\sqrt{2\pi}}\int \exp{\left(y\right)}dy\\
 &amp; = &amp; -\dfrac{1}{\sqrt{2\pi}} \exp{\left(y\right)}\\
 &amp; = &amp;  -\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}.
-\end{eqnarray*}
-\]</span> Sustituyendo todo lo anterior se tiene que, <span class="math display">\[
-\begin{eqnarray*}
+\end{eqnarray*}\]</span></p>
+<p>Sustituyendo todo lo anterior se tiene que,</p>
+<p><span class="math display">\[\begin{eqnarray*}
     E\left[X^{4}\right] &amp; = &amp; \left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}-\int_{-\infty}^{\infty} -\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}3x^{2}dx\\
      &amp; = &amp; \left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}+3\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} x^{2}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
      &amp; = &amp; \left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}+3E[X^{2}],
-\end{eqnarray*}
-\]</span> por otro lado, <span class="math display">\[
+\end{eqnarray*}\]</span></p>
+<p>por otro lado, <span class="math display">\[
 \left.-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}=\lim_{x\to\infty}-x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}+\lim_{x\to-\infty}x^{3}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}=0.
 \]</span> Por lo tanto, dado que <span class="math inline">\(E[X^{2}]=1\)</span>, se concluye que <span class="math display">\[
 E\left[X^{4}\right]=3.
 \]</span> Procediendo de igual manera que el caso anterior, se tiene que: <span class="math display">\[
 E\left[X^{3}\right]=\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}x^{3}\exp\left(-\frac{x^{2}}{2}\right)d x.
-\]</span> tomando <span class="math inline">\(u=x^{2}\Longrightarrow du=2xdx\)</span> y <span class="math inline">\(dv\)</span>, <span class="math inline">\(v\)</span> igual al caso anterior, se tiene que <span class="math display">\[
-\begin{eqnarray*}
+\]</span> tomando <span class="math inline">\(u=x^{2}\Longrightarrow du=2xdx\)</span> y <span class="math inline">\(dv\)</span>, <span class="math inline">\(v\)</span> igual al caso anterior, se tiene que</p>
+<p><span class="math display">\[\begin{eqnarray*}
     E\left[X^{3}\right] &amp; = &amp; \left.-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}-\int_{-\infty}^{\infty} -2x\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
      &amp; = &amp; \left.-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}+2E[X]\\
      &amp; = &amp; 0,
-\end{eqnarray*}
-\]</span> usando el hecho que <span class="math inline">\(E[X]=0\)</span> y <span class="math display">\[
+\end{eqnarray*}\]</span></p>
+<p>usando el hecho que <span class="math inline">\(E[X]=0\)</span> y <span class="math display">\[
 \left.-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}=\lim_{x\to\infty}-x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}+\lim_{x\to-\infty}x^{2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}=0.
 \]</span> Por lo tanto, <span class="math display">\[
 E\left[X^{3}\right]=0.
-\]</span> De manera general se tiene que, <span class="math display">\[
-\begin{eqnarray*}
+\]</span> De manera general se tiene que,</p>
+<p><span class="math display">\[\begin{eqnarray*}
     E\left[X^{p}\right] &amp; = &amp; \left.-x^{p-1}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}\right|_{-\infty}^{\infty}-\int_{-\infty}^{\infty} -(p-1)x^{p-2}\dfrac{1}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^{2}}{2}\right)}dx\\
      &amp; = &amp; 0+(p-1)E[X^{p-2}]\\
      &amp; = &amp; (p-1)E[X^{p-2}].
-\end{eqnarray*}
-\]</span></p>
+\end{eqnarray*}\]</span></p>
 <p>Por otro lado, observemos que <span class="math inline">\(\delta W_{i}\sim N\left(0,\delta t\right)\)</span>, donde <span class="math inline">\(\delta t=t_{i+1}-t_{i}\)</span>, entonces <span class="math display">\[
 Z=\dfrac{\delta W_{i}}{\sqrt{\delta t}}\sim N\left(0,1\right),
 \]</span></p>
@@ -362,20 +357,21 @@ E[\exp(t+\frac{1}{4}W_{t})]=\exp\left(\frac{32}{33}t\right).
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Se tiene que <span class="math display">\[
 E\left[\exp\left(a+bX\right)\right]=\exp{(a)}E\left[\exp\left(bX\right)\right],
-\]</span> observemos que <span class="math inline">\(bX\sim N\left(0,b^{2}\right)\)</span> además, <span class="math inline">\(E\left[\exp\left(bX\right)\right]\)</span> es la función generadora de momentos cuando <span class="math inline">\(t=1\)</span> <span class="math display">\[
+\]</span></p>
+<p>observemos que <span class="math inline">\(bX\sim N\left(0,b^{2}\right)\)</span> además, <span class="math inline">\(E\left[\exp\left(bX\right)\right]\)</span> es la función generadora de momentos cuando <span class="math inline">\(t=1\)</span> <span class="math display">\[
 M_{bX}\left(1\right)=E\left[\exp\left(bX\right)\right]=\exp\left(\dfrac{b^{2}}{2}\right),
 \]</span> sustituyendo, resulta <span class="math display">\[
 E\left[\exp\left(a+bX\right)\right]=\exp{(a)}\exp\left(\dfrac{b^{2}}{2}\right)=\exp\left(a+\dfrac{1}{2}b^{2}\right).
 \]</span> Ahora calculemos <span class="math inline">\(E\left[\exp\left(t+\dfrac{1}{4}W_{t}\right)\right]\)</span>, se tiene que, <span class="math display">\[
 E\left[\exp\left(t+\dfrac{1}{4}W_{t}\right)\right]=E\left[\exp\left(t+\dfrac{1}{4}\left(W_{t}-W_{0}\right)\right)\right],
-\]</span> entonces consideremos a <span class="math inline">\(\dfrac{W_{t}-W_{0}}{\sqrt{t}}\)</span>, observemos que, <span class="math inline">\(\dfrac{W_{t}-W_{0}}{\sqrt{t}}\sim N\left(0,1\right),\)</span> por lo tanto, podemos usar la fórmula anterior con <span class="math inline">\(a=t\)</span> y <span class="math inline">\(b=\dfrac{1}{4}\sqrt{t}\)</span>, <span class="math display">\[
-\begin{align*}
+\]</span> entonces consideremos a <span class="math inline">\(\dfrac{W_{t}-W_{0}}{\sqrt{t}}\)</span>, observemos que, <span class="math inline">\(\dfrac{W_{t}-W_{0}}{\sqrt{t}}\sim N\left(0,1\right),\)</span> por lo tanto, podemos usar la fórmula anterior con <span class="math inline">\(a=t\)</span> y <span class="math inline">\(b=\dfrac{1}{4}\sqrt{t}\)</span>,</p>
+<p><span class="math display">\[\begin{align*}
 E\left[\exp\left(t+\dfrac{1}{4}\left(W_{t}-W_{0}\right)\right)\right] &amp; = E\left[\exp\left(t+\dfrac{1}{4}\sqrt{t}\left(\dfrac{W_{t}-W_{0}}{\sqrt{t}}\right)\right)\right]\\
 &amp; =\exp\left(t+\dfrac{1}{2}\left(\dfrac{1}{16}t\right)\right)\\
 &amp; =\exp\left(t+\dfrac{1}{32}t\right)\\
 &amp; =\exp\left(\dfrac{33}{32}t\right).
-\end{align*}
-\]</span> Por lo tanto se concluye que, <span class="math display">\[
+\end{align*}\]</span></p>
+<p>Por lo tanto se concluye que, <span class="math display">\[
 E\left[\exp\left(t+\dfrac{1}{4}W_{t}\right)\right]=\exp\left(\dfrac{33}{32}t\right).
 \]</span></p>
 </div>

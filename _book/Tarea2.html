@@ -205,52 +205,48 @@ Y_{\delta,h}(n\delta)=X_{1}+X_{2}+\cdots+X_{n}.
 Y_{\delta,h}(t)=\frac{(n+1)\delta-t}{\delta}Y_{\delta,h}(n\delta)+\frac{t-n\delta}{\delta}Y_{\delta,h}((n+1)\delta).
 \]</span></p>
 <p>Calculemos la función característica de <span class="math inline">\(Y_{\delta,h}(t)\)</span>, donde <span class="math inline">\(\lambda\in\mathbb{R}\)</span> fijo y sea <span class="math inline">\(t=n\delta\)</span> así, <span class="math inline">\(n=t/\delta\)</span>. Entonces se tiene que</p>
-<p><span id="eq-4.1"><span class="math display">\[
-\begin{align}
-    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right] &amp; = \prod_{j=1}^{n}Ee^{i\lambda X_{j}},\text{ por ser variables independientes,}\nonumber\\
-    &amp; = (Ee^{i\lambda X_{j}})^{n},\text{ por ser idénticamente distribuidas,}\nonumber\\
-    &amp; =  \frac{1}{2}(e^{i\lambda h}+e^{-i\lambda h})^{n},\nonumber\\
-    &amp; =  (\cos(\lambda h))^{n},\nonumber\\
-    &amp; =  (\cos(\lambda h))^{t/\delta},
-\end{align}
+<p><span class="math display">\[\begin{eqnarray}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right] &amp; = &amp; \prod_{j=1}^{n}Ee^{i\lambda X_{j}},\text{ por ser variables independientes,}\\
+    &amp; = &amp; (Ee^{i\lambda X_{j}})^{n},\text{ por ser idénticamente distribuidas,}\\
+    &amp; = &amp; \frac{1}{2}(e^{i\lambda h}+e^{-i\lambda h})^{n},\\
+    &amp; = &amp; (\cos(\lambda h))^{n},\\
+    &amp; = &amp; (\cos(\lambda h))^{t/\delta},
+\end{eqnarray}\]</span> <span id="eq-4.1"><span class="math display">\[
+\
 \tag{4.1}\]</span></span></p>
 <p>Por otro lado, sea <span class="math inline">\(u=\left[\cos\left(\lambda h\right)\right]^{1/\delta}\Rightarrow\ln\left(u\right)=\dfrac{1}{\delta}\ln\left[\cos\left(\lambda h\right)\right]\)</span>.</p>
 <p>Usando la expansión de Taylor de <span class="math inline">\(\cos\left(x\right)\)</span> se tiene que <span class="math display">\[
 \cos\left(\lambda h\right)\approx1-\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!},
 \]</span></p>
-<p>entonces <span class="math display">\[
-\begin{eqnarray}
-    \ln\left(\cos\left(\lambda h\right)\right) &amp; \approx &amp; \ln\left[1-\dfrac{\left(\lambda h\right)^{2}}{2}+\dfrac{\left(\lambda h\right)^{4}}{4!}\right]\nonumber\\
-&amp; \approx &amp; -\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!}-\frac{1}{2}\left(-\frac{\lambda^{2}h^{2}}{2!}+\frac{\lambda^{4}h^{4}}{4!}\right)^{2}\nonumber\\
-  &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2!}+\dfrac{\lambda ^{4}h^{4}}{4!}-\frac{1}{2}\left(\frac{\lambda^{4}h^{4}}{4}-\frac{\lambda^{6}h^{6}}{24^{2}}+\frac{\lambda^{8}h^{8}}{24}\right)\nonumber\\
-   &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2}+\dfrac{\lambda^{4} h^{4}}{24}-\frac{\lambda^{4}h^{4}}{8}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\nonumber\\
+<p>entonces</p>
+<p><span class="math display">\[\begin{eqnarray}
+    \ln\left(\cos\left(\lambda h\right)\right) &amp; \approx &amp; \ln\left[1-\dfrac{\left(\lambda h\right)^{2}}{2}+\dfrac{\left(\lambda h\right)^{4}}{4!}\right]\\
+&amp; \approx &amp; -\dfrac{\left(\lambda h\right)^{2}}{2!}+\dfrac{\left(\lambda h\right)^{4}}{4!}-\frac{1}{2}\left(-\frac{\lambda^{2}h^{2}}{2!}+\frac{\lambda^{4}h^{4}}{4!}\right)^{2}\\
+  &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2!}+\dfrac{\lambda ^{4}h^{4}}{4!}-\frac{1}{2}\left(\frac{\lambda^{4}h^{4}}{4}-\frac{\lambda^{6}h^{6}}{24^{2}}+\frac{\lambda^{8}h^{8}}{24}\right)\\
+   &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2}+\dfrac{\lambda^{4} h^{4}}{24}-\frac{\lambda^{4}h^{4}}{8}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\\
    &amp; = &amp; -\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}-\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}
-\end{eqnarray}
-\]</span> para una <span class="math inline">\(h\)</span> pequeña, se satisface que, <span class="math display">\[
+\end{eqnarray}\]</span></p>
+<p>para una <span class="math inline">\(h\)</span> pequeña, se satisface que, <span class="math display">\[
 -\frac{\lambda^{6}h^{6}}{(2)24^{2}}+\frac{\lambda^{8}h^{8}}{48}\approx 0
 \]</span></p>
 <p>Por lo tanto, <span class="math inline">\(\ln\left(\cos\left(\lambda h\right)\right)\approx -\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\)</span>.\ Así, para <span class="math inline">\(\delta\)</span> y <span class="math inline">\(h\)</span> pequeña, se tiene que <span class="math inline">\(\ln u\approx \dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)\)</span>.\ Entonces</p>
-<p><span class="math display">\[
-\begin{equation}
+<p><span class="math display">\[\begin{equation}
     u\approx\exp\left[\dfrac{1}{\delta}\left(-\dfrac{\lambda^{2} h^{2}}{2}-\dfrac{\lambda^{4} h^{4}}{12}\right)\right]
-\end{equation}
-\]</span> Entonces por la ecuación (<a href="#eq-4.1">Equation&nbsp;<span class="quarto-unresolved-ref">eq-4.1</span></a>), <span class="math display">\[
-\begin{equation}
+\end{equation}\]</span></p>
+<p>Entonces por la ecuación (<a href="#eq-4.1">Equation&nbsp;<span>4.1</span></a>),</p>
+<p><span class="math display">\[\begin{equation}
     E\exp\left[i\lambda Y_{n,\delta}\left(t\right)\right]\approx\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]
-\end{equation}
-\]</span></p>
+\end{equation}\]</span></p>
 <p>Calculando el limite <span class="math display">\[
 \lim_{\delta\to0}E\left[\exp\left(i\lambda Y_{n,\delta}\left(t\right)\right)\right]=\lim_{\delta\to0}\exp\left[-t\left(\left[\dfrac{h^{2}}{\delta}\right]\left(\dfrac{\lambda^{2}}{2}-\dfrac{\lambda^{4}h^{2}}{24}\right)\right)\right],
 \]</span></p>
 <p>Asumamos que <span class="math inline">\(\delta\to0\)</span>, <span class="math inline">\(h\to0\)</span> pero <span class="math inline">\(h^{2}/\delta\to\infty\)</span>. Entonces <span class="math inline">\(\lim_{\delta\to0} Y_{\delta, h}(t)\)</span> no existe. Por otro lado, consideremos la siguiente renormalización,</p>
-<p><span class="math display">\[
-\begin{eqnarray}
-    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2\delta}\right] &amp; = &amp; E\left[\exp (i\lambda Y_{n,\delta}\left(t\right))\exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\right]\nonumber\\
-    &amp; = &amp; \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)E\exp\left[ i\lambda Y_{n,\delta}\left(t\right)\right]\nonumber\\
-    &amp; \approx &amp; \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]\nonumber\\
+<p><span class="math display">\[\begin{eqnarray}
+    E\exp\left[i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2\delta}\right] &amp; = &amp; E\left[\exp (i\lambda Y_{n,\delta}\left(t\right))\exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\right]\\
+    &amp; = &amp; \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)E\exp\left[ i\lambda Y_{n,\delta}\left(t\right)\right]\\
+    &amp; \approx &amp; \exp\left(\dfrac{th^{2}\lambda^{2}}{2\delta}\right)\exp\left[-\dfrac{t\lambda^{2} h^{2}}{2\delta}-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right]\\
     &amp; = &amp; \exp\left(-\dfrac{t\lambda^{4} h^{4}}{12\delta}\right)
-\end{eqnarray}
-\]</span></p>
+\end{eqnarray}\]</span></p>
 <p>Así, si <span class="math inline">\(\delta,h\to0\)</span> de tal manera que <span class="math inline">\(h^{2}/\delta\to\infty\)</span> y <span class="math inline">\(h^{4}/\delta\to0\)</span>, entonces <span class="math display">\[
 \lim_{\delta\to0}E\left[\exp\left(i\lambda Y_{n,\delta}\left(t\right)+\dfrac{th^{2}\lambda^{2}}{2}\right)\right]=\lim_{\delta\to0}\exp\left(\dfrac{\left(\lambda h\right)^{4}}{24\delta}\right)=1
 \]</span></p>
