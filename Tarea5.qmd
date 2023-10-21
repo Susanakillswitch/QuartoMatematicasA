@@ -138,6 +138,7 @@ W(t_{i+\alpha})-W(t_{i}) & =\left(1-\alpha\right)W(t_{i})+\alpha W(t_{i+1})+Y-W_
  & =\alpha\left(W_{i+1}-W(t_{i})\right)+Y.
 \end{align*}
 $$
+
 Entonces, 
 $$
 E\left[W(t_{i+\alpha})-W(t_{i})\right]-E[\alpha\left(W(t_{i+1})-W(t_{i})\right)]=E\left[Y\right]\Longrightarrow E[Y]=0,
@@ -167,6 +168,7 @@ E[X^{p}]=\frac{1}{\pi}\int_{-\infty}^{\infty}x^{p}\exp(-x^{2}/2)dx.
 $$
 Usando esta relación, demuestre que $E[X^{3}]=0$ y $E[X^{4}]=3$. Entonces deduce que un incremento Browniano $\delta W_{i}:=W(t_{i+1})-W(t_{i})$ satisface que $E[\delta Wt_{i}^{3}]=0$ y $E[\delta Wt_{i}^{4}]=3\delta t^{2}$. Entonces encuentre una expresion para $E[X^{p}]$ para un entero positivo $p$ 
 :::
+
 :::{.proof}
 De la definición del $p$-esimo momento se tiene para $p=4$, que
 $$
@@ -226,14 +228,17 @@ $$
      & = & (p-1)E[X^{p-2}].
 \end{eqnarray*}
 $$
+
 Por otro lado, observemos que $\delta W_{i}\sim N\left(0,\delta t\right)$, donde $\delta t=t_{i+1}-t_{i}$, entonces
 $$
 Z=\dfrac{\delta W_{i}}{\sqrt{\delta t}}\sim N\left(0,1\right),
 $$
+
 que por lo visto anteriormente, para $p=4$. 
 $$
 E\left[Z^{4}\right]=3\Longrightarrow E[(\delta W_{i})^{4}]=E[Z^{4}](\delta t )^{2}=3(\delta t )^{2}
 $$
+
 y para $p=3$, resulta
 $$
 E[Z^{3}]=0\Longrightarrow E[(\delta W_{i})^{3}]=E[Z^{3}](\delta t )^{3/2}=0.
@@ -257,6 +262,7 @@ Se tiene que
 $$
 E\left[\exp\left(a+bX\right)\right]=\exp{(a)}E\left[\exp\left(bX\right)\right],
 $$
+
 observemos que $bX\sim N\left(0,b^{2}\right)$ además, $E\left[\exp\left(bX\right)\right]$ es la función
 generadora de momentos cuando $t=1$ 
 $$

@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "clase 22 de agosto 2023"
+  title: "Matematicas aplicadas"
   author: "Susana Hernández"
   date: "22/8/2023"
   cover-image: 'cover.png'

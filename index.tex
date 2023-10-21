@@ -212,7 +212,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={clase 22 de agosto 2023},
+  pdftitle={Matematicas aplicadas},
   pdfauthor={Susana Hernández},
   colorlinks=true,
   linkcolor={blue},
@@ -221,13 +221,13 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{clase 22 de agosto 2023}
+\title{Matematicas aplicadas}
 \author{Susana Hernández}
 \date{Invalid Date}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, frame hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, boxrule=0pt, sharp corners, breakable, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -1296,7 +1296,9 @@ Dado que, \[
 W(t_{i+\alpha})-W(t_{i}) & =\left(1-\alpha\right)W(t_{i})+\alpha W(t_{i+1})+Y-W_{i}\\
  & =\alpha\left(W_{i+1}-W(t_{i})\right)+Y.
 \end{align*}
-\] Entonces, \[
+\]
+
+Entonces, \[
 E\left[W(t_{i+\alpha})-W(t_{i})\right]-E[\alpha\left(W(t_{i+1})-W(t_{i})\right)]=E\left[Y\right]\Longrightarrow E[Y]=0,
 \] y \[
 Var\left[W(t_{i+\alpha})-W(t_{i})\right]=\alpha^{2}d t+Var\left[Y\right],
@@ -1371,13 +1373,19 @@ caso anterior, se tiene que \[
      & = & 0+(p-1)E[X^{p-2}]\\
      & = & (p-1)E[X^{p-2}].
 \end{eqnarray*}
-\] Por otro lado, observemos que
+\]
+
+Por otro lado, observemos que
 \(\delta W_{i}\sim N\left(0,\delta t\right)\), donde
 \(\delta t=t_{i+1}-t_{i}\), entonces \[
 Z=\dfrac{\delta W_{i}}{\sqrt{\delta t}}\sim N\left(0,1\right),
-\] que por lo visto anteriormente, para \(p=4\). \[
+\]
+
+que por lo visto anteriormente, para \(p=4\). \[
 E\left[Z^{4}\right]=3\Longrightarrow E[(\delta W_{i})^{4}]=E[Z^{4}](\delta t )^{2}=3(\delta t )^{2}
-\] y para \(p=3\), resulta \[
+\]
+
+y para \(p=3\), resulta \[
 E[Z^{3}]=0\Longrightarrow E[(\delta W_{i})^{3}]=E[Z^{3}](\delta t )^{3/2}=0.
 \]
 
