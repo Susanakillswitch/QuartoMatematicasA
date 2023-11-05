@@ -1,0 +1,15 @@
+::: {#exr-1}
+Cree un scrip para muestrear 10000 rutas del proceso $u(t,W_{t})$ definido en el ejercicio 5.5. Graficar 10 rutas de muestra y la media de 10000 rutas de muestra de este proceso $u(t,W_{t})$.
+:::
+
+::: {.solution}
+The solution.
+:::
+
+::: {#exr-2}
+Siguiendo las ideas para llenar un camino browniano en puntos $t_{i+\frac{1}{2}}:=t_{i}+\frac{1}{2}\delta t$. Haga una función de Python para llenar un camino browniano dada una fracción $\alpha\in(0,1)$ para llenar en los puntos $t_{i+\alpha}:=t_{i}+\alpha\delta t$
+:::
+
+::: {.solution}
+The solution.
+:::
