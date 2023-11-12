@@ -19,9 +19,9 @@ w_ = np.roll(w, -1)  # w_i+1, recorer las casillas, el -1 significa que te recor
 w_alpha = alpha * w_ + (1 - alpha) * w # es un vector que tiene como elementos w_{i+\alpha}
 w_alpha = np.delete(w_alpha, -1) # estamos elimando el ultimo que no es un incremento del vector W_{\alpha}
 w_alpha += y # una forma para sumar vectores, para completar el ajuste
-w_ref = np.zeros(2* n_points -1) # definiendo otro vector browniano completo (refinado)
+w_ref = np.zeros(2* n_points -1) # definiendo otro vector browniano completo (refinado) para almacenar las nueva trayectoria las alphas
 
-w_ref[0::2] = w # rellenamos con los elemntos de w en ods pasos
+w_ref[0::2] = w # rellenamos con los elemntos de w en dos pasos
 w_ref[1::2] = w_alpha
 
 time_ref = np.zeros(2 * n_points - 1) # particiones refinadas
