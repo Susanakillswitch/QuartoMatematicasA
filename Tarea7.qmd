@@ -1,0 +1,12 @@
+# Tarea 7
+
+::: {#exr-1}
+
+Sea $W(t)$ un Movimiento Browniano y $Z_{i}$ una colección de variables aleatorias i.i.d, con distribución $N\left(0,\frac{\delta t}{4}\right)$.\
+Pruebe que la suma
+$$
+\sum_{i=0}^{L}Z_{i}\left(W(t_{i+1})-W(t_{i})\right),
+$$
+tiene valor esperado igual a cero y una varianza de $O(\delta t)$.
+
+:::
