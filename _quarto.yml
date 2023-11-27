@@ -16,6 +16,9 @@ book:
     - Tarea3.qmd
     - Tarea4.qmd
     - Tarea5.qmd
+    - Tarea6.qmd
+    - Tarea7.qmd
+    - Tarea8.qmd
     - references.qmd
 
 bibliography: references.bib

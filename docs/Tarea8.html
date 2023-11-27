@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Susana Hernández">
 
-<title>Matematicas aplicadas</title>
+<title>Matematicas aplicadas - 10&nbsp; Tarea 8</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./Tarea7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,6 +62,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tarea8.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tarea 8</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -101,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -161,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tarea8.html" class="sidebar-item-text sidebar-link">
+  <a href="./Tarea8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tarea 8</span></span></a>
   </div>
 </li>
@@ -181,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#del-mao-1" id="toc-del-mao-1" class="nav-link active" data-scroll-target="#del-mao-1"><span class="header-section-number">10.1</span> 5.18 del Mao</a></li>
   </ul>
 </nav>
     </div>
@@ -190,26 +192,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Matematicas aplicadas</h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tarea 8</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Susana Hernández </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -217,11 +207,116 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="cover.png" title="Matematicas aplicadas" class="quarto-cover-image img-fluid"></p>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<div id="exr-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.1 </strong></span>Use la aproximación de la suma de Riemann la ecuación (<a href="Tarea7.html#eq-aproximacionRiemann">Equation&nbsp;<span>9.1</span></a>). Muestra la propiedad de linealidad de la integral estocástica. Es decir, <span class="math display">\[
+\int_{0}^{T}\left(\alpha f(t)+\beta g(t)\right) dW_{t}=\alpha\int_{0}^{T}f(t)dW_{t}+\beta\int_{0}^{T}g(t)dW_{t}
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Sea <span class="math inline">\(\{0=t_{0},t_{1},\dots,t_{L-1},t_{L}=T\}\)</span> una particion del intervalo <span class="math inline">\([0,T]\)</span>, de la aproximación de la suma de Riemann ecuación (<a href="Tarea7.html#eq-aproximacionRiemann">Equation&nbsp;<span>9.1</span></a>), se satisface que, <span class="math display">\[\begin{eqnarray*}
+\int_{0}^{T}\left(\alpha f(t)+\beta g(t)\right) dW_{t} &amp; \sim &amp; \sum_{i=0}^{L}(\alpha f(t_{i})+\beta g(t_{i}))(W(t_{i+1})-W(t_{i}))\\
+&amp; = &amp; \sum_{i=0}^{L}\alpha f(t_{i})(W(t_{i+1})-W(t_{i}))+ \sum_{i=0}^{L}\beta g(t_{i})(W(t_{i+1})-W(t_{i}))\\
+&amp; = &amp; \alpha\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))+\beta\sum_{i=0}^{L} g(t_{i})(W(t_{i+1})-W(t_{i}))
+\end{eqnarray*}\]</span> observemos que, <span class="math display">\[
+\alpha\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))\text{ es la aproximacion de suma de Riemann de; } \alpha\int_{0}^{T} f(t) dW_{t},
+\]</span> análogamente se tiene para <span class="math inline">\(\beta\sum_{i=0}^{L} g(t_{i})(W(t_{i+1})-W(t_{i}))\)</span>, por lo tanto de aquí se sigue que, tomando el limite cuando <span class="math inline">\(L\to\infty\)</span>, resulta <span class="math display">\[
+\alpha\lim_{L\to\infty}\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))=\alpha \int_{0}^{T}f(t)dW_{t}
+\]</span> y <span class="math display">\[
+\beta\lim_{L\to\infty}\sum_{i=0}^{L} g(t_{i})(W(t_{i+1})-W(t_{i}))=\beta\int_{0}^{T}g(t)dW_{t}
+\]</span> entonces de estas dos últimas relaciones, se concluye que: <span class="math display">\[
+\int_{0}^{T}\left(\alpha f(t)+\beta g(t)\right) dW_{t}= \alpha \int_{0}^{T}f(t)dW_{t}+\beta\int_{0}^{T}g(t)dW_{t}
+\]</span></p>
+</div>
+<div id="exr-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.2 </strong></span>Escriba con detalle la demostración del siguiente Teorema, también incluya la demostración del Lema 5.18 del Mao.</p>
+</div>
+<div id="thm-6.1" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 10.1 (6.1 del Mao) </strong></span>Sea <span class="math inline">\(f\in\mathcal{M}^{2}([0,T];\mathbb{R})\)</span>, sea <span class="math inline">\(\rho,\tau\)</span> dos tiempos de paro tales que <span class="math inline">\(0\leq\rho\leq\tau\leq T\)</span>. Entonces <span class="math display">\[\begin{eqnarray}
+\mathbb{E}\left(\int_{\rho}^{\tau}f(s)dW_{s}\mid\mathcal{F}_{\rho}\right) &amp; = &amp; 0,\\
+\mathbb{E}\left(\left|\int_{\rho}^{\tau}f(s)dW_{s}\right|^{2}\mid\mathcal{F}_{\rho}\right) &amp; = &amp; \mathbb{E}\left(\int_{\rho}^{\tau}\left|f(s)\right|^{2}ds\mid\mathcal{F}_{\rho}\right).
+\end{eqnarray}\]</span></p>
+</div>
+<p>Antes de la demostración del teorema <a href="#thm-6.1">Theorem&nbsp;<span>10.1</span></a>, veamos el siguiente Lema. ::: {#lem-5.18}</p>
+<section id="del-mao-1" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="del-mao-1"><span class="header-section-number">10.1</span> 5.18 del Mao</h2>
+<p>Sea <span class="math inline">\(f\in\mathcal{M}^{2}([0,T],\mathbb{R})\)</span> y sea <span class="math inline">\(\tau\)</span> un tiempo de paro tal que <span class="math inline">\(0\leq \tau\leq T\)</span>. Entonces <span class="math display">\[
+\int_{0}^{\tau}f(s)dW(s)=I(\tau),
+\]</span> donde <span class="math inline">\(\{I(t)\}_{0\leq t \leq t}\)</span> es la integral indefinida de <span class="math inline">\(f\)</span> dada por la Definición 5.11. :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>La definición 5.11 del Mao, nos dice que, <span class="math display">\[
+I(t)=\int_{0}^{t}f(s)dW(s),\quad 0\leq t\leq T
+\]</span> Por otro lado, de la definición 5.15 del Mao, también se tiene que <span class="math display">\[
+\int_{0}^{\tau}f(s)dW(s)=\int_{0}^{T}\mathbb{I}_{[0,\tau]}f(s)dW(s)
+\]</span> así, por las dos definiciones anteriores se cumple que, <span class="math display">\[
+\int_{0}^{\tau}f(s)dW(s)=I(\tau)
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em> (Del Teorema 6.1). </span>El Teorema de paro de la martingala de Doob, nos dice que: <span class="math display">\[\begin{equation}
+E(I(\tau)|\mathcal{F}_{\rho})=I(\rho)
+\end{equation}\]</span> Además la definición 5.15, nos dice que para <span class="math inline">\(\rho\)</span> otro tiempo de paro, tal que <span class="math inline">\(0\leq \rho\leq \tau\)</span>, se cumple que <span class="math display">\[
+\int_{\rho}^{\tau}f(s)dW(s)=\int_{0}^{\tau}f(s)dW(s)-\int_{0}^{\rho}f(s)dW(s).
+\]</span> Entonces, aplicando la igualdad anterior, el Lema <span class="quarto-unresolved-ref">?lem-5.18</span> y el Teorema de paro de la martingala de Doob, resulta <span class="math display">\[\begin{eqnarray*}
+\mathbb{E}\left(\int_{\rho}^{\tau}f(s)dW_{s}\Big|\mathcal{F}_{\rho}\right) &amp; = &amp; \mathbb{E}\left(\left(\int_{0}^{\tau}f(s)dW(s)-\int_{0}^{\rho}f(s)dW(s)\right)\Big|\mathcal{F}_{\rho}\right)\\
+&amp; = &amp; \mathbb{E}(I(\tau)-I(\rho)|\mathcal{F}_\rho)\\
+&amp; = &amp; \mathbb{E}(I(\tau)|\mathcal{F}_\rho)-\mathbb{E}(I(\rho)|\mathcal{F}_\rho)\\
+&amp; = &amp; I(\rho)-I(\rho)\\
+&amp; = &amp; 0
+\end{eqnarray*}\]</span> De aquí, se concluye que la primera relación del teorema <a href="#thm-6.1">Theorem&nbsp;<span>10.1</span></a> se satisface.<br>
+Por otro lado, nuevamente por el Teorema de paro de Doob, se tiene que <span class="math display">\[\begin{equation}
+E(I^{2}(\tau)-\langle I,I\rangle_{\tau}|\mathcal{F}_{\rho})=I^{2}(\rho)-\langle I,I\rangle_{\rho},
+\end{equation}\]</span> y además, del Teorema 5.14 del Mao, se tiene que <span class="math display">\[
+\langle I,I\rangle_{t}=\int_{0}^{t}|f(s)|^{2}ds.
+\]</span> De estos dos hechos anteriores, resulta</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\mathbb{E}(|I(\tau)-I(\rho)|^{2}|\mathcal{F}_{\rho}) &amp; = &amp; \mathbb{E}(I^{2}(\tau)-2I(\rho)I(\tau)+I^{2}(\rho)|\mathcal{F}_{\rho}) \\
+&amp; = &amp; \mathbb{E}(I^{2}(\tau)|\mathcal{F}_{\rho})-2I(\rho)\mathbb{E}(I(\tau)|\mathcal{F}_{\rho})+I^{2}(\rho) \\
+&amp; = &amp; \mathbb{E}(I^{2}(\tau)|\mathcal{F}_{\rho})-2I(\rho)^{2}+I^{2}(\rho)\\
+&amp; = &amp; \mathbb{E}(I^{2}(\tau)|\mathcal{F}_{\rho})-I^{2}(\rho)\\
+&amp; = &amp; \mathbb{E}(\langle I,I\rangle_{\tau}-\langle I, I\rangle_{\rho}|\mathcal{F}_{\rho})\\
+&amp; = &amp; \mathbb{E}\left(\int_{0}^{\tau}|f(s)|^{2}ds-\int_{0}^{\rho}|f(s)|^{2}ds|\mathcal{F}_{\rho}\right)\\
+&amp; = &amp; \mathbb{E}\left(\int_{\rho}^{\tau}|f(s)|^{2}ds|\mathcal{F}_{\rho}\right).
+\end{eqnarray*}\]</span> Ya que, <span class="math display">\[
+\mathbb{E}\left(\left|\int_{\rho}^{\tau}f(s)dW_{s}\right|^{2}\mid\mathcal{F}_{\rho}\right)=\mathbb{E}(|I(\tau)-I(\rho)|^{2}|\mathcal{F}_{\rho}),
+\]</span> se sigue que la segunda relación del teorema <a href="#thm-6.1">Theorem&nbsp;<span>10.1</span></a> se satisface.</p>
+</div>
+<div id="exr-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.3 </strong></span>Usando la aproximación de la suma de Riemann ecuación (<a href="Tarea7.html#eq-aproximacionRiemann">Equation&nbsp;<span>9.1</span></a>), la isometría de Itô y la identidad <span class="math inline">\(4ab=(a+b)^{2}-(a-b)^{2}\)</span> pruebe que <span class="math display">\[
+\mathbb{E}\left[\left(\int_{0}^{T}g(t)dW_{t}\right)\left(\int_{0}^{T}f(t)dW_{t}\right)\right]=\int_{0}^{T}\mathbb{E}[f(t)g(t)]dt.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Sea <span class="math inline">\(a=\int_{0}^{T}g(t)dW_{t}\)</span> y <span class="math inline">\(b=\int_{0}^{T}f(t)dW_{t}\)</span>, entonces de la identidad <span class="math inline">\(4ab=(a+b)^{2}-(a-b)^{2}\)</span>, se tiene que <span class="math display">\[\begin{eqnarray*}
+4\left(\int_{0}^{T}g(t)dW_{t}\right)\left(\int_{0}^{T}f(t)dW_{t}\right) &amp; = &amp; \left(\int_{0}^{T}g(t)dW_{t}+\int_{0}^{T}f(t)dW_{t}\right)^{2}-\left(\int_{0}^{T}g(t)dW_{t}-\int_{0}^{T}f(t)dW_{t}\right)^{2}\\
+&amp; = &amp; \left(\int_{0}^{T}(g(t)+f(t))dW_{t}\right)^{2}-\left(\int_{0}^{T}(g(t)-f(t))dW_{t}\right)^{2},
+\end{eqnarray*}\]</span> Entonces</p>
+<p><span class="math display">\[\begin{eqnarray*}
+4\mathbb{E}\left[\left(\int_{0}^{T}g(t)dW_{t}\right)\left(\int_{0}^{T}f(t)dW_{t}\right)\right] &amp; = &amp; \mathbb{E}\left(\int_{0}^{T}(g(t)+f(t))dW_{t}\right)^{2}-\mathbb{E}\left(\int_{0}^{T}(g(t)-f(t))dW_{t}\right)^{2}\\
+&amp; = &amp;\left(\int_{0}^{T} \mathbb{E}(g(t)+f(t))^{2}dt\right)-\left(\int_{0}^{T}\mathbb{E}(g(t)-f(t))^{2}dt\right)\quad\text{esto se sigue por la isometria de Itô}\\
+&amp; = &amp; \left(\int_{0}^{T}(\mathbb{E}[(g(t)+f(t))^{2}]-\mathbb{E}[(g(t)-f(t))^{2}])dt\right)\\
+&amp; = &amp; \left(\int_{0}^{T}\mathbb{E}[(g(t)+f(t))^{2}-(g(t)-f(t))^{2}]dt\right)\quad\text{usando nuevamente que, } 4ab=(a+b)^{2}-(a-b)^{2}\\
+&amp; = &amp; 4\left(\int_{0}^{T}\mathbb{E}[g(t)f(t)]dt\right)
+\end{eqnarray*}\]</span> De aquí, se concluye que <span class="math display">\[
+\mathbb{E}\left[\left(\int_{0}^{T}g(t)dW_{t}\right)\left(\int_{0}^{T}f(t)dW_{t}\right)\right]=\left(\int_{0}^{T}\mathbb{E}[g(t)f(t)]dt\right)
+\]</span></p>
+</div>
+<div id="exr-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.4 </strong></span>Usando la suma de Riemann ecuación (<a href="Tarea7.html#eq-aproximacionRiemann">Equation&nbsp;<span>9.1</span></a>), deduzca que, <span class="math display">\[
+\int_{0}^{T}W(t)^{2}dW(t)=\dfrac{1}{3}W(T)^{3}-\int_{0}^{T}W(t)dt.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Primero, observemos que, <span class="math display">\[
+3W(t_{i})^{2}(W(t_{i+1})-W(t_{i}))=W(t_{i+1})^{3}-\left(W(t_{i+1})-W(t_{i})\right)^{3}-3\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})-W(t_{i-1})^{3},
+\]</span> entonces de la ecuación (<a href="Tarea7.html#eq-aproximacionRiemann">Equation&nbsp;<span>9.1</span></a>) y la relación anterior, tenemos que,</p>
+<p><span class="math display">\[\begin{align*}
+\int_{0}^{T}W(t)^{2}dW(t) &amp; \sim \sum_{i=0}^{L}W(t_{i})^{2}(W(t_{i+1})-W(t_{i}))\\
+&amp; = \frac{1}{3} \sum_{i=0}^{L}\left[W(t_{i+1})^{3}-W(t_{i-1})^{3}\right]-\frac{1}{3}\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{3}-\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})\\
+&amp; =\frac{1}{3}( W(T)^{3}-W(t_{0})^{3})- \frac{1}{3}\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{3}-\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})\\
+&amp; =\frac{1}{3}W(T)^{3}- \frac{1}{3}\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{3}-\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i}).
+\end{align*}\]</span> Afirmamos que <span class="math inline">\(\frac{1}{3}\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{3}\to 0\)</span> en <span class="math inline">\(L^{2}\)</span>.<br>
+En efecto, calculemos la media de la variación cuadrática. Del Teorema Multinomial, resulta</p>
+</div>
 
 
 </section>
@@ -462,10 +557,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./Tarea7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tarea 7</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
