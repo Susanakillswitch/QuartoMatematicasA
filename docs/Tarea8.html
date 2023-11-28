@@ -179,13 +179,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#del-mao-1" id="toc-del-mao-1" class="nav-link active" data-scroll-target="#del-mao-1"><span class="header-section-number">10.1</span> 5.18 del Mao</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -236,12 +230,13 @@ ul.task-list li input[type="checkbox"] {
 \mathbb{E}\left(\left|\int_{\rho}^{\tau}f(s)dW_{s}\right|^{2}\mid\mathcal{F}_{\rho}\right) &amp; = &amp; \mathbb{E}\left(\int_{\rho}^{\tau}\left|f(s)\right|^{2}ds\mid\mathcal{F}_{\rho}\right).
 \end{eqnarray}\]</span></p>
 </div>
-<p>Antes de la demostración del teorema <a href="#thm-6.1">Theorem&nbsp;<span>10.1</span></a>, veamos el siguiente Lema. ::: {#lem-5.18}</p>
-<section id="del-mao-1" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="del-mao-1"><span class="header-section-number">10.1</span> 5.18 del Mao</h2>
-<p>Sea <span class="math inline">\(f\in\mathcal{M}^{2}([0,T],\mathbb{R})\)</span> y sea <span class="math inline">\(\tau\)</span> un tiempo de paro tal que <span class="math inline">\(0\leq \tau\leq T\)</span>. Entonces <span class="math display">\[
+<p>Antes de la demostración del teorema <a href="#thm-6.1">Theorem&nbsp;<span>10.1</span></a>, veamos el siguiente Lema.<br>
+</p>
+<div id="lem-5.18" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 10.1 (5.18 del Mao) </strong></span>Sea <span class="math inline">\(f\in\mathcal{M}^{2}([0,T],\mathbb{R})\)</span> y sea <span class="math inline">\(\tau\)</span> un tiempo de paro tal que <span class="math inline">\(0\leq \tau\leq T\)</span>. Entonces <span class="math display">\[
 \int_{0}^{\tau}f(s)dW(s)=I(\tau),
-\]</span> donde <span class="math inline">\(\{I(t)\}_{0\leq t \leq t}\)</span> es la integral indefinida de <span class="math inline">\(f\)</span> dada por la Definición 5.11. :::</p>
+\]</span> donde <span class="math inline">\(\{I(t)\}_{0\leq t \leq t}\)</span> es la integral indefinida de <span class="math inline">\(f\)</span> dada por la Definición 5.11.</p>
+</div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>La definición 5.11 del Mao, nos dice que, <span class="math display">\[
 I(t)=\int_{0}^{t}f(s)dW(s),\quad 0\leq t\leq T
@@ -256,7 +251,7 @@ I(t)=\int_{0}^{t}f(s)dW(s),\quad 0\leq t\leq T
 E(I(\tau)|\mathcal{F}_{\rho})=I(\rho)
 \end{equation}\]</span> Además la definición 5.15, nos dice que para <span class="math inline">\(\rho\)</span> otro tiempo de paro, tal que <span class="math inline">\(0\leq \rho\leq \tau\)</span>, se cumple que <span class="math display">\[
 \int_{\rho}^{\tau}f(s)dW(s)=\int_{0}^{\tau}f(s)dW(s)-\int_{0}^{\rho}f(s)dW(s).
-\]</span> Entonces, aplicando la igualdad anterior, el Lema <span class="quarto-unresolved-ref">?lem-5.18</span> y el Teorema de paro de la martingala de Doob, resulta <span class="math display">\[\begin{eqnarray*}
+\]</span> Entonces, aplicando la igualdad anterior, el Lema <a href="#lem-5.18">Lemma&nbsp;<span>10.1</span></a> y el Teorema de paro de la martingala de Doob, resulta <span class="math display">\[\begin{eqnarray*}
 \mathbb{E}\left(\int_{\rho}^{\tau}f(s)dW_{s}\Big|\mathcal{F}_{\rho}\right) &amp; = &amp; \mathbb{E}\left(\left(\int_{0}^{\tau}f(s)dW(s)-\int_{0}^{\rho}f(s)dW(s)\right)\Big|\mathcal{F}_{\rho}\right)\\
 &amp; = &amp; \mathbb{E}(I(\tau)-I(\rho)|\mathcal{F}_\rho)\\
 &amp; = &amp; \mathbb{E}(I(\tau)|\mathcal{F}_\rho)-\mathbb{E}(I(\rho)|\mathcal{F}_\rho)\\
@@ -319,7 +314,6 @@ En efecto, calculemos la media de la variación cuadrática. Del Teorema Multino
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
