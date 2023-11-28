@@ -10,7 +10,7 @@ $$
 :::
 
 :::{.proof}
-Sea $\{0=t_{0},t_{1},\dots,t_{L-1},t_{L}=T\}$ una particion del intervalo $[0,T]$, de la aproximación de la suma de Riemann ecuación (@eq-aproximacionRiemann), se satisface que,
+Sea $\{0=t_{0},t_{1},\dots,t_{L-1},t_{L}=T\}$ una partición del intervalo $[0,T]$, de la aproximación de la suma de Riemann ecuación (@eq-aproximacionRiemann), se satisface que,
 \begin{eqnarray*}
 \int_{0}^{T}\left(\alpha f(t)+\beta g(t)\right) dW_{t} & \sim & \sum_{i=0}^{L}(\alpha f(t_{i})+\beta g(t_{i}))(W(t_{i+1})-W(t_{i}))\\
 & = & \sum_{i=0}^{L}\alpha f(t_{i})(W(t_{i+1})-W(t_{i}))+ \sum_{i=0}^{L}\beta g(t_{i})(W(t_{i+1})-W(t_{i}))\\
@@ -157,6 +157,7 @@ $$
 :::
 
 :::{.proof}
+Sea $\{0=t_{0},t_{1},\dots,t_{L-1},t_{L}=T\}$ una partición del intervalo $[0,T]$.
 Primero, observemos que,
 $$
 3W(t_{i})^{2}(W(t_{i+1})-W(t_{i}))=W(t_{i+1})^{3}-\left(W(t_{i+1})-W(t_{i})\right)^{3}-3\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})-W(t_{i-1})^{3},
@@ -174,13 +175,121 @@ En efecto, calculemos la media de la variación cuadrática. Del Teorema Multino
 $$
 \frac{1}{9}\mathbb{E}\left[\left(\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{3}\right)^{2}\right]=\frac{1}{9}\sum_{i=0}^{L}\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{6}\right]+\frac{2}{9}\sum_{i\neq j}^{L}\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\left(W(t_{j+1})-W(t_{j})\right)^{3}\right],
 $$
-notemos que, como $i\neq j$ sin 
-$$
+notemos que, como $i\neq j$, sin perdida de generalidad supongamos que $i<j$, entonces
+
 \begin{eqnarray*}
-    \mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\left(W(t_{j+1})-W(t_{j})\right)^{3}\right] & = & \mathbb{E}\{\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\left(W(t_{j+1})-W(t_{j})\right)^{3}\right]|\mathcal{F}_{j}\}\\
-    & = & \mathbb{E}\{\left(W(t_{i+1})-W(t_{i})\right)^{3}\mathbb{E}\left[\left(W(t_{j+1})-W(t_{j})\right)^{3}\right|\mathcal{F}_{j}]\}\\
-    & = & \mathbb{E}[\left(W(t_{i+1})-W(t_{i})\right)^{3}]\mathbb{E}\left[\left(W(t_{j+1})-W(t_{j})\right)^{3}\right]\\
-    & = & 0. \text{ de la tarea 5}
+\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\left(W(t_{j+1})-W(t_{j})\right)^{3}\right] & = & \mathbb{E}\left.\left\{\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\left(W(t_{j+1})-W(t_{j})\right)^{3}\right]\right|\mathcal{F}_{j}\right\}\\
+& = & \mathbb{E}\left\{\left(W(t_{i+1})-W(t_{i})\right)^{3}\mathbb{E}\left.\left[\left(W(t_{j+1})-W(t_{j})\right)^{3}\right|\mathcal{F}_{j}\right]\right\}\\
+& = & \mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\right]\mathbb{E}\left[\left(W(t_{j+1})-W(t_{j})\right)^{3}\right]
 \end{eqnarray*}
+
+dado que de la tarea 5 se demostro que, $\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\right]=0$, de la última igualdad ses concluye que,
+$$
+\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\left(W(t_{j+1})-W(t_{j})\right)^{3}\right]=0.
+$$
+Por lo tanto,
+$$
+\frac{2}{9}\sum_{i=0}^{L}\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{3}\left(W(t_{j+1})-W(t_{j})\right)^{3}\right]=0.
+$$
+Por otro lado, también de la tarea 5, sabemos que
+$$
+\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{6}\right] = 15\left(t_{i+1}-t_{i}\right)^{3},
+$$
+entonces
+
+\begin{align*}
+\frac{1}{9}\sum_{i=0}^{L}E\left[\left(W(t_{i+1})-W(t_{i})\right)^{6}\right] & =\frac{5}{3}\sum_{i=0}^{L}\left(t_{i+1}-t_{i}\right)^{3}\\
+& \leq\frac{5}{3}\|\Delta_{L}\|^{2}\sum_{i=0}^{L}\left(t_{i+1}-t_{i}\right)\\
+& \leq\frac{5}{3}\|\Delta_{L}\|^{2}L\to0,\quad\text{cuando,  }\|\Delta_{L}\|\to0.
+\end{align*}
+Con todo lo anterior se concluye que,
+$$
+\frac{1}{3}\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{3}\to 0.
+$$
+Ahora veamos que,
+$$
+\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})\to \sum_{i=0}^{L}W(t_{i})\left(t_{i+1}-t_{i}\right)\text{ en }L^{2}
+$$
+Observemos que, 
+
+\begin{eqnarray*}
+\mathbb{E}\left[\left(\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})- \sum_{i=0}^{L}W(t_{i})\left(t_{i+1}-t_{i}\right) \right)^{2}\right] & = & \mathbb{E}\left[\left(\sum_{i=0}^{L}W(t_{i})\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right] \right)^{2}\right]\\
+& = & \mathbb{E}\left[\sum_{i=0}^{L}W(t_{i})^{2}\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right]^{2} +\sum_{i\neq j}W(t_{i})W(t_{j})\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right]\left[\left(W(t_{j+1})-W(t_{j})\right)^{2}-\left(t_{j+1}-t_{j}\right)\right] \right]\\
+& = & \sum_{i=0}^{L}\mathbb{E}\left[W(t_{i})^{2}\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right]^{2}\right] +\sum_{i\neq j}\mathbb{E}\left[W(t_{i})W(t_{j})\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right]\left[\left(W(t_{j+1})-W(t_{j})\right)^{2}-\left(t_{j+1}-t_{j}\right)\right] \right],
+\end{eqnarray*}
+para $i<j$, se tiene que
+
+\begin{eqnarray*}
+\mathbb{E}\left[W(t_{i})W(t_{j})\left(\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right)\left(\left(W(t_{j+1})-W(t_{j})\right)^{2}-\left(t_{j+1}-t_{j}\right)\right)\right] & = & \mathbb{E}\left.\left\{\mathbb{E}\left[W(t_{i})W(t_{j})\left(\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right)\left(\left(W(t_{j+1})-W(t_{j})\right)^{2}-\left(t_{j+1}-t_{j}\right)\right)\right]\right|\mathcal{F}_{j}\right\}\\
+& = &  \mathbb{E}\left\{W(t_{i})W(t_{j})\left(\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right)\mathbb{E}\left[\left.\left(W(t_{j+1})-W(t_{j})\right)^{2}-\left(t_{j+1}-t_{j}\right)\right|\mathcal{F}_{j}\right]\right\}\\
+& = &  \mathbb{E}\left\{W(t_{i})W(t_{j})\left(\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right)\mathbb{E}\left[\left(W(t_{j+1})-W(t_{j})\right)^{2}-\left(t_{j+1}-t_{j}\right)\right]\right\}\\
+& = & 0.
+\end{eqnarray*}
+Por lo tanto,
+$$
+\sum_{i=0}^{L}W(t_{i})W(t_{j})\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right]\left[\left(W(t_{j+1})-W(t_{j})\right)^{2}-\left(t_{j+1}-t_{j}\right)\right] =0.
+$$
+Además,
+\begin{eqnarray*}
+\mathbb{E}\left[W(t_{i})^{2}\left(\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right)^{2}\right] & = & \mathbb{E}\left\{\mathbb{E}\left.\left[W(t_{i})^{2}\left(\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right)^{2}\right]\right|\mathcal{F}_{i}\right\}\\
+& = & \mathbb{E}\left.\left\{\mathbb{E}\left[W(t_{i})^{2}\left(\left(W(t_{i+1})-W(t_{i})\right)^{4}-2\left(W(t_{i+1})-W(t_{i})\right)^{2}\left(t_{i+1}-t_{i}\right)+\left(t_{i+1}-t_{i}\right)^{2}\right)\right]\right|\mathcal{F}_{i}\right\}\\
+& = & \mathbb{E}\left\{\mathbb{E}\left.\left[W(t_{i})^{2}\left(W(t_{i+1})-W(t_{i})\right)^{4}-2W(t_{i})^{2}\left(W(t_{i+1})-W(t_{i})\right)^{2}\left(t_{i+1}-t_{i}\right)+W(t_{i})^{2}\left(t_{i+1}-t_{i}\right)^{2}\right]\right|\mathcal{F}_{i}\right\}\\
+& = & \mathbb{E}\left\{\mathbb{E}\left[\left.W(t_{i})^{2}\left(W(t_{i+1})-W(t_{i})\right)^{4}\right|\mathcal{F}_{i}\right]-2\mathbb{E}\left[\left.W(t_{i})^{2}\left(W(t_{i+1})-W(t_{i})\right)^{2}\left(t_{i+1}-t_{i}\right)\right|\mathcal{F}_{i}\right]+\mathbb{E}\left[\left.W(t_{i})^{2}\left(t_{i+1}-t_{i}\right)^{2}\right|\mathcal{F}_{i}\right]\right\}\\
+& = & \mathbb{E}\left\{W(t_{i})^{2}\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{4}|\mathcal{F}_{i}\right]-2W(t_{i})^{2}\mathbb{E}\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}\left(t_{i+1}-t_{i}\right)|\mathcal{F}_{i}\right]+W(t_{i})^{2}\mathbb{E}\left[\left(t_{i+1}-t_{i}\right)^{2}|\mathcal{F}_{i}\right]\right\}\\
+& = & \mathbb{E}\left\{W(t_{i})^{2}3(t_{i+1}-t_{i})^{2}-2W(t_{i})^{2}(t_{i+1}-t_{i})^{2}+W(t_{i})^{2}\left(t_{i+1}-t_{i}\right)^{2}\right\}\\
+& = & 3t_{i}(t_{i+1}-t_{i})^{2}-2t_{i}(t_{i+1}-t_{i})^{2}+t_{i}(t_{i+1}-t_{i})^{2}\\
+& = & 2t_{i}(t_{i+1}-t_{i})^{2},
+\end{eqnarray*}
+de esta última igualdad se sigue que,
+
+\begin{eqnarray*}
+\mathbb{E}\left[\sum_{i=0}^{L}W(t_{i})^{2}\left[\left(W(t_{i+1})-W(t_{i})\right)^{2}-\left(t_{i+1}-t_{i}\right)\right]^{2}\right] & = & \sum_{i=0}^{L}2t_{i}(t_{i+1}-t_{i})^{2}\\
+& \leq & 2L\|\Delta_{L}\|\sum_{i=0}^{L}t_{i+1}-t_{i}\\
+& = & 2\|\Delta_{L}\|L^{2}\to0,\quad\text{ cuando }\|\Delta_{L}\|\to0.
+\end{eqnarray*}
+Por lo tanto,
+$$
+\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})\to \sum_{i=0}^{L}W(t_{i})\left(t_{i+1}-t_{i}\right).
+$$
+Así, sustituyendo todo lo anterior, resulta
+
+\begin{eqnarray*}
+\int_{0}^{T}W(t)^{2}dW(t) & = & \lim_{L\to\infty}\frac{1}{3}W(T)^{3}-\lim_{L\to\infty}\sum_{i=0}^{L}\left(W(t_{i+1})-W(t_{i})\right)^{2}W(t_{i})\\
+& = & \frac{1}{3}W(T)^{3}-\int_{0}^{T}W(t)dt
+\end{eqnarray*}
+
+:::
+
+::: {#exr-5}
+Verifique que la isometría de Itô, dada por
+$$
+\mathbb{E}\left[\left(\int_{0}^{T}h(t)dW(t)\right)^{2}\right]=\mathbb{E}\left[\int_{0}^{T}h(t)^{2}dt\right],
+$$
+se tiene cuando $h(t):= 1$.
+:::
+
+:::{.proof}
+Del ejercicio @exr-3 con $h(t)=1$, se tiene que,
+
+\begin{eqnarray*}
+\mathbb{E}\left[\left(\int_{0}^{T}h(t)dW(t)\right)^{2}\right]=\mathbb{E}\left[\left(\int_{0}^{T}1dW(t)\right)^{2}\right] & = & \mathbb{E}\left[\left(\int_{0}^{T}1dW_{t}\right)\left(\int_{0}^{T}1dW_{t}\right)\right]\\
+& = & \int_{0}^{T}\mathbb{E}[1]dt\\
+& = & \int_{0}^{T}dt\\
+& = & T.
+\end{eqnarray*}
+Por otro lado,
+\begin{eqnarray*}
+\mathbb{E}\left[\int_{0}^{T}h(t)^{2}dt\right] & = & \mathbb{E}\left[\int_{0}^{T}1^{2}dt\right]\\
+& = & \mathbb{E}\left[\int_{0}^{T}dt\right]\\
+& = & \mathbb{E}\left[T\right]\\
+& = & T
+\end{eqnarray*}
+Así,
+$$
+\mathbb{E}\left[\left(\int_{0}^{T}dW(t)\right)^{2}\right]= \mathbb{E}\left[\int_{0}^{T}dt\right],
+$$
+y con esto se concluye que, para $h(t)=1$ se satisface que
+$$
+\mathbb{E}\left[\left(\int_{0}^{T}h(t)dW(t)\right)^{2}\right]= \mathbb{E}\left[\int_{0}^{T}h(t)^{2}dt\right].
 $$
 :::
