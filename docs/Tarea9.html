@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Matematicas aplicadas - 9&nbsp; Tarea 7</title>
+<title>Matematicas aplicadas - 11&nbsp; Tarea 9</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Tarea8.html" rel="next">
-<link href="./Tarea6.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./Tarea8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tarea7.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tarea 7</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tarea9.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Tarea 9</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tarea7.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Tarea7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tarea 7</span></span></a>
   </div>
 </li>
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tarea9.html" class="sidebar-item-text sidebar-link">
+  <a href="./Tarea9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Tarea 9</span></span></a>
   </div>
 </li>
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tarea 7</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Tarea 9</span></h1>
 </div>
 
 
@@ -207,116 +207,85 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div id="exr-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9.1 </strong></span>Sea <span class="math inline">\(W(t)\)</span> un Movimiento Browniano y <span class="math inline">\(Z_{i}\)</span> una colección de variables aleatorias i.i.d, con distribución <span class="math inline">\(N\left(0,\frac{\delta t}{4}\right)\)</span>.<br>
-Pruebe que la suma <span class="math display">\[
-\sum_{i=0}^{L}Z_{i}\left(W(t_{i+1})-W(t_{i})\right),
-\]</span> tiene valor esperado igual a cero y una varianza de <span class="math inline">\(O(\delta t)\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Sin perdida de generalidad dado como estan definidas <span class="math inline">\(Z_{i}\)</span> y <span class="math inline">\(W(t_{i+1})-W(t_{i})\)</span> podemos suponer que son variables aleatorias independientes para cada <span class="math inline">\(i=1,\dots ,L\)</span>. Entonces</p>
-<p><span class="math display">\[\begin{eqnarray*}
-\mathbb{E}\left[\sum_{i=0}^{L}Z_{i}\left(W(t_{i+1})-W(t_{i})\right)\right] &amp; = &amp;  \sum_{i=0}^{L}\mathbb{E}\left[Z_{i}\left(W(t_{i+1})-W(t_{i})\right)\right]\\
-&amp; = &amp;  \sum_{i=0}^{L}\mathbb{E}(Z_{i})\mathbb{E}\left(W(t_{i+1})-W(t_{i})\right)\\
-&amp; = &amp; 0 \quad\text{ ya que, por hipótesis, }\mathbb{E}(Z_{i})=0\text{ y }\mathbb{E}\left(W(t_{i+1})-W(t_{i})\right)=0
-\end{eqnarray*}\]</span> <span class="math display">\[
-\therefore \mathbb{E}\left[\sum_{i=0}^{L}Z_{i}\left(W(t_{i+1})-W(t_{i})\right)\right]=0.
-\]</span> Ahora calculemos la varianza; sabemos que <span class="math inline">\(Var(X)=\mathbb{E}(X^{2})-(\mathbb{E}(X))^{2}\)</span>, sustituyendo resulta</p>
-<p><span class="math display">\[\begin{eqnarray*}
-Var\left[\sum_{i=0}^{L}Z_{i}\left(W(t_{i+1})-W(t_{i})\right)\right] &amp; = &amp;   \mathbb{E}\left[\left(\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\right)^{2}\right]-\left(\mathbb{E}\left[\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\right]\right)^{2}\\
-&amp; = &amp;  \mathbb{E}\left[\left(\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\right)^{2}\right]\quad\text{ usando el hecho que tiene valor esperado igual a 0}.
-\end{eqnarray*}\]</span> Por el Teorema multinomial, se tiene que</p>
-<p><span class="math display">\[\begin{eqnarray*}
-\mathbb{E}\left[\left(\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\right)^{2}\right] &amp; = &amp;  \mathbb{E}\left[\sum_{i=0}^{L} \left[Z_{i}(W(t_{i+1})-W(t_{i}))\right]^{2}+2\sum_{i\neq j}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))Z_{j}(W(t_{j+1})-W(t_{j}))\right]\\
-&amp; = &amp;  \sum_{i=0}^{L} \mathbb{E}\left[Z_{i}(W(t_{i+1})-W(t_{i}))\right]^{2}+2\sum_{i\neq j}^{L} \mathbb{E}\left[Z_{i}(W(t_{i+1})-W(t_{i}))Z_{j}(W(t_{j+1})-W(t_{j}))\right].
-\end{eqnarray*}\]</span> Dado que <span class="math inline">\(i\neq j\)</span>, sin perdida de generalidad podemos suponer que <span class="math inline">\(i&lt;j\)</span>, entonces</p>
-<p><span class="math display">\[\begin{eqnarray*}
-\mathbb{E}\left[Z_{i}(W(t_{i+1})-W(t_{i}))Z_{j}(W(t_{j+1})-W(t_{j}))\right] &amp; = &amp;  \mathbb{E}\{ \mathbb{E}\left[Z_{i}(W(t_{i+1})-W(t_{i}))Z_{j}(W(t_{j+1})-W(t_{j}))|\mathcal{F}_{j}\right]
-\}\\
-&amp; = &amp; \mathbb{E}\{[Z_{i}(W(t_{i+1})-W(t_{i}))Z_{j} ]\mathbb{E}\left[(W(t_{j+1})-W(t_{j}))|\mathcal{F}_{j}\right]\}\\
-&amp; = &amp; 0
-\end{eqnarray*}\]</span> Por otro lado,</p>
-<p><span class="math display">\[\begin{eqnarray*}
-\mathbb{E}\left[Z_{i}(W(t_{i+1})-W(t_{i}))\right]^{2} &amp; = &amp;  \mathbb{E}\{ \mathbb{E}\left[Z_{i}^{2}(W(t_{i+1})-W(t_{i}))^{2}|\mathcal{F}_{i}\right]
-\}\\
-&amp; = &amp; \mathbb{E}\{Z_{i}^{2}\mathbb{E}\left[(W(t_{i+1})-W(t_{i}))^{2}|\mathcal{F}_{i}\right]\}\\
-&amp; = &amp; \mathbb{E}[Z_{i}^{2}](t_{i+1}-t_{i})\\
-&amp; = &amp; \dfrac{\delta t}{4}(t_{i+1}-t_{i}),
-\end{eqnarray*}\]</span> sustituyendo todo lo anterior, resulta <span class="math display">\[\begin{eqnarray*}
-Var\left[\sum_{i=0}^{L}Z_{i}\left(W(t_{i+1})-W(t_{i})\right)\right] &amp; = &amp;  \sum_{i=0}^{L}\dfrac{\delta t}{4}(t_{i+1}-t_{i})\\
-&amp; = &amp;  \dfrac{\delta t}{4}(t_{L+1}-t_{0}).
-\end{eqnarray*}\]</span> Para un <span class="math inline">\(L\)</span> suficientemente grande podemos considerar que, dado un <span class="math inline">\(\varepsilon&gt;0\)</span>, tal que, <span class="math inline">\((t_{L+1}-t_{0})\leq\dfrac{\varepsilon}{4}\)</span>, así <span class="math display">\[
-Var\left[\sum_{i=0}^{L}Z_{i}\left(W(t_{i+1})-W(t_{i})\right)\right]\leq \varepsilon\delta t.
-\]</span> Por lo tanto, con esto se concluye que, la varianza es de orden <span class="math inline">\(\delta t\)</span>.</p>
-</div>
-<div id="exr-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9.2 </strong></span>La regla del punto medio de la integral de Riemann de una función <span class="math inline">\(h\in C^{2}([a,b])\)</span> sobre una partición de <span class="math inline">\(L\)</span> puntos del intervalo <span class="math inline">\([a,b]\)</span> está dada por, <span class="math display">\[
-\int_{a}^{b}h(t)dt=\lim_{\delta t\to 0,\,L\to\infty}\sum_{i=0}^{L}h\left(\dfrac{t_{i}+t_{i+1}}{2}\right)\delta t.
-\]</span> Use la relación <span class="math display">\[
-W\left(\frac{t_{i}+t_{i+1}}{2}\right)=\frac{1}{2}(W(t_{i})+W(t_{i+1}))+ \underbrace{Z_{i}}_{i.i.d.\sim N(0,\delta t/4)},
-\]</span> y el ejercicio anterior para demostrar que la regla del punto medio de la integral de Riemann implica que <span class="math display">\[
-\int_{0}^{T}W(t)dW(t)=\frac{1}{2}W(T)^{2}.
-\]</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Sea <span class="math inline">\(\Delta_{L}=\{0=t_{0},t_{1},\dots,t_{L-1},t_{L}=T\}\)</span> una partición del intervalo <span class="math inline">\([0,T]\)</span>. De la regla del punto medio, aplicada para <span class="math inline">\(h(t)=W(t)\)</span>, se tiene que</p>
-<p><span class="math display">\[\begin{eqnarray*}
-\int_{0}^{T}W(t)dW(t) &amp; = &amp; \lim_{\delta t\to 0,\,L\to\infty}\sum_{i=0}^{L}W\left(\dfrac{t_{i}+t_{i+1}}{2}\right)(W(t_{i+1})-W(t_{i}))\\
-&amp; = &amp; \lim_{\delta t\to 0,\,L\to\infty}\sum_{i=0}^{L}\left[\frac{1}{2}(W(t_{i})+W(t_{i+1}))+ Z_{i}\right](W(t_{i+1})-W(t_{i}))\\
-&amp; = &amp; \lim_{\delta t\to 0,\,L\to\infty}\sum_{i=0}^{L}\frac{1}{2}\left(W(t_{i+1})^{2}-W(t_{i})^{2}\right)+ \lim_{\delta t\to 0,\,L\to\infty}\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\\
-&amp; = &amp; \lim_{\delta t\to 0,\,L\to\infty}\frac{1}{2}\left(W(T)^{2}-W(0)^{2}\right)+ \lim_{\delta t\to 0,\,L\to\infty}\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\\
-&amp; = &amp; \frac{1}{2}W(T)^{2}+ \lim_{\delta t\to 0,\,L\to\infty}\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i})).
-\end{eqnarray*}\]</span> De la igualdad anterior solo nos faltaria demostrar que, <span class="math display">\[
-\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\rightarrow 0\text{ en } L^{2}
-\]</span> es decir, <span class="math display">\[
-\lim_{\|\Delta_{L}\|\to0}E\left[\left(\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\right)^{2}\right]=0
-\]</span> Del ejercicio anterior, sabemos que <span class="math display">\[
-E\left[\left(\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\right)^{2}\right] = O(\delta t)\leq \varepsilon\|\Delta_{L}\|,
-\]</span> así, tomando el limite cuando <span class="math inline">\(\|\Delta_{L}\|\to\)</span> se tiene que, <span class="math display">\[
-\sum_{i=0}^{L} Z_{i}(W(t_{i+1})-W(t_{i}))\rightarrow 0\text{ en } L^{2},
-\]</span> por lo tanto, sustituyendo este último resultado, se concluye que <span class="math display">\[
-\int_{0}^{T}W(t)dW(t)=\frac{1}{2}W(T)^{2}
-\]</span></p>
-</div>
 <div id="exr-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9.3 </strong></span>Usando la aproximación de la suma de Riemann <span id="eq-aproximacionRiemann"><span class="math display">\[
-\int_{0}^{T}h(t)dW(t)\sim\sum_{i=0}^{L}h(t_{i})(W(t_{i+1})-W(t_{i})),
-\tag{9.1}\]</span></span> argumente que, <span class="math display">\[
-\mathbb{E}\left[\left(\int_{0}^{T}tdW(t)\right)^{2}\right]=\frac{T^{3}}{3}.
-\]</span> Por tanto, enuncie la isometría de Itô y deduzca que esta isometría es válida para el caso <span class="math inline">\(h(t)=t\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 11.1 </strong></span>Sea <span class="math inline">\(\tau\)</span> un tiempo de paro. Prueba que <span class="math inline">\(W\left(t+\tau\right)-W\left(\tau\right)\)</span> es un movimiento browniano.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Sea <span class="math inline">\(\{0=t_{0},t_{1},\dots,t_{L-1},t_{L}=T\}\)</span> una partición del intervalo <span class="math inline">\([0,T]\)</span>. De la aproximación de la suma de Riemann, tenemos que <span class="math display">\[\begin{eqnarray*}
-\int_{0}^{T}tdW(t) &amp; \sim &amp; \sum_{i=0}^{L}t_{i}(W(t_{i+1})-W(t_{i}))\\
-\Longrightarrow \left(\int_{0}^{T}tdW(t)\right)^{2} &amp; \sim &amp; \left(\sum_{i=0}^{L}t_{i}(W(t_{i+1})-W(t_{i}))\right)^{2},
-\end{eqnarray*}\]</span> del Teorema Multinomial, se sigue que <span class="math display">\[
-\left(\sum_{i=0}^{L}t_{i}(W(t_{i+1})-W(t_{i}))\right)^{2} = \sum_{i=0}^{L}t_{i}^{2}(W(t_{i+1})-W(t_{i}))^{2}+2\sum_{i\neq j}t_{i} t_{j}(W(t_{i+1})-W(t_{i}))(W(t_{j+1})-W(t_{j}))
-\]</span> de las relaciones anteriores se tiene que, <span class="math display">\[\begin{eqnarray*}
-\mathbb{E}
-\left[\left(\int_{0}^{T}tdW(t)\right)^{2}\right] &amp; \sim &amp;  \mathbb{E}
-\left[\sum_{i=0}^{L}t_{i}^{2}(W(t_{i+1})-W(t_{i}))^{2}+2\sum_{i\neq j}t_{i} t_{j}(W(t_{i+1})-W(t_{i}))(W(t_{j+1})-W(t_{j}))\right]\\
-&amp; = &amp;  
-\sum_{i=0}^{L}t_{i}^{2}\mathbb{E}(W(t_{i+1})-W(t_{i}))^{2}+2\sum_{i\neq j}t_{i} t_{j}\mathbb{E}\left[(W(t_{i+1})-W(t_{i}))(W(t_{j+1})-W(t_{j}))\right]\\
-&amp; = &amp;  
-\sum_{i=0}^{L}t_{i}^{2}(t_{i+1}-t_{i}),
-\end{eqnarray*}\]</span> además, observemos que, <span class="math display">\[
-\lim_{L\to 0}\sum_{i=0}^{L}t_{i}^{2}(t_{i+1}-t_{i})=\int_{0}^{T}t^{2}dt=\frac{T}{3}
-\]</span> entonces, de esto último se concluye que, <span class="math display">\[
-\mathbb{E}
-\left[\left(\int_{0}^{T}tdW(t)\right)^{2}\right]=\frac{T}{3}.
-\]</span> Por otro lado, de la isometría de Itô, se cumple que <span class="math display">\[\begin{eqnarray*}
-\mathbb{E}
-\left[\left(\int_{0}^{T}tdW(t)\right)^{2}\right] &amp; = &amp; \mathbb{E}
-\left[\left(\int_{0}^{T}tdW(t)\right)\left(\int_{0}^{T}tdW(t)\right)\right]\\
-&amp; = &amp;
-\int_{0}^{T}\mathbb{E}(t^{2})dt\\
-&amp; = &amp;
-\int_{0}^{T}t^{2}dt\\
-&amp; = &amp; \frac{T}{3}.
-\end{eqnarray*}\]</span> Por lo tanto, la isometría de Itô se cumple para <span class="math inline">\(h(t)=t\)</span></p>
+<p><span class="proof-title"><em>Proof</em>. </span>Definamos a, <span class="math display">\[
+W_{\tau}\left(t\right)=W\left(t+\tau\right)-W\left(\tau\right),
+\]</span></p>
+<p>Claramente <span class="math inline">\(W_{\tau}\left(0\right)=0\)</span>, ya que: <span class="math display">\[
+W_{\tau}\left(0\right)=W\left(\tau\right)-W\left(\tau\right)=0.
+\]</span></p>
+<p>Sea <span class="math inline">\(s\leq t\)</span>, observemos que</p>
+<p><span class="math display">\[\begin{align*}
+W_{\tau}\left(t\right)-W_{\tau}\left(s\right) &amp; =W\left(t+\tau\right)-W\left(\tau\right)-\left[W\left(s+\tau\right)-W\left(\tau\right)\right]\\
+&amp; =W\left(t+\tau\right)-W\left(s+\tau\right),
+\end{align*}\]</span></p>
+<p>dado que <span class="math inline">\(W\left(t+\tau\right)-W\left(s+\tau\right)\sim N\left(0,t-s\right)\)</span> entonces de la última igualdad se sigue que <span class="math display">\[
+W_{\tau}\left(t\right)-W_{\tau}\left(s\right)\sim N\left(0,t-s\right).
+\]</span> De aquí se concluye que <span class="math inline">\(W_{\tau}(t)\)</span> tiene incrementos independientes y estacionarios.<br>
+Por lo tanto, con todo lo anterior se concluye que <span class="math inline">\(W_{\tau}(t)\)</span> es un Movimiento Browniano.</p>
 </div>
 <div id="exr-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9.4 </strong></span>Escriba una función de Python para calcular la integral de Itô del movimiento Browniano <span class="math inline">\(W(t)\)</span> sobre <span class="math inline">\([0,T]\)</span>. La función tendría la siguiente firma.</p>
+<p><span class="theorem-title"><strong>Exercise 11.2 </strong></span>Sea <span class="math inline">\(W_{1}\left(t\right),W_{2}\left(t\right)\)</span> movimientos brownianos independientes con punto inicial <span class="math inline">\(\left(W_{1}\left(0\right),W_{2}\left(0\right)\right)\neq\left(0,0\right)\)</span>.<br>
+Defina <span class="math inline">\(X_{t}:=\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right).\)</span></p>
+</div>
+<div>
+<ol type="a">
+<li>Demuestre que <span class="math inline">\(X_{t}\)</span> es una martingala local.</li>
+<li>Demuestre que <span class="math inline">\(E\left|X_{t}\right|&lt;\infty\)</span> para cada <span class="math inline">\(t&gt;0\)</span>.</li>
+<li>Demuestre que <span class="math inline">\(X_{t}\)</span> no es una martingala.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\((a)\)</span> Consideremos a, <span class="math display">\[
+\tau_{n}=\inf_{t}\left\{ X_{t}=n\right\}
+\]</span></p>
+<p>Dado que <span class="math inline">\(X_{t}\)</span> no es acotada, se tiene que, <span class="math display">\[
+\tau_{n}\to\infty,\text{ cuando }n\to\infty,\forall n.
+\]</span></p>
+<p>Ahora probaremos que <span class="math inline">\(X_{\min\left\{ t,\tau_{n}\right\} }\)</span> es una martingala.<br>
+Primero veamos que es adaptado a la filtración:<br>
+Si <span class="math inline">\(\tau_{n}\geq t\)</span> lo tenemos por construcción, ya que, en este caso <span class="math display">\[
+X_{\min\left\{ t,\tau_{n}\right\} }=X_{t},
+\]</span> y <span class="math inline">\(X_{t}\)</span> si es adaptado con respecto a la filtración. Ahora si <span class="math inline">\(\tau_{n}&lt;t\)</span>, tenemos que, <span class="math display">\[
+X_{\min\left\{ t,\tau_{n}\right\} }=X_{\tau_{n}}=n.
+\]</span> Además, observemos que, <span class="math display">\[
+\left[X_{\min\left\{ t,\tau_{n}\right\} }=n\right]\subset\left[\tau_{n}&lt;t\right],
+\]</span> y dado que <span class="math inline">\(\tau_{n}\)</span> es tiempo de paro, se cumple que <span class="math inline">\(\left[\tau_{n}&lt;t\right]\in\mathcal{F}_{t}\)</span>. Por lo tanto, de la última relación se sigue que, <span class="math inline">\(X_{\min\left\{ t,\tau_{n}\right\} }\)</span> es adaptado a la filtración.<br>
+Ahora solo nos queda probar que es una martingala. Sea <span class="math inline">\(s&lt;t\)</span>, se tiene que,</p>
+<p><span class="math display">\[\begin{align*}
+E\left[X_{\min\left\{ t,\tau_{n}\right\} }\mid\mathcal{F}_{s}\right] &amp; =E\left[X_{\min\left\{ t,\tau_{n}\right\} }1_{[t&lt;\tau_{n}]}\mid\mathcal{F}_{s}\right]+E\left[X_{\min\left\{ t,\tau_{n}\right\} }1_{\left[\tau_{n}\leq t\right]}\mid\mathcal{F}_{s}\right]\\
+&amp; =E\left[X_{t}1_{[t&lt;\tau_{n}]}\mid\mathcal{F}_{s}\right]+E\left[X_{\tau_{n}}1_{\left[\tau_{n}\leq t\right]}\mid\mathcal{F}_{s}\right]\\
+&amp; =E\left[X_{s}1_{[s&lt;\tau_{n}]}\mid\mathcal{F}_{s}\right]+E\left[X_{\tau_{n}}1_{\left[\tau_{n}\leq s\right]}\mid\mathcal{F}_{s}\right]\\
+&amp; =X_{s}1_{[s&lt;\tau_{n}]}+X_{\tau_{n}}1_{\left[\tau_{n}\leq s\right]}\\
+&amp; =X_{\min\left\{ s,\tau_{n}\right\} },
+\end{align*}\]</span></p>
+<p>y con esto se concluye que <span class="math inline">\(X_{\min\left\{ t,\tau_{n}\right\} }\)</span> es una martingala.<br>
+<br>
+<span class="math inline">\((b)\)</span> Observemos que, como <span class="math inline">\(X_{t} =\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right)\)</span>, entonces <span class="math display">\[
+\exp\left(X_{t}\right) =W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right).
+\]</span> Asi,</p>
+<p><span class="math display">\[\begin{align*}
+E\left[\exp\left(X_{t}\right)\right] &amp; =E\left[W_{1}^{2}\left(t\right)\right]+E\left[W_{2}^{2}\left(t\right)\right]\\
+&amp; =2t,
+\end{align*}\]</span></p>
+<p>dado que, <span class="math inline">\(X_{t}\geq0,\forall t\)</span> y <span class="math inline">\(X_{t} \le\exp\left(X_{t}\right)\)</span>, entonces <span class="math display">\[
+E\left[X_{t}\right]\leq2t&lt;\infty,\forall t
+\]</span> <span class="math inline">\((c)\)</span> Primero recordemos lo siguiente:<br>
+Si <span class="math inline">\(X_{t}\)</span> es martingala entonces <span class="math inline">\(E\left[X_{t}\right]\)</span> es constante, entonces este resultado nos diría que si <span class="math inline">\(E\left[X_{t}\right]\)</span> no es constante, <span class="math inline">\(X_{t}\)</span> no es martingala.<br>
+Dado lo anterior, supongamos que existe <span class="math inline">\(c\in\mathbb{R}\)</span> tal que <span class="math display">\[
+E\left[X_{t}\right]=c,\forall t\Longrightarrow E\left[\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right)\right] =c.
+\]</span> Así, <span class="math display">\[
+\int_{0}^{\infty}\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right)\mathrm{d}\mathcal{P} =c,
+\]</span> de aquí se tendría que la integral es finita. Entonces <span class="math display">\[
+X_{t}\to0,t\to\infty,\text{ c.s}.
+\]</span> De esto último y de la continuidad de la exponencial, se concluye que <span class="math display">\[
+W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\to1,t\to\infty,\text{c.s}
+\]</span> Pero de lo demostrado del inciso anterior, sabemos que, <span class="math display">\[
+E\left[W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right]=2t,
+\]</span> la cual converge a infinito, cuando <span class="math inline">\(t\to\infty\)</span>. Así, llegamos a una contradicción. Por lo tanto, <span class="math inline">\(E\left[X_{t}\right]\)</span> no es constante, y se siguiría que <span class="math inline">\(X_{t}\)</span> no puede ser martingala.</p>
 </div>
 
 
@@ -557,13 +526,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Tarea6.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tarea6.html</span></span>
+      <a href="./Tarea8.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tarea 8</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Tarea8.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tarea 8</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

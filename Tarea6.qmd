@@ -3,7 +3,39 @@ Cree un scrip para muestrear 10000 rutas del proceso $u(t,W_{t})$ definido en el
 :::
 
 ::: {.solution}
-The solution.
+```{.python filename="Exploring functions to generate random variables with a Bernoulli distribution.py"}
+import numpy as np
+import aux_functions as aux
+import matplotlib.pyplot as plt
+
+def b_function(t, a, w): 
+    y = np.exp(t+ a * w)
+    return y
+
+
+n_samples = 10000
+n = 100
+t_initial = 0
+t_final = 1
+
+mean = np.zeros(n) 
+for i in range(n_samples):
+    time, b_w = aux.strong_brownian(t_final,n) 
+    y = b_function(time,0.25, b_w) 
+    if i < 10:
+        plt.plot(time,b_w,'g-',alpha = 0.5) 
+    mean += y 
+
+mean = (n_samples)**(-1) * mean 
+time = np.linspace(0,t_final, n_)
+
+y = [np.exp(33 / 32 * t) for t in time] 
+plt.plot(time, mean, 'r-*', alpha = 0.5)
+plt.plot(time, y,'b-',alpha = 0.8)
+plt.show()
+
+```
+![Figura 1](Figure_6-1.png)
 :::
 
 ::: {#exr-2}
@@ -11,5 +43,8 @@ Siguiendo las ideas para llenar un camino browniano en puntos $t_{i+\frac{1}{2}}
 :::
 
 ::: {.solution}
-The solution.
+```{.python filename="Exploring functions to generate random variables with a Bernoulli distribution.py"}
+
+
+```
 :::

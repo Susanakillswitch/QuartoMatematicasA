@@ -1,0 +1,124 @@
+# Tarea 9
+
+::: {#exr-3}
+Sea $\tau$ un tiempo de paro. Prueba que $W\left(t+\tau\right)-W\left(\tau\right)$
+es un movimiento browniano.
+:::
+
+:::{.proof}
+Definamos a,
+$$
+W_{\tau}\left(t\right)=W\left(t+\tau\right)-W\left(\tau\right),
+$$
+
+Claramente $W_{\tau}\left(0\right)=0$, ya que:
+$$
+W_{\tau}\left(0\right)=W\left(\tau\right)-W\left(\tau\right)=0.
+$$
+
+Sea $s\leq t$, observemos que
+
+\begin{align*}
+W_{\tau}\left(t\right)-W_{\tau}\left(s\right) & =W\left(t+\tau\right)-W\left(\tau\right)-\left[W\left(s+\tau\right)-W\left(\tau\right)\right]\\
+& =W\left(t+\tau\right)-W\left(s+\tau\right),
+\end{align*}
+
+dado que $W\left(t+\tau\right)-W\left(s+\tau\right)\sim N\left(0,t-s\right)$ entonces de la última igualdad se sigue que
+$$
+W_{\tau}\left(t\right)-W_{\tau}\left(s\right)\sim N\left(0,t-s\right).
+$$
+De aquí se concluye que $W_{\tau}(t)$ tiene incrementos independientes y estacionarios.\
+Por lo tanto, con todo lo anterior se concluye que $W_{\tau}(t)$ es un Movimiento Browniano. 
+:::
+
+::: {#exr-4}
+Sea $W_{1}\left(t\right),W_{2}\left(t\right)$ movimientos brownianos independientes con punto inicial $\left(W_{1}\left(0\right),W_{2}\left(0\right)\right)\neq\left(0,0\right)$.\
+Defina $X_{t}:=\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right).$
+:::
+
+::: {}
+(a) Demuestre que $X_{t}$ es una martingala local.
+(b) Demuestre que $E\left|X_{t}\right|<\infty$ para cada $t>0$.
+(c) Demuestre que $X_{t}$ no es una martingala.
+:::
+
+
+:::{.proof}
+$(a)$ Consideremos a,
+$$
+\tau_{n}=\inf_{t}\left\{ X_{t}=n\right\} 
+$$
+
+Dado que $X_{t}$ no es  acotada, se tiene que,
+$$
+\tau_{n}\to\infty,\text{ cuando }n\to\infty,\forall n.
+$$
+
+Ahora probaremos que $X_{\min\left\{ t,\tau_{n}\right\} }$ es una martingala.\
+Primero veamos que es adaptado a la filtración:\
+Si $\tau_{n}\geq t$ lo tenemos por construcción, ya que, en este caso
+$$
+X_{\min\left\{ t,\tau_{n}\right\} }=X_{t},
+$$
+y $X_{t}$ si es adaptado con respecto a la filtración. Ahora si $\tau_{n}<t$, tenemos que,
+$$
+X_{\min\left\{ t,\tau_{n}\right\} }=X_{\tau_{n}}=n.
+$$
+Además, observemos que,
+$$
+\left[X_{\min\left\{ t,\tau_{n}\right\} }=n\right]\subset\left[\tau_{n}<t\right],
+$$
+y dado que $\tau_{n}$ es tiempo de paro, se cumple que $\left[\tau_{n}<t\right]\in\mathcal{F}_{t}$. Por lo tanto, de la última relación se sigue que, $X_{\min\left\{ t,\tau_{n}\right\} }$ es adaptado a la filtración.\
+Ahora solo nos queda probar que es una martingala. Sea $s<t$, se tiene que,
+
+\begin{align*}
+E\left[X_{\min\left\{ t,\tau_{n}\right\} }\mid\mathcal{F}_{s}\right] & =E\left[X_{\min\left\{ t,\tau_{n}\right\} }1_{[t<\tau_{n}]}\mid\mathcal{F}_{s}\right]+E\left[X_{\min\left\{ t,\tau_{n}\right\} }1_{\left[\tau_{n}\leq t\right]}\mid\mathcal{F}_{s}\right]\\
+& =E\left[X_{t}1_{[t<\tau_{n}]}\mid\mathcal{F}_{s}\right]+E\left[X_{\tau_{n}}1_{\left[\tau_{n}\leq t\right]}\mid\mathcal{F}_{s}\right]\\
+& =E\left[X_{s}1_{[s<\tau_{n}]}\mid\mathcal{F}_{s}\right]+E\left[X_{\tau_{n}}1_{\left[\tau_{n}\leq s\right]}\mid\mathcal{F}_{s}\right]\\
+& =X_{s}1_{[s<\tau_{n}]}+X_{\tau_{n}}1_{\left[\tau_{n}\leq s\right]}\\
+& =X_{\min\left\{ s,\tau_{n}\right\} },
+\end{align*}
+
+y con esto se concluye que $X_{\min\left\{ t,\tau_{n}\right\} }$ es una martingala. \
+\
+$(b)$ Observemos que, como $X_{t} =\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right)$, entonces
+$$
+\exp\left(X_{t}\right) =W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right).
+$$
+Asi, 
+
+\begin{align*}
+E\left[\exp\left(X_{t}\right)\right] & =E\left[W_{1}^{2}\left(t\right)\right]+E\left[W_{2}^{2}\left(t\right)\right]\\
+& =2t,
+\end{align*}
+
+dado que, $X_{t}\geq0,\forall t$ y $X_{t} \le\exp\left(X_{t}\right)$, entonces
+$$
+E\left[X_{t}\right]\leq2t<\infty,\forall t
+$$
+$(c)$ Primero recordemos lo siguiente:\
+Si $X_{t}$ es martingala entonces $E\left[X_{t}\right]$ es constante, entonces este resultado nos diría que si $E\left[X_{t}\right]$ no es constante, $X_{t}$ no es martingala.\
+Dado lo anterior, supongamos que existe $c\in\mathbb{R}$ tal que 
+$$
+E\left[X_{t}\right]=c,\forall t\Longrightarrow E\left[\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right)\right] =c.
+$$
+Así,
+$$
+\int_{0}^{\infty}\ln\left(W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right)\mathrm{d}\mathcal{P} =c,
+$$
+de aquí se tendría que la integral es finita. Entonces 
+$$
+X_{t}\to0,t\to\infty,\text{ c.s}.
+$$
+De esto último y de la continuidad de la exponencial, se concluye que
+$$
+W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\to1,t\to\infty,\text{c.s}
+$$
+Pero de lo demostrado del inciso anterior, sabemos que,
+$$
+E\left[W_{1}^{2}\left(t\right)+W_{2}^{2}\left(t\right)\right]=2t,
+$$
+la cual converge a infinito, cuando $t\to\infty$.
+Así, llegamos a una contradicción. Por lo tanto, $E\left[X_{t}\right]$
+no es constante, y se siguiría que $X_{t}$ no puede ser martingala. 
+:::

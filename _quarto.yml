@@ -19,6 +19,7 @@ book:
     - Tarea6.qmd
     - Tarea7.qmd
     - Tarea8.qmd
+    - Tarea9.qmd
     - references.qmd
 
 bibliography: references.bib

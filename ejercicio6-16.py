@@ -8,7 +8,7 @@ def b_function(t, a, w): # y local va dentro de una funcion
 
 
 n_samples = 10000
-n_points = 64
+n_points = 100
 t_initial = 0
 t_final = 1
 
@@ -24,6 +24,6 @@ mean = (n_samples)**(-1) * mean # promediendo
 time = np.linspace(0,t_final, n_points)
 
 y = [np.exp(33 / 32 * t) for t in time] # el valor vedadero
-plt.plot(time, mean, 'r-', alpha = 0.5)
-plt.plot(time, y,'b-',alpha = 0.3)
+plt.plot(time, mean, 'r-*', alpha = 0.5)
+plt.plot(time, y,'b-',alpha = 0.8)
 plt.show()
