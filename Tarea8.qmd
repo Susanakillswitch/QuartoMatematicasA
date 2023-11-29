@@ -18,7 +18,7 @@ Sea $\{0=t_{0},t_{1},\dots,t_{L-1},t_{L}=T\}$ una partición del intervalo $[0,T
 \end{eqnarray*}
 observemos que,
 $$
-\alpha\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))\text{ es la aproximacion de suma de Riemann de; } \alpha\int_{0}^{T} f(t) dW_{t},
+\alpha\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))\text{ es la aproximacion de la suma de Riemann de; } \alpha\int_{0}^{T} f(t) dW_{t},
 $$
 análogamente se tiene para $\beta\sum_{i=0}^{L} g(t_{i})(W(t_{i+1})-W(t_{i}))$, por lo tanto de aquí se sigue que, tomando el limite cuando $L\to\infty$, resulta 
 $$
@@ -264,7 +264,7 @@ Así, sustituyendo todo lo anterior, resulta
 Verifique que la isometría de Itô, dada por
 $$
 \mathbb{E}\left[\left(\int_{0}^{T}h(t)dW(t)\right)^{2}\right]=\mathbb{E}\left[\int_{0}^{T}h(t)^{2}dt\right],
-$$
+$${#eq-7.4}
 se tiene cuando $h(t):= 1$.
 :::
 

@@ -245,7 +245,7 @@ E[Z^{3}]=0\Longrightarrow E[(\delta W_{i})^{3}]=E[Z^{3}](\delta t )^{3/2}=0.
 $$
 :::
 
-::: {#exr-5}
+::: {#exr-75}
 
 Suponga que $X\thicksim N(0,1)$. Demuestre que para $a, b\in\mathbb{R}$,
 $$

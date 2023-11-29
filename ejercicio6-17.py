@@ -4,11 +4,11 @@ import aux_functions as aux
 
 
 t_final = 1
-n_points = 65
+n_points = 100
 delta_t = 1/(n_points - 1)
-alpha = 0.7
+alpha = 0.3
 
-prng = np.random.RandomState(219)
+prng = np.random.RandomState(123456789)
 
 time, w = aux.strong_brownian(1,n_points) # w_i
 
@@ -33,5 +33,5 @@ for i in range(2 * n_points - 1):
         time_ref[i] = time[int(i / 2)] + alpha * delta_t # para agregar las particiones refinadas
 
 plt.plot(time_ref,w_ref,'g-')
-plt.plot(time, w,'ro')
+plt.plot(time, w,'r*')
 plt.show()

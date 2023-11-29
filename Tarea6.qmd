@@ -1,9 +1,9 @@
 ::: {#exr-1}
-Cree un scrip para muestrear 10000 rutas del proceso $u(t,W_{t})$ definido en el ejercicio 5.5. Graficar 10 rutas de muestra y la media de 10000 rutas de muestra de este proceso $u(t,W_{t})$.
+Cree un scrip para muestrear 10000 rutas del proceso $u(t,W_{t})$ definido en el ejercicio @exr-75. Graficar 10 rutas de muestra y la media de 10000 rutas de muestra de este proceso $u(t,W_{t})$.
 :::
 
 ::: {.solution}
-```{.python filename="Exploring functions to generate random variables with a Bernoulli distribution.py"}
+```{.python filename="simulación ejercicio 7-5.py"}
 import numpy as np
 import aux_functions as aux
 import matplotlib.pyplot as plt
@@ -43,8 +43,45 @@ Siguiendo las ideas para llenar un camino browniano en puntos $t_{i+\frac{1}{2}}
 :::
 
 ::: {.solution}
-```{.python filename="Exploring functions to generate random variables with a Bernoulli distribution.py"}
+```{.python filename="simulación para llenar un camino browniano con alpha=0,3.py"}
+import numpy as np
+import matplotlib.pyplot as plt
+import aux_functions as aux
 
+
+t_final = 1
+n = 100
+delta_t = 1/(n - 1)
+alpha = 0.3
+
+prng = np.random.RandomState(123456789)
+
+time, w = aux.strong_brownian(1,n) 
+
+y = np.sqrt(delta_t *(alpha - alpha ** 2)) * prng.standard_normal(n - 1)  
+
+w_ = np.roll(w, -1)  
+
+w_alpha = alpha * w_ + (1 - alpha) * w 
+w_alpha = np.delete(w_alpha, -1) 
+w_alpha += y 
+w_ref = np.zeros(2* n -1) 
+
+w_ref[0::2] = w 
+w_ref[1::2] = w_alpha
+
+time_ref = np.zeros(2 * n - 1) 
+
+for i in range(2 * n - 1):
+    if i % 2 == 0:
+        time_ref[i] = time[int(i / 2)] 
+    else:
+        time_ref[i] = time[int(i / 2)] + alpha * delta_t 
+
+plt.plot(time_ref,w_ref,'g-')
+plt.plot(time, w,'ro')
+plt.show()
 
 ```
+![Figura 2](Figure_617.png)
 :::
