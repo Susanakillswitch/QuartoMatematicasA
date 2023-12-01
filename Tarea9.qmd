@@ -64,7 +64,7 @@ E_If = 0
 for j in range(n2):
    I_fn = 0
    for i in range(n):
-      I_fi= w[i-1]*(w[i]-w[i-1])
+      I_fi= t[i-1]*(w[i]-w[i-1])
       I_fn += I_fi
    I_f=I_fn**2
    E_If += I_f
