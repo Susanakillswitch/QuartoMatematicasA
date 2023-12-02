@@ -171,26 +171,36 @@ Escriba una función de Python para calcular la integral de Itô del movimiento 
 :::
 
 ::: {.solution}
-```{.python filename="Exploring functions to generate random variables with a Bernoulli distribution.py"}
+```{.python filename="calculando la integral de Itô del movimiento Browniano W(t).py"}
 import numpy as np
 
+def strong_brownian(t, n): 
+    dt = t / n
+    dw = np.zeros(n)
+    w = np.zeros(n)
+    for i in np.arange(1, n):
+        dw[i] = np.sqrt(dt)*np.random.standard_normal()
+        w[i] = w[i - 1] + dw[i]
+    time = np.linspace(0, t, n)
+    return time, w
 
-def f(x: float, t: float):
+
+def f(x, t):
     y = x
     return y
      
 
-def fB(partition: np.array, x: float, t: float):
+def fB(partition, x, t):
     y = 0
     for i in range(len(partition) - 1):
         if partition[i] <= t < partition[i + 1]:
             y = f(x, t)
     return y
 
-def ito_n(n_points: int, t: float):
-    time, w = bw.u(t, n_points)
-    integral = np.zeros(n_points)
-    for i in range(n_points - 1):
+def ito_n(n, t):
+    time, w = strong_brownian(t, n)
+    integral = np.zeros(n)
+    for i in range(n - 1):
         integral[i] = fB(time, w[i], time[i]) * (w[i + 1] - w[i])
     ito = integral.sum()
     return w, ito

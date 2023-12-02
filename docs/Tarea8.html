@@ -175,6 +175,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Tarea10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tarea10.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -218,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 &amp; = &amp; \sum_{i=0}^{L}\alpha f(t_{i})(W(t_{i+1})-W(t_{i}))+ \sum_{i=0}^{L}\beta g(t_{i})(W(t_{i+1})-W(t_{i}))\\
 &amp; = &amp; \alpha\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))+\beta\sum_{i=0}^{L} g(t_{i})(W(t_{i+1})-W(t_{i}))
 \end{eqnarray*}\]</span> observemos que, <span class="math display">\[
-\alpha\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))\text{ es la aproximacion de suma de Riemann de; } \alpha\int_{0}^{T} f(t) dW_{t},
+\alpha\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))\text{ es la aproximacion de la suma de Riemann de; } \alpha\int_{0}^{T} f(t) dW_{t},
 \]</span> análogamente se tiene para <span class="math inline">\(\beta\sum_{i=0}^{L} g(t_{i})(W(t_{i+1})-W(t_{i}))\)</span>, por lo tanto de aquí se sigue que, tomando el limite cuando <span class="math inline">\(L\to\infty\)</span>, resulta <span class="math display">\[
 \alpha\lim_{L\to\infty}\sum_{i=0}^{L} f(t_{i})(W(t_{i+1})-W(t_{i}))=\alpha \int_{0}^{T}f(t)dW_{t}
 \]</span> y <span class="math display">\[
@@ -375,9 +381,9 @@ En efecto, calculemos la media de la variación cuadrática. Del Teorema Multino
 \end{eqnarray*}\]</span></p>
 </div>
 <div id="exr-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 10.5 </strong></span>Verifique que la isometría de Itô, dada por <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercise 10.5 </strong></span>Verifique que la isometría de Itô, dada por <span id="eq-7.4"><span class="math display">\[
 \mathbb{E}\left[\left(\int_{0}^{T}h(t)dW(t)\right)^{2}\right]=\mathbb{E}\left[\int_{0}^{T}h(t)^{2}dt\right],
-\]</span> se tiene cuando <span class="math inline">\(h(t):= 1\)</span>.</p>
+\tag{10.1}\]</span></span> se tiene cuando <span class="math inline">\(h(t):= 1\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Del ejercicio <a href="Tarea9.html#exr-3">Exercise&nbsp;<span>11.1</span></a> con <span class="math inline">\(h(t)=1\)</span>, se tiene que,</p>
