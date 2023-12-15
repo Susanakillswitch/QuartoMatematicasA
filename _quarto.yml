@@ -21,6 +21,7 @@ book:
     - Tarea8.qmd
     - Tarea9.qmd
     - Tarea10.qmd
+    - ProyectoFinal.qmd
     - references.qmd
 
 bibliography: references.bib
