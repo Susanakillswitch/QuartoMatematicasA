@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Matematicas aplicadas - 13&nbsp; Proyecto Final</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./Tarea10.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ProyectoFinal.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Proyecto Final</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Matematicas aplicadas</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarea 1</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarea 2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tarea 3</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Tarea 4</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Tarea 5</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tarea6.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tarea 7</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tarea 8</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Tarea 9</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tarea10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tarea 10</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ProyectoFinal.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Proyecto Final</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo"><span class="header-section-number">13.1</span> objetivo:</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción"><span class="header-section-number">13.2</span> Introducción:</a></li>
+  <li><a href="#desarrollo" id="toc-desarrollo" class="nav-link" data-scroll-target="#desarrollo"><span class="header-section-number">13.3</span> Desarrollo:</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Proyecto Final</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="objetivo" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">13.1</span> objetivo:</h2>
+<p>Nuestra referencia principal sera el articulo “Analytic Solution of a Stochastic Richards Equation driven by Brownian motion” para encontrar la solución de la ecuación de Richard y también contrastar el comportamiento de la realización de la solución respecto a su contraparte determinista.</p>
+</section>
+<section id="introducción" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="introducción"><span class="header-section-number">13.2</span> Introducción:</h2>
+<p>Uno de los modelos más famosos de la dinámica de poblaciones es la ecuación logística que se propuso por primera vez por P F Verhulst en 1838. La ecuación logística, también conocida como ecuación de Verhulst, viene dada por la ecuación diferencial ordinaria <span class="math display">\[
+dN(t)=rN(t)\left(1-\frac{N(t)}{K}\right)dt
+\]</span> donde <span class="math inline">\(N(t)\)</span> es el tamaño de la población en el momento <span class="math inline">\(t\)</span>, <span class="math inline">\(r\)</span> es la tasa de crecimiento intrínseco y <span class="math inline">\(K&gt; 0\)</span> es la capacidad de carga/nivel de saturación.<br>
+En 1959, FJ Richard en propuso la siguiente modificación de la ecuación logística para modelar el crecimiento de poblaciones biológicas: <span id="eq-2"><span class="math display">\[
+dN(t)=rN(t)\left(1-\left(\frac{N(t)}{K}\right)^{\alpha}\right)dt,
+\tag{13.1}\]</span></span></p>
+<p>con la condición inicial <span class="math inline">\(N(0)=N_{0}\)</span>, se asume que <span class="math inline">\(0&lt;N_{0}&lt;K\)</span> y <span class="math inline">\(\alpha&gt;0\)</span> es el exponente de la desviación de la curva logística estándar.<br>
+Ahora construimos el modelo estocástico de Richard insertando el término de ruido multiplicativo en el modelo determinista (<a href="#eq-2">Equation&nbsp;<span>13.1</span></a>) para obtener una ecuación aleatoria. Escribimos <span class="math inline">\(N_{t}\)</span> en lugar de <span class="math inline">\(N(t)\)</span> para enfatizar que <span class="math inline">\(N_{t}\)</span>, ya no es una función determinista sino una variable aleatoria, el ruido como el ruido blanco gaussiano <span class="math inline">\(dB_{t}\)</span> y obtenemos la ecuación diferencial estocástica en el sentido de Itô <span id="eq-3"><span class="math display">\[
+dN(t)=rN(t)\left(1-\left(\frac{N(t)}{K}\right)^{\alpha}\right)dt+\sigma N_{t}dB_{t}
+\tag{13.2}\]</span></span> donde <span class="math inline">\(\sigma\)</span> es el coeficiente de difusión que mide el tamaño de la fluctuación del ruido. Para resolver la ecuación diferencial estocástica (<a href="#eq-3">Equation&nbsp;<span>13.2</span></a>) necesitamos algunos resultados del cálculo estocástico de Itô.<br>
+Primero, recordemos que un proceso estocástico <span class="math inline">\(\left(X_{t}\right)_{t\geq 0}\)</span> se llama adaptado si existe un espacio de probabilidad filtrado <span class="math inline">\(\left(\Omega,\mathcal{F},\left(\mathcal{F}_{t}\right)_{t\geq 0},\mathbb{P}\right)\)</span> tal que, para cada <span class="math inline">\(t\geq 0\)</span> la variable aleatoria <span class="math inline">\(X_{t}\)</span> está definida en <span class="math inline">\(\left(\Omega,\mathcal{F},\mathbb{P}\right)\)</span> así como <span class="math inline">\(\mathcal{F}_{t}\)</span>-medible. Un proceso estocástico adaptado <span class="math inline">\(\left(X_{t}\right)_{t\in [0,T]}\)</span> se llama proceso de Itô si se puede escribir de la forma <span class="math display">\[
+X_{t}=X_{0}+\int_{0}^{t}b\left(s\right)\mathrm{d}s+\int_{0}^{t}\sigma\left(s\right)\mathrm{d}B_{s},\,X_{0}=x_{0},\,t\in[0,T],
+\]</span> donde <span class="math inline">\(b\)</span> y <span class="math inline">\(\sigma\)</span> son procesos estocásticos adaptados que satisfacen <span class="math inline">\(\int_{0}^{t}|b(s)|ds&lt;\infty\)</span> y <span class="math inline">\(\int_{0}^{t}\sigma(s)^{2}ds&lt;\infty\)</span>. El proceso <span class="math inline">\(\langle X\rangle_{t}:=\langle X,X\rangle_{t}=\int_{0}^{t}\sigma(s)^{2}ds\)</span> es llamada la variación cuadrática de <span class="math inline">\(X\)</span>.<br>
+</p>
+</section>
+<section id="desarrollo" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="desarrollo"><span class="header-section-number">13.3</span> Desarrollo:</h2>
+<p>Para encontrar la solucion de la ecuación diferencial estocástica de Richard (<a href="#eq-3">Equation&nbsp;<span>13.2</span></a>) primero necesitamos los siguientes dos Teoremas.<br>
+</p>
+<div id="thm-Teorema1" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 13.1 </strong></span>Si <span class="math inline">\((X_{t})_{t\in[0,T]}\)</span> es un proceso de Itô y <span class="math inline">\(F\in C^{1,2}([0,T],\mathbb{R})\)</span>, entonces <span class="math display">\[
+F(T,X_{t})-F(0,X_{0})=\int_{0}^{T}\frac{\partial F}{\partial x}(t,X_{t})dX_{t}+\int_{0}^{T}\frac{\partial F}{\partial t}(t,X_{t})dt+\frac{1}{2}\int_{0}^{T}\frac{\partial^{2} F}{\partial x^{2}}(t,X_{t})d\langle X\rangle_{t}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Sea <span class="math inline">\(X_{t}\)</span> un proceso de Itô dado por <span id="eq-t1"><span class="math display">\[
+X_{t}=X_{0}+\int_{0}^{t}b\left(s\right)\mathrm{d}s+\int_{0}^{t}\sigma\left(s\right)\mathrm{d}B_{s},\,X_{0}=x_{0},\,t\in[0,T].
+\tag{13.3}\]</span></span> Sea <span class="math inline">\(F\left(t,x\right)\)</span>, dado que <span class="math inline">\(F\in C^{1,2}\)</span> entonces <span class="math inline">\(F\left(t,X_{t}\right)\)</span> es también un proceso de Itô.<br>
+Usaremos la serie de Taylor y la tabla de Itô para encontrar la formula de Itô del proceso <span class="math inline">\(F\)</span>.<br>
+Primero recordemos que la serie de Taylor para dos variables, esta dada por, <span class="math display">\[\begin{eqnarray*}
+F\left(t,x\right) &amp; = &amp; F\left(t_{0},x_{0}\right)+\partial_{t}F(t_{0},x_{0})\left(t-t_{0}\right)+\partial_{x}F(t_{0},x_{0})\left(x-x_{0}\right)+\frac{1}{2}\left(\partial_{xx}^{2}F\left(t_{0},x_{0}\right)\left(x-x_{0}\right)^{2}\right.\\
+&amp;  &amp; \left.+\partial_{xt}^{2}F\left(t_{0},x_{0}\right)\left(t-t_{0}\right)\left(x-x_{0}\right)+\partial_{tx}^{2}F\left(t_{0},x_{0}\right)\left(x-x_{0}\right)\left(t-t_{0}\right)+\partial_{tt}^{2}F\left(t_{0},x_{0}\right)\left(t-t_{0}\right)^{2}\right).
+\end{eqnarray*}\]</span> Sea <span class="math inline">\(\Delta_{n}=\{t_{0}=0,t_{1},\dots,t_{n}=T\}\)</span> una partición del intervalo <span class="math inline">\([0,T]\)</span>, entonces <span class="math display">\[\begin{eqnarray*}
+F\left(T,X_{t}\right)-F\left(0,X_{0}\right) &amp; = &amp; \sum_{i=1}^{n}\frac{\partial F}{\partial t}(t_{i-1},X_{t_{i-1}})\left(t_{i}-t_{i-1}\right)+\sum_{i=1}^{n}\frac{\partial F}{\partial x}(t_{i-1},X_{t_{i-1}})\left(X_{t_{i}}-X_{t_{i-1}}\right)\\
+&amp;  &amp; +\sum_{i=1}^{n}\frac{1}{2}\frac{\partial^{2}F}{\partial x \partial  x}(t_{i-1},X_{t_{i-1}})\left(X_{t_{i}}-X_{t_{i-1}}\right)^{2}+\sum_{i=1}^{n}\frac{1}{2}\frac{\partial ^{2}F}{\partial x\partial t}(t_{i-1},X_{t_{i-1}})\left(t_{i}-t_{i-1}\right)\left(X_{t_{i}}-X_{t_{i-1}}\right)\\
+&amp;  &amp; +\sum_{i=1}^{n}\frac{1}{2}\frac{\partial^{2}F}{\partial t\partial x}(t_{i-1},X_{t_{i-1}})\left(X_{t_{i}}-X_{t_{i-1}}\right)\left(t_{i}-t_{i-1}\right)+\sum_{i=1}^{n}\frac{1}{2}\frac{\partial^{2}F}{\partial t \partial t}(t_{i-1},X_{t_{i-1}})\left(t_{i}-t_{i-1}\right)^{2}
+\end{eqnarray*}\]</span> Por otro lado, dado que, <span class="math inline">\(\left(t_{i}-t_{i-1}\right)=dt_{i}\)</span>, <span class="math inline">\(\left(t_{i}-t_{i-1}\right)\left(X_{t_{i}}-X_{t_{i-1}}\right)=dt_{i}dX_{t_{i}},\)</span> y <span class="math inline">\(\left(X_{t_{i}}-X_{t_{i-1}}\right)=(dX_{i})^{2}\)</span>, de la tabla de Itô y de la ecuación (<a href="#eq-t1">Equation&nbsp;<span>13.3</span></a>), resulta para cada <span class="math inline">\(i=1,\dots,n\)</span>, <span class="math display">\[
+\left(X_{t_{i}}-X_{t_{i-1}}\right)^{2}=\sigma^{2}(t_{i})dt_{i},
+\]</span></p>
+<p><span class="math display">\[
+\left(t_{i}-t_{i-1}\right)\left(X_{t_{i}}-X_{t_{i-1}}\right)=0,
+\]</span></p>
+<p><span class="math display">\[
+\left(X_{t_{i}}-X_{t_{i-1}}\right)\left(t_{i}-t_{i-1}\right)=0,
+\]</span></p>
+<p><span class="math display">\[
+\left(t_{i}-t_{i-1}\right)^{2}=0.
+\]</span> Sustituyendo las relaciones anteriores se obtiene, <span class="math display">\[\begin{eqnarray*}
+F\left(T,X_{t}\right)-F\left(0,X_{0}\right) &amp; = &amp; \sum_{i=1}^{n}\frac{\partial F}{\partial t}(t_{i-1},X_{t_{i-1}})dt_{i}+\sum_{i=1}^{n}\frac{\partial F}{\partial x}(t_{i-1},X_{t_{i-1}})dX_{t_{i}}\\
+&amp;  &amp; +\sum_{i=1}^{n}\frac{1}{2}\frac{\partial^{2}F}{\partial x \partial  x}(t_{i-1},X_{t_{i-1}})\sigma^{2}(t_{i})dt_{i}.
+\end{eqnarray*}\]</span> Haciendo <span class="math inline">\(\|\Delta_{n}\|\to0\)</span>, se tiene que, <span class="math display">\[
+\sum_{i=1}^{n}\frac{\partial F}{\partial t}(t_{i-1},X_{t_{i-1}})dt_{i}\rightarrow \int_{0}^{T} \frac{\partial F}{\partial t}(t,X_{t})dt
+\]</span> <span class="math display">\[
+\frac{1}{2}\sum_{i=1}^{n}\frac{\partial^{2}F}{\partial x^{2}}(t_{i-1},X_{t_{i-1}})\sigma^{2}(t_{i})dt_{i}\rightarrow \frac{1}{2}\int_{0}^{T} \frac{\partial^{2}F}{\partial x^{2}}(t,X_{t})\sigma^{2}(t)dt
+\]</span> y del Teorema 5.3.3 del Kuo, <span class="math display">\[
+\sum_{i=1}^{n}\frac{\partial F}{\partial x}(t_{i-1},X_{t_{i-1}})dX_{t_{i}}\rightarrow \int_{0}^{T} \frac{\partial F}{\partial x}(t,X_{t})dX_{t}.
+\]</span> Entonces de todo lo anterior se sigue que, <span class="math display">\[F\left(T,X_{t}\right)-F\left(0,X_{0}\right)=\int_{0}^{T} \frac{\partial F}{\partial t}(t,X_{t})dt+\int_{0}^{T} \frac{\partial F}{\partial x}(t,X_{t})dX_{t}+\frac{1}{2}\int_{0}^{T} \frac{\partial^{2}F}{\partial x^{2}}(t,X_{t})\sigma^{2}(t)dt.\]</span> Además como <span class="math inline">\(\sigma^{2}dt=d\langle X\rangle_{t}\)</span>, se concluye que <span class="math display">\[
+F\left(T,X_{t}\right)-F\left(0,X_{0}\right)=\int_{0}^{T} \frac{\partial F}{\partial t}(t,X_{t})dt+\int_{0}^{T} \frac{\partial F}{\partial x}(t,X_{t})dX_{t}+\frac{1}{2}\int_{0}^{T} \frac{\partial^{2}F}{\partial x^{2}}(t,X_{t})d\langle X\rangle_{t}
+\]</span> <span class="math inline">\(\blacksquare\)</span></p>
+</div>
+<p>Una ecuación diferencial estocástica lineal es una ecuación de la forma <span id="eq-6"><span class="math display">\[
+dX_{t}=\left(a_{1}(t)X_{t}+a_{2}(t)\right)dt+\left(b_{1}(t)X_{t}+b_{2}(t)\right)dB_{t}.\quad X_{0}=x_{0},
+\tag{13.4}\]</span></span> donde <span class="math inline">\(a_{i}\)</span> y <span class="math inline">\(b_{i}\)</span>, <span class="math inline">\(i=1,2\)</span> son funciones deterministas, acotadas en todo intervalo finito <span class="math inline">\([0,T]\)</span>.</p>
+<div id="thm-Teorema2" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 13.2 </strong></span>El proceso estocástico <span class="math display">\[
+X_{t}=\Phi_{t}^{-1}\left(x_{0}+\int_{0}^{t}\left(a_{2}(s)-b_{1}(s)b_{2}(s)\right)\Phi_{s}ds+\int_{0}^{t}b_{2}(s)\Phi_{s}dB_{s}\right),\quad t\geq 0,
+\]</span> donde <span class="math inline">\(\Phi_{t}:=e^{-\left(\int_{0}^{t}\left(a_{1}(s)-\frac{1}{2}b_{1}^{2}(s)\right)ds+\int_{0}^{t}b_{1}(s)dB_{s}\right)}\)</span> es la solución de la ecuación lineal diferencial estocástica (<a href="#eq-6">Equation&nbsp;<span>13.4</span></a>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Primero, necesitamos encontrar <span class="math inline">\(d(\Phi_{t}X_{t})\)</span>. Para esto, recordemos de la sección 7.5 del Kuo H-H, se tiene que para dos procesos de Itô <span class="math inline">\(X_{t}\)</span>, <span class="math inline">\(Y_{t}\)</span> se satisface que <span class="math display">\[
+d(X_{t}Y_{t})=Y_{t}dX_{t}+X_{t}dY_{t}+dX_{t}dY_{t}.
+\]</span></p>
+<p>La igualdad anterior se llama la fórmula del producto de Itô.<br>
+Por la fórmula del producto de Itô, aplicada para <span class="math inline">\(\Phi_{t}\)</span> y <span class="math inline">\(X_{t}\)</span> tenemos que <span id="eq-11.1.6"><span class="math display">\[
+d(\Phi_{t}X_{t})=\Phi_{t}dX_{t}+X_{t}d\Phi_{t}+(d\Phi_{t})(dX_{t}).
+\tag{13.5}\]</span></span> Sea <span class="math inline">\(Z_{t}=\int_{0}^{t}\left(a_{1}(s)-\frac{1}{2}b_{1}^{2}(s)\right)ds+\int_{0}^{t}b_{1}(s)dB_{s}\)</span>, entonces <span class="math inline">\(\Phi_{t}=e^{-Z_{t}}\)</span>, usando la fórmula de Itô para encontrar <span class="math inline">\(d\Phi_{t}\)</span> se tiene que:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+d\Phi_{t} &amp; = &amp; d(e^{-Z_{t}})\\
+&amp; = &amp; -e^{-Z_{t}}dZ_{t}-\frac{1}{2}\left(de^{-Z_{t}}\right)(dZ_{t})\\
+&amp; = &amp; - \Phi_{t}dZ_{t}+\frac{1}{2}e^{-Z_{t}}(dZ_{t})^{2}\\
+&amp; = &amp; \Phi_{t}\left(-a_{1}(t)dt+\frac{1}{2}b_{1}^{2}(t)dt-b_{1}(t)dB_{t}\right)+\frac{1}{2}\Phi_{t}b_{1}^{2}(t)dt\\
+&amp; = &amp; \Phi_{t}\left(-a_{1}(t)dt+b_{1}^{2}(t)dt-b_{1}(t)dB_{t}\right)
+\end{eqnarray*}\]</span></p>
+<p>De esta ultima igualdad, la ecuacion (<a href="#eq-6">Equation&nbsp;<span>13.4</span></a>) y de la tabla de Itô, se sigue que <span class="math display">\[\begin{eqnarray*}
+(d\Phi_{t})(dX_{t}) &amp; = &amp; \left(\Phi_{t}\left(-a_{1}(t)d+b_{1}^{2}(t)dt-b_{1}(t)dB_{t}\right)\right)\big(\left(a_{1}(t)X_{t}+a_{2}(t)\right)dt+\left(b_{1}(t)X_{t}+b_{2}(t)\right)dB_{t}\big)\\
+&amp; = &amp; -\Phi_{t}b_{1}^{2}(t)X_{t}dt-\Phi_{t}b_{1}(t)b_{2}(t)dt\\
+&amp; = &amp; -\Phi_{t}b_{1}(t)\{b_{1}(t)X_{t}+b_{2}(t)\}dt
+\end{eqnarray*}\]</span></p>
+<p>sustituyendo el valor de <span class="math inline">\(d\Phi_{t}\)</span> y el de <span class="math inline">\((d\Phi_{t})(dX_{t})\)</span> en la ecuación (<a href="#eq-11.1.6">Equation&nbsp;<span>13.5</span></a>) resulta <span class="math display">\[\begin{eqnarray*}
+d(\Phi_{t}X_{t}) &amp; = &amp; \Phi_{t}dX_{t}+X_{t}\Phi_{t}\left(-a_{1}(t)dt+b_{1}^{2}(t)dt-b_{1}(t)dB_{t}\right)-\Phi_{t}b_{1}(t)\{b_{1}(t)X_{t}+b_{2}(t)\}dt\\
+&amp; = &amp; \Phi_{t}\{dX_{t}-a_{1}(t)X_{t}dt-b_{1}(t)X_{t}dB_{t}-b_{2}(t)b_{1}(t)d(t)\},
+\end{eqnarray*}\]</span> sustituyendo la ecuación (<a href="#eq-6">Equation&nbsp;<span>13.4</span></a>) en la igualdad anterior resulta, <span class="math display">\[
+d(\Phi_{t}X_{t})=\Phi_{t}\{b_{2}(t)dB(t)+a_{2}(t)dt-b_{2}(t)b_{1}(t)dt\},
+\]</span> entonces se tiene que, <span class="math display">\[
+\Phi_{t}X_{t}= x_{0}+\int_{0}^{t}\Phi_{s}b_{2}(s)dB(s)+\int_{0}^{t}\Phi_{s}(a_{2}(s)-b_{2}(s)b_{1}(s))ds
+\]</span> Al dividir ambos lados por <span class="math inline">\(\Phi_{t}\)</span> obtenemos la solución <span class="math inline">\(X_{t}\)</span> de la Ecuación (<a href="#eq-6">Equation&nbsp;<span>13.4</span></a>), <span class="math display">\[
+X_{t}= \Phi_{t}^{-1}\left( x_{0}+\int_{0}^{t}\Phi_{s}b_{2}(s)dB(s)+\int_{0}^{t}\Phi_{s}(a_{2}(s)-b_{2}(s)b_{1}(s))ds\right)
+\]</span> <span class="math inline">\(\blacksquare\)</span></p>
+</div>
+<p>Solución exacta de la ecuación estocástica de Richards.<br>
+<span id="eq-r"><span class="math display">\[
+dN_{t}=rN_{t}\left(1-\left(\frac{N_{t}}{K}\right)^{\alpha}\right)dt +\sigma N_{t}dB_{t}
+\tag{13.6}\]</span></span></p>
+<div id="thm-line" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 13.3 </strong></span>La solución de la ecuación estocástica de Richards (<a href="#eq-r">Equation&nbsp;<span>13.6</span></a>) viene dada por <span class="math display">\[
+N_{t}=N_{0}\exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\left(1+\left(\frac{N_{0}}{K}\right)^{\alpha}r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right)}^{-\frac{1}{\alpha}}
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Sea <span class="math inline">\(X_{t}:=\dfrac{N_{t}}{K}\)</span>. Entonces de la ecuacion (<a href="#eq-r">Equation&nbsp;<span>13.6</span></a>), obtenemos <span class="math inline">\(dX_{t}=rX_{t}\left(1-X_{t}^{\alpha}\right)dt+\sigma X_{t}dB_{t}\)</span> con condición inicial <span class="math inline">\(X_{0}=\dfrac{N_{0}}{K}\)</span>. Sea <span class="math inline">\(F(t,x):=x^{-\alpha}\)</span> entonces, <span class="math display">\[
+\frac{\partial F}{\partial x}=-\frac{\alpha}{x^{\alpha+1}},\,\frac{\partial^{2} F}{\partial x^{2}}=\frac{\alpha(\alpha+1)}{x^{\alpha+2}}\text{ y }\frac{\partial F}{\partial t}=0.
+\]</span> La variación cuadrática de <span class="math inline">\(X_{t}\)</span> esta dada por <span class="math inline">\(\langle X\rangle_{t}=\int_{0}^{t}\sigma^{2}X_{s}^{2}ds\)</span> lo que significa <span class="math inline">\(d\langle X\rangle_{t}=\sigma^{2}X_{t}^{2}dt\)</span>. Usando la notación <span class="math inline">\(Y_{t}:=X_{t}^{-\alpha}\)</span> y aplicando la formula de Itô Teorema <a href="#thm-Teorema1">Theorem&nbsp;<span>13.1</span></a> obtenemos</p>
+<p><span class="math display">\[\begin{eqnarray*}
+dY_{t} &amp; = &amp; -\frac{\alpha}{X_{t}^{\alpha+1}}dX_{t}+\frac{1}{2}\frac{\alpha(\alpha+1)}{X_{t}^{\alpha+2}}d\langle X\rangle_{t}\\
+&amp; = &amp; -\frac{\alpha}{X_{t}^{\alpha+1}}dX_{t}+\frac{1}{2}\frac{\alpha(\alpha+1)}{X_{t}^{\alpha+2}}\sigma^{2}X_{t}^{2}dt\\
+&amp; = &amp; -\frac{\alpha}{X_{t}^{\alpha+1}}\left(rX_{t}\left(1-X_{t}^{\alpha}\right)dt+\sigma X_{t}dB_{t}\right)+\frac{1}{2}\frac{\alpha(\alpha+1)}{X_{t}^{\alpha}}\sigma^{2}dt\\
+&amp; = &amp; -\frac{\alpha r\left(1-X_{t}^{\alpha}\right)dt}{X_{t}^{\alpha}}-\frac{\sigma\alpha dB_{t}}{X_{t}^{\alpha}}+\frac{1}{2}\frac{\alpha(\alpha+1)}{X_{t}^{\alpha}}\sigma^{2}dt\\
+&amp; = &amp; -\alpha r Y_{t}dt+\alpha rdt-\sigma\alpha Y_{t}dB_{t}+\frac{1}{2}\alpha(\alpha+1)Y_{t}\sigma^{2}dt\\
+&amp; = &amp; \left(\left(\frac{1}{2}\alpha(\alpha+1)\sigma^{2}-r\alpha\right)Y_{t}+r\alpha\right)dt-\sigma\alpha Y_{t}dB_{t}.
+\end{eqnarray*}\]</span></p>
+<p>Esta es una ecuación diferencial estocástica lineal con factor integrante, donde, <span class="math display">\[a_{1}(t)=\frac{1}{2}\alpha(\alpha+1)\sigma^{2}-r\alpha
+   ,\,a_{2}(t)=r\alpha,\, b_{1}(t)=-\sigma\alpha,\,b_{2}(t)=0.
+\]</span> entonces es una ecuación del tipo de (<a href="#eq-6">Equation&nbsp;<span>13.4</span></a>), con <span class="math display">\[\begin{eqnarray*}
+\Phi_{t} &amp; = &amp; \exp{\left(-\left(\int_{0}^{t}\left(\frac{1}{2}\alpha(\alpha+1)\sigma^{2}-r\alpha\right)ds-\frac{1}{2}\int_{0}^{t}(-\sigma\alpha)^{2}ds-\int_{0}^{t}\sigma\alpha dB_{s}\right)\right)}\\
+&amp; = &amp; \exp{\left(-\int_{0}^{t}\frac{1}{2}\alpha(\alpha+1)\sigma^{2}ds+\int_{0}^{t}r\alpha ds+\frac{1}{2}\int_{0}^{t}\sigma^{2}\alpha^{2}ds+\int_{0}^{t}\sigma\alpha dB_{s}\right)}\\
+&amp; = &amp; \exp{\left(-\frac{1}{2}\int_{0}^{t}\alpha^{2}\sigma^{2}ds-\frac{1}{2}\int_{0}^{t}\alpha\sigma^{2}ds+\int_{0}^{t}r\alpha ds+\frac{1}{2}\int_{0}^{t}\sigma^{2}\alpha^{2}ds+\int_{0}^{t}\sigma\alpha dB_{s}\right)}\\
+&amp; = &amp; \exp{\left(-\frac{1}{2}\int_{0}^{t}\alpha\sigma^{2}ds+\int_{0}^{t}r\alpha ds+\int_{0}^{t}\sigma\alpha dB_{s}\right)}\\
+&amp; = &amp; \exp{\left(-\frac{1}{2}\alpha\sigma^{2}t+r\alpha t+\sigma\alpha B_{t}\right)}.
+\end{eqnarray*}\]</span></p>
+<p>Por lo tanto, según el Teorema <a href="#thm-Teorema2">Theorem&nbsp;<span>13.2</span></a>, la solución de la ecuación diferencial estocástica lineal en <span class="math inline">\(Y_{t}\)</span> es</p>
+<p><span class="math display">\[\begin{eqnarray*}
+Y_{t} &amp; = &amp;  \Phi_{t}^{-1}\left(Y_{0}+\int_{0}^{t}r\alpha\Phi_{s}ds\right)\\
+&amp; = &amp;  \exp{\left(\frac{1}{2}\alpha\sigma^{2}t-r\alpha t-\sigma\alpha B_{t}\right)}\left(Y_{0}+\int_{0}^{t}r\alpha\exp{\left(-\frac{1}{2}\alpha\sigma^{2}s+r\alpha s+\sigma\alpha B_{s}\right)}ds\right)\\
+&amp; = &amp;  \exp{\left(\alpha\left(\left(\frac{1}{2}\sigma^{2}-r \right)t-\sigma B_{t}\right)\right)}\left(Y_{0}+r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right).
+\end{eqnarray*}\]</span> Reescribiendo la última expresión en términos de <span class="math inline">\(X_{t}\)</span> se obtiene <span class="math display">\[
+X_{t}=\exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\left(\left(\frac{1}{X_{0}}\right)^{\alpha}+r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right)^{-\frac{1}{\alpha}}}
+\]</span></p>
+<p>Finalmente, la solución de (<a href="#eq-r">Equation&nbsp;<span>13.6</span></a>) viene dada por</p>
+<p><span class="math display">\[\begin{eqnarray*}
+X_{t} &amp; = &amp; \exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\left(\left(\frac{1}{X_{0}}\right)^{\alpha}+\left(\frac{X_{0}}{X_{0}}\right)^{\alpha}r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right)^{-\frac{1}{\alpha}}}\\
+&amp; = &amp; \exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\left(\frac{1}{X_{0}}\right)^{-1}\left(1+(X_{0})^{\alpha}r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right)^{-\frac{1}{\alpha}}}\\
+&amp; = &amp; \exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\left(\frac{N_{0}}{K}\right)\left(1+\left(\frac{N_{0}}{K}\right)^{\alpha}r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right)^{-\frac{1}{\alpha}}}.
+\end{eqnarray*}\]</span> Por lo tanto, <span class="math display">\[
+N_{t}=N_{0}\exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\left(1+\left(\frac{N_{0}}{K}\right)^{\alpha}r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right)^{-\frac{1}{\alpha}}}.
+\]</span> <span class="math inline">\(\blacksquare\)</span></p>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>comparacion de Euler-Maruyama con la exacta.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.axes_grid1 <span class="im">import</span> make_axes_locatable</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_rich(pars,t,x):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    alpha <span class="op">=</span> pars[<span class="dv">0</span>]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> pars[<span class="dv">1</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> pars[<span class="dv">2</span>]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    sigma <span class="op">=</span> pars[<span class="dv">3</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> alpha <span class="op">*</span> x <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> (x <span class="op">/</span> k) <span class="op">**</span> m)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> sigma <span class="op">*</span> x</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> u, v</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> logistic_step(pars,t,x, dt):</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    u, v <span class="op">=</span> log_rich(pars,t,x)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">+</span> u <span class="op">*</span> dt <span class="op">+</span> v <span class="op">*</span> np.sqrt(dt)<span class="op">*</span> np.random.standard_normal()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>x_0 <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>tf <span class="op">=</span> <span class="dv">32</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>log_pars <span class="op">=</span> [<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">400</span>, <span class="fl">0.01</span>]</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">2</span> <span class="op">**</span> <span class="dv">12</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> np.linspace(<span class="dv">0</span>, tf, n) </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>delta_t <span class="op">=</span> time[<span class="dv">1</span>] <span class="op">-</span> time[<span class="dv">0</span>]</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>x_t <span class="op">=</span> [x_0]</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    x_t.append(logistic_step(log_pars, time[i], x_t[i], delta_t))</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> exact_solution(pars, x_0, t):</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    alpha <span class="op">=</span> pars[<span class="dv">0</span>]</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> pars[<span class="dv">1</span>]</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> pars[<span class="dv">2</span>]</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    a_1 <span class="op">=</span> (k <span class="op">/</span> x_0) <span class="op">**</span> m <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    a_2 <span class="op">=</span> np.exp( <span class="op">-</span><span class="dv">1</span> <span class="op">*</span> m <span class="op">*</span> alpha <span class="op">*</span> t)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    a_3 <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> a_1 <span class="op">*</span> a_2</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> k <span class="op">*</span> a_3 <span class="op">**</span> (<span class="op">-</span><span class="dv">1</span> <span class="op">*</span> m <span class="op">**</span> (<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y </span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>exact <span class="op">=</span> [exact_solution(log_pars, x_0, t) <span class="cf">for</span> t <span class="kw">in</span> time]</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>plt.plot(time, exact, <span class="st">'r'</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>plt.plot(time, x_t, <span class="st">'b'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>plt.legend([<span class="st">'Exacta'</span>,<span class="st">'EM'</span>])</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Comparativa: EM vs Determinista'</span>)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> solve_logistic(pars, x_0, tf, n):</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    delta_t <span class="op">=</span> tf <span class="op">/</span> (n <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    x_t <span class="op">=</span> [x_0]</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        x_t.append(logistic_step(pars, <span class="dv">1</span>, x_t[i], delta_t))</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x_t</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>samples <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> []</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(samples):</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    y_t <span class="op">=</span> solve_logistic(log_pars, x_0, tf, n)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>        data.append([i <span class="op">+</span> <span class="dv">1</span>, j, j <span class="op">*</span> delta_t, y_t[j]])</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>distr <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">'sample'</span>,<span class="st">'step'</span>,<span class="st">'time'</span>,<span class="st">'x_t'</span>])</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>distr.head()</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>distr.to_csv(<span class="st">"muestra_em_logistic.csv"</span>)</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>marker_style_00 <span class="op">=</span> <span class="bu">dict</span>(</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"blue"</span>,</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    linestyle<span class="op">=</span><span class="st">"-"</span>,</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    <span class="co"># marker="",</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    markersize<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>    markerfacecoloralt<span class="op">=</span><span class="st">"gray"</span>,</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.1</span>,</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>x_T <span class="op">=</span> []</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(samples):</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>    ax.plot(distr.iloc[j <span class="op">*</span>n: (j<span class="op">+</span><span class="dv">1</span>) <span class="op">*</span> n, <span class="dv">2</span>], distr.iloc[j <span class="op">*</span>n: (j<span class="op">+</span><span class="dv">1</span>) <span class="op">*</span> n, <span class="dv">3</span>], <span class="op">**</span>marker_style_00, label<span class="op">=</span><span class="vs">r"$X(t_i)$"</span>)</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>    x_T.append(distr.iloc[j <span class="op">*</span>n: (j<span class="op">+</span><span class="dv">1</span>) <span class="op">*</span> n <span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>])</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r"$t$"</span>)</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r"$X(t)$"</span>)</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>x_T <span class="op">=</span> np.array(x_T)</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>ymax <span class="op">=</span> np.<span class="bu">max</span>(np.<span class="bu">abs</span>(x_T))</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>binwidth <span class="op">=</span> <span class="fl">0.025</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>lim <span class="op">=</span> (<span class="bu">int</span>(ymax <span class="op">/</span> binwidth) <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> binwidth</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> <span class="dv">100</span>  <span class="co"># np.arange(0, lim + binwidth, binwidth)</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>divider <span class="op">=</span> make_axes_locatable(ax)</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>ax_histy <span class="op">=</span> divider.append_axes(<span class="st">"right"</span>, <span class="fl">1.2</span>, pad<span class="op">=</span><span class="fl">0.1</span>, sharey<span class="op">=</span>ax)</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>n, bins, patches <span class="op">=</span> ax_histy.hist(x_T, bins<span class="op">=</span>bins, orientation<span class="op">=</span><span class="st">"horizontal"</span>, density<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> np.std(x_T)</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> np.mean(x_T)</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> (np.sqrt(<span class="dv">2</span> <span class="op">*</span> np.pi) <span class="op">*</span> sigma)) <span class="op">*</span> np.exp(</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> ((<span class="fl">1.0</span> <span class="op">/</span> sigma) <span class="op">*</span> (bins <span class="op">-</span> mu)) <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="co"># ax_histy.plot(y, bins, "--")</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.legend(loc=0)</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"gen_log_sde_batch_sample_path.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> grid <span class="op">=</span> sns.JointGrid(data<span class="op">=</span>distr, x<span class="op">=</span><span class="st">"time"</span>, y<span class="op">=</span><span class="st">"x_t"</span>)</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>g.plot_joint(sns.scatterplot)</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>g.plot_marginals(sns.kdeplot)</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>g.plot_marginals(sns.histplot)</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>g.ax_marg_x.remove()</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="co"># g = sns.jointplot(data=df_batch_path, x="t_i", y="X(t_i)", marginal_ticks=True)</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co"># sns.kdeplot(df_batch_path["X(t_i)"], ax=g.ax_marg_x, legend=False)</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>g.savefig(<span class="st">"marginal.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="Figure_1_pf.png" class="img-fluid" alt="Comparacion de la solucion de EM y la determinista"> <img src="Figure_2_pf.png" class="img-fluid" alt="Histograma de 1000 trayectorias de la dsitrucion estacionaria"></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Tarea10.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tarea 10</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
