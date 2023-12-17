@@ -2,7 +2,7 @@
 
 ## objetivo:
 Nuestra referencia principal sera el articulo "Analytic Solution of a Stochastic Richards
-Equation driven by Brownian motion" para encontrar la solución de la ecuación de Richard y también contrastar el comportamiento de la realización de la solución respecto a su contraparte determinista.
+Equation driven by Brownian motion" para encontrar la solución de la ecuación de Richard, deducir la forma y condiciones para obtener una distribución estacionaria y también contrastar el comportamiento de la realización de la solución respecto a su contraparte determinista.
 
 ## Introducción:
 Uno de los modelos más famosos de la dinámica de poblaciones es la ecuación logística que se propuso por primera vez por P F Verhulst en 1838. La ecuación logística, también conocida como ecuación de Verhulst, viene dada por la ecuación diferencial ordinaria
@@ -230,6 +230,83 @@ $$
 $\blacksquare$
 :::
 
+Por último, para encontrar la distribución estacionaria, utilizaremos la siguiente proposición.
+
+::: {#prp-4}
+
+Sea $X$ un proceso de difusión con generador $A$ y densidad de transición $p=p(t,x,y)$ que tiene una densidad estacionaria $p_{0}=p_{0}(y)$ en el intervalo $(a,b)$. Supongamos que $p$ y $p_{0}$ son funciones continuas y derivadas parciales continuas $\frac{\partial p}{\partial y}, \frac{\partial p}{\partial t}, \frac{\partial^{2} p}{\partial y^{2}}, \frac{\partial p_{0}}{\partial y}$ y $\frac{\partial^{2} p_{0}}{\partial  y^{2}}$. Supongamos también que $\sigma(x)>0$, $x\in(a,b)$. Entonces la densidad estacionaria $p_{0}$ de $X$ es de la  forma
+$$
+p_{0}(y)=\dfrac{N}{\sigma^{2}(y)}\exp{\left(2\int_{k}^{y}\frac{b(u)}{\sigma^{2}(u)}du\right)},\quad y\in(a,b)
+$$
+donde $k$ es un punto arbitrario de $(a,b)$ y $N$ es la constante de normalización tal que $\int_{a}^{b}p_{0}(y)dy=1$.
+
+:::
+
+:::{.proof}
+Usaremos la ecuación de Fokker-Planck (FPE), para la evolución de la densidad de probabilidad de transición $p(y,t|x)$ para la formula de Itô, la cual esta dada por:
+$$
+\partial_{t}p(y,t|x)=-\partial_{y}f(y)p(y,t|x)+\frac{\sigma^{2}}{2}\partial_{yy}g^{2}(y)p(y,t|x),
+$$
+con $p_{s}(x)$ la solución estacionaria de FPE que se puede escribir de la siguiente forma:
+$$
+\partial_{t}p\left(x,t|x_{0},0\right)+\partial_{x}J\left(x,t|x_{0},0\right)=0,
+$$
+donde
+$$
+J\left(x,t|x_{0},0\right)=f(x)p\left(x,t|x_{0},0\right)-\frac{\sigma^{2}}{2}\partial_{x}g^{2}(y)p(y,t|x_{0},0),
+$$
+Por lo tanto, se tiene que, para la densidad de probabilidad estacionaria $p_{s}(x):$
+$$
+-f(x)p_{s}(x)+\frac{\sigma^{2}}{2}\partial_{x}g^{2}(x)p_{s}(x)=-J,
+$${#eq-6.8}
+para resolver la ecuación (@eq-6.8) definimos la función auxiliar $q(x)=g^{2}(x)p_{s}(x)$. La FPE estacionaria queda dada por:
+$$
+\partial_{x}q(x)=\frac{2}{\sigma^{2}}\frac{f(x)}{g^{2}(x)}q(x)-\frac{2}{\sigma^{2}}J,
+$$
+y su solución queda determinada por:
+$$
+q(x)=N\exp{\left(\frac{2}{\sigma^{2}}\int^{x}\frac{f(u)}{g^{2}(u)}du\right)}-\frac{2J}{\sigma^{2}}\int^{x}\exp{\left(\frac{2}{\sigma^{2}}\int_{z}^{x}\frac{f(u)}{g^{2}(u)}du\right)dz}
+$$
+por lo tanto la densidad estacionaria
+$$
+p_{s}(x)=\frac{N}{g^{2}(x)}\exp{\left(\frac{2}{\sigma^{2}}\int^{x}\frac{f(u)}{g^{2}(u)}du\right)}-\frac{2J}{\sigma^{2}g^{2}(x)}\int^{x}\exp{\left(\frac{2}{\sigma^{2}}\int_{z}^{x}\frac{f(u)}{g^{2}(u)}du\right)dz}
+$$
+en este caso $J=0$, así 
+$$
+p_{s}(x)=\frac{N}{g^{2}(x)}\exp{\left(\frac{2}{\sigma^{2}}\int^{x}\frac{f(u)}{g^{2}(u)}du\right)}.
+$$
+
+Que por todas las notaciones anteriores, resulta
+$$
+p_{0}(y)=\dfrac{N}{\sigma^{2}(y)}\exp{\left(2\int_{k}^{y}\frac{b(u)}{\sigma^{2}(u)}du\right)}.
+$$
+$\blacksquare$
+:::
+
+La proposición @prp-4 nos da una idea de como sería (en caso de existir) la función de densidad estacionaria de la ecuación de Richard (@eq-r), esta quedaría determinada por,
+\begin{eqnarray*}
+p_{0}(x) & = & \frac{N}{\sigma^{2}x^{2}}\exp{\left(2\int_{1}^{x}\frac{ru\left(1-\left(\frac{u}{K}\right)^{\alpha}\right)}{\sigma^{2}u^{2}}\right)}\\
+& = & \frac{N}{\sigma^{2}x^{2}}\exp{\left(2\int_{1}^{x}\left(\frac{r}{\sigma^{2}u}-\frac{r}{\sigma^{2}K}u^{\alpha-1}\right)du\right)}\\
+& = & \frac{N}{\sigma^{2}x^{2}}\exp{\left(\frac{2r}{\sigma^{2}}\left(\ln{x}+\frac{1}{\alpha K}(1-x^{\alpha})\right)\right)}\\
+& = & \frac{N}{\sigma^{2}}\exp{\left(\frac{2r}{\alpha K\sigma^{2}}\right)x^{\frac{2r}{\sigma^{2}}-2}}\exp{\left(-\frac{2r}{\alpha K\sigma^{2}}x^{\alpha}\right)}.
+\end{eqnarray*}
+
+De aqui se puede observar que, la función $p_{0}$ es integrable en $(0,\infty)$ si y solo si $\frac{2r}{\sigma^{2}}-2>-1$, es decir, para $r>\frac{1}{2}\sigma^{2}$. Esto significa que el proceso de difusión descrito por la ecuación de Richard (@eq-r) no tiene densidad estacionaria para $r\leq \frac{1}{2}\sigma^{2}$ y tiene una densidad estacionaria para $r>\frac{1}{2}\sigma^{2}$.\
+
+Por último, veremos la simulación de la comparacion de la solución exacta con la de Euler-Maruyana y tambien el histograma de como se vería la distribución estacionaria. \
+Primero definimos las siguientes funciones auxiliares.
+
+\begin{align*}
+u\left(t,X_{t}\right) & =\alpha X_{t}\left[1-\left(\dfrac{X_{t}}{K}\right)^{m}\right]\\
+v\left(t,X_{t}\right) & =\sigma X_{t}
+\end{align*}
+
+Reescribiendo el sistema, queda 
+
+\begin{align*}
+\mathrm{d}X_{t} & =u\left(t,X_{t}\right)\mathrm{d}t+v\left(t,X_{t}\right)\mathrm{d}B_{t},t>t_{0}\\
+X_{t_{0}} & =x_{0},
+\end{align*}
 ```{.python }
 import numpy as np
 import pandas as pd
@@ -343,3 +420,9 @@ g.savefig("marginal.png")
 ```
 ![Comparacion de la solucion de EM y la determinista](Figure_1_pf.png)
 ![Histograma de 1000 trayectorias de la dsitrucion estacionaria](Figure_2_pf.png)
+
+## Referencias: 
+
+[1] Analytic Solution of a Stochastic Richards Equation driven by Brownian motion, H P Suryawan, 2018.\
+[2] H.-H. Kuo, Introduction to stochastic integration, Springer, New York, 2006.\
+[3] Oksendal B, 2003, Stochastic Differential Equations, sixth edition (Heidelberg: Springer)

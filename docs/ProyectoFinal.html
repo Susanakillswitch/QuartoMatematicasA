@@ -238,6 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo"><span class="header-section-number">13.1</span> objetivo:</a></li>
   <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción"><span class="header-section-number">13.2</span> Introducción:</a></li>
   <li><a href="#desarrollo" id="toc-desarrollo" class="nav-link" data-scroll-target="#desarrollo"><span class="header-section-number">13.3</span> Desarrollo:</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">13.4</span> Referencias:</a></li>
   </ul>
 </nav>
     </div>
@@ -263,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="objetivo" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">13.1</span> objetivo:</h2>
-<p>Nuestra referencia principal sera el articulo “Analytic Solution of a Stochastic Richards Equation driven by Brownian motion” para encontrar la solución de la ecuación de Richard y también contrastar el comportamiento de la realización de la solución respecto a su contraparte determinista.</p>
+<p>Nuestra referencia principal sera el articulo “Analytic Solution of a Stochastic Richards Equation driven by Brownian motion” para encontrar la solución de la ecuación de Richard, deducir la forma y condiciones para obtener una distribución estacionaria y también contrastar el comportamiento de la realización de la solución respecto a su contraparte determinista.</p>
 </section>
 <section id="introducción" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="introducción"><span class="header-section-number">13.2</span> Introducción:</h2>
@@ -413,10 +414,53 @@ X_{t} &amp; = &amp; \exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t
 N_{t}=N_{0}\exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\left(1+\left(\frac{N_{0}}{K}\right)^{\alpha}r\alpha\int_{0}^{t}\exp{\left(\alpha\left(\left(r-\frac{1}{2}\sigma^{2}\right)s+\sigma B_{s}\right)\right)}ds\right)^{-\frac{1}{\alpha}}}.
 \]</span> <span class="math inline">\(\blacksquare\)</span></p>
 </div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>comparacion de Euler-Maruyama con la exacta.py</strong></pre>
+<p>Por último, para encontrar la distribución estacionaria, utilizaremos la siguiente proposición.</p>
+<div id="prp-4" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposition 13.1 </strong></span>Sea <span class="math inline">\(X\)</span> un proceso de difusión con generador <span class="math inline">\(A\)</span> y densidad de transición <span class="math inline">\(p=p(t,x,y)\)</span> que tiene una densidad estacionaria <span class="math inline">\(p_{0}=p_{0}(y)\)</span> en el intervalo <span class="math inline">\((a,b)\)</span>. Supongamos que <span class="math inline">\(p\)</span> y <span class="math inline">\(p_{0}\)</span> son funciones continuas y derivadas parciales continuas <span class="math inline">\(\frac{\partial p}{\partial y}, \frac{\partial p}{\partial t}, \frac{\partial^{2} p}{\partial y^{2}}, \frac{\partial p_{0}}{\partial y}\)</span> y <span class="math inline">\(\frac{\partial^{2} p_{0}}{\partial y^{2}}\)</span>. Supongamos también que <span class="math inline">\(\sigma(x)&gt;0\)</span>, <span class="math inline">\(x\in(a,b)\)</span>. Entonces la densidad estacionaria <span class="math inline">\(p_{0}\)</span> de <span class="math inline">\(X\)</span> es de la forma <span class="math display">\[
+p_{0}(y)=\dfrac{N}{\sigma^{2}(y)}\exp{\left(2\int_{k}^{y}\frac{b(u)}{\sigma^{2}(u)}du\right)},\quad y\in(a,b)
+\]</span> donde <span class="math inline">\(k\)</span> es un punto arbitrario de <span class="math inline">\((a,b)\)</span> y <span class="math inline">\(N\)</span> es la constante de normalización tal que <span class="math inline">\(\int_{a}^{b}p_{0}(y)dy=1\)</span>.</p>
 </div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Usaremos la ecuación de Fokker-Planck (FPE), para la evolución de la densidad de probabilidad de transición <span class="math inline">\(p(y,t|x)\)</span> para la formula de Itô, la cual esta dada por: <span class="math display">\[
+\partial_{t}p(y,t|x)=-\partial_{y}f(y)p(y,t|x)+\frac{\sigma^{2}}{2}\partial_{yy}g^{2}(y)p(y,t|x),
+\]</span> con <span class="math inline">\(p_{s}(x)\)</span> la solución estacionaria de FPE que se puede escribir de la siguiente forma: <span class="math display">\[
+\partial_{t}p\left(x,t|x_{0},0\right)+\partial_{x}J\left(x,t|x_{0},0\right)=0,
+\]</span> donde <span class="math display">\[
+J\left(x,t|x_{0},0\right)=f(x)p\left(x,t|x_{0},0\right)-\frac{\sigma^{2}}{2}\partial_{x}g^{2}(y)p(y,t|x_{0},0),
+\]</span> Por lo tanto, se tiene que, para la densidad de probabilidad estacionaria <span class="math inline">\(p_{s}(x):\)</span> <span id="eq-6.8"><span class="math display">\[
+-f(x)p_{s}(x)+\frac{\sigma^{2}}{2}\partial_{x}g^{2}(x)p_{s}(x)=-J,
+\tag{13.7}\]</span></span> para resolver la ecuación (<a href="#eq-6.8">Equation&nbsp;<span>13.7</span></a>) definimos la función auxiliar <span class="math inline">\(q(x)=g^{2}(x)p_{s}(x)\)</span>. La FPE estacionaria queda dada por: <span class="math display">\[
+\partial_{x}q(x)=\frac{2}{\sigma^{2}}\frac{f(x)}{g^{2}(x)}q(x)-\frac{2}{\sigma^{2}}J,
+\]</span> y su solución queda determinada por: <span class="math display">\[
+q(x)=N\exp{\left(\frac{2}{\sigma^{2}}\int^{x}\frac{f(u)}{g^{2}(u)}du\right)}-\frac{2J}{\sigma^{2}}\int^{x}\exp{\left(\frac{2}{\sigma^{2}}\int_{z}^{x}\frac{f(u)}{g^{2}(u)}du\right)dz}
+\]</span> por lo tanto la densidad estacionaria <span class="math display">\[
+p_{s}(x)=\frac{N}{g^{2}(x)}\exp{\left(\frac{2}{\sigma^{2}}\int^{x}\frac{f(u)}{g^{2}(u)}du\right)}-\frac{2J}{\sigma^{2}g^{2}(x)}\int^{x}\exp{\left(\frac{2}{\sigma^{2}}\int_{z}^{x}\frac{f(u)}{g^{2}(u)}du\right)dz}
+\]</span> en este caso <span class="math inline">\(J=0\)</span>, así <span class="math display">\[
+p_{s}(x)=\frac{N}{g^{2}(x)}\exp{\left(\frac{2}{\sigma^{2}}\int^{x}\frac{f(u)}{g^{2}(u)}du\right)}.
+\]</span></p>
+<p>Que por todas las notaciones anteriores, resulta <span class="math display">\[
+p_{0}(y)=\dfrac{N}{\sigma^{2}(y)}\exp{\left(2\int_{k}^{y}\frac{b(u)}{\sigma^{2}(u)}du\right)}.
+\]</span> <span class="math inline">\(\blacksquare\)</span></p>
+</div>
+<p>La proposición <a href="#prp-4">Proposition&nbsp;<span>13.1</span></a> nos da una idea de como sería (en caso de existir) la función de densidad estacionaria de la ecuación de Richard (<a href="#eq-r">Equation&nbsp;<span>13.6</span></a>), esta quedaría determinada por, <span class="math display">\[\begin{eqnarray*}
+p_{0}(x) &amp; = &amp; \frac{N}{\sigma^{2}x^{2}}\exp{\left(2\int_{1}^{x}\frac{ru\left(1-\left(\frac{u}{K}\right)^{\alpha}\right)}{\sigma^{2}u^{2}}\right)}\\
+&amp; = &amp; \frac{N}{\sigma^{2}x^{2}}\exp{\left(2\int_{1}^{x}\left(\frac{r}{\sigma^{2}u}-\frac{r}{\sigma^{2}K}u^{\alpha-1}\right)du\right)}\\
+&amp; = &amp; \frac{N}{\sigma^{2}x^{2}}\exp{\left(\frac{2r}{\sigma^{2}}\left(\ln{x}+\frac{1}{\alpha K}(1-x^{\alpha})\right)\right)}\\
+&amp; = &amp; \frac{N}{\sigma^{2}}\exp{\left(\frac{2r}{\alpha K\sigma^{2}}\right)x^{\frac{2r}{\sigma^{2}}-2}}\exp{\left(-\frac{2r}{\alpha K\sigma^{2}}x^{\alpha}\right)}.
+\end{eqnarray*}\]</span></p>
+<p>De aqui se puede observar que, la función <span class="math inline">\(p_{0}\)</span> es integrable en <span class="math inline">\((0,\infty)\)</span> si y solo si <span class="math inline">\(\frac{2r}{\sigma^{2}}-2&gt;-1\)</span>, es decir, para <span class="math inline">\(r&gt;\frac{1}{2}\sigma^{2}\)</span>. Esto significa que el proceso de difusión descrito por la ecuación de Richard (<a href="#eq-r">Equation&nbsp;<span>13.6</span></a>) no tiene densidad estacionaria para <span class="math inline">\(r\leq \frac{1}{2}\sigma^{2}\)</span> y tiene una densidad estacionaria para <span class="math inline">\(r&gt;\frac{1}{2}\sigma^{2}\)</span>.<br>
+</p>
+<p>Por último, veremos la simulación de la comparacion de la solución exacta con la de Euler-Maruyana y tambien el histograma de como se vería la distribución estacionaria.<br>
+Primero definimos las siguientes funciones auxiliares.</p>
+<p><span class="math display">\[\begin{align*}
+u\left(t,X_{t}\right) &amp; =\alpha X_{t}\left[1-\left(\dfrac{X_{t}}{K}\right)^{m}\right]\\
+v\left(t,X_{t}\right) &amp; =\sigma X_{t}
+\end{align*}\]</span></p>
+<p>Reescribiendo el sistema, queda</p>
+<p><span class="math display">\[\begin{align*}
+\mathrm{d}X_{t} &amp; =u\left(t,X_{t}\right)\mathrm{d}t+v\left(t,X_{t}\right)\mathrm{d}B_{t},t&gt;t_{0}\\
+X_{t_{0}} &amp; =x_{0},
+\end{align*}\]</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -507,7 +551,7 @@ N_{t}=N_{0}\exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>ymax <span class="op">=</span> np.<span class="bu">max</span>(np.<span class="bu">abs</span>(x_T))</span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>binwidth <span class="op">=</span> <span class="fl">0.025</span></span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>lim <span class="op">=</span> (<span class="bu">int</span>(ymax <span class="op">/</span> binwidth) <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> binwidth</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> <span class="dv">100</span>  <span class="co"># np.arange(0, lim + binwidth, binwidth)</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> <span class="dv">100</span>  </span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>divider <span class="op">=</span> make_axes_locatable(ax)</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>ax_histy <span class="op">=</span> divider.append_axes(<span class="st">"right"</span>, <span class="fl">1.2</span>, pad<span class="op">=</span><span class="fl">0.1</span>, sharey<span class="op">=</span>ax)</span>
 <span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>n, bins, patches <span class="op">=</span> ax_histy.hist(x_T, bins<span class="op">=</span>bins, orientation<span class="op">=</span><span class="st">"horizontal"</span>, density<span class="op">=</span><span class="va">True</span>)</span>
@@ -516,20 +560,22 @@ N_{t}=N_{0}\exp{\left(\left(r-\frac{1}{2}\sigma^{2}\right)t+\sigma B_{t}\right)\
 <span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> (np.sqrt(<span class="dv">2</span> <span class="op">*</span> np.pi) <span class="op">*</span> sigma)) <span class="op">*</span> np.exp(</span>
 <span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> ((<span class="fl">1.0</span> <span class="op">/</span> sigma) <span class="op">*</span> (bins <span class="op">-</span> mu)) <span class="op">**</span> <span class="dv">2</span></span>
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="co"># ax_histy.plot(y, bins, "--")</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.legend(loc=0)</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"gen_log_sde_batch_sample_path.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> grid <span class="op">=</span> sns.JointGrid(data<span class="op">=</span>distr, x<span class="op">=</span><span class="st">"time"</span>, y<span class="op">=</span><span class="st">"x_t"</span>)</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>g.plot_joint(sns.scatterplot)</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>g.plot_marginals(sns.kdeplot)</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>g.plot_marginals(sns.histplot)</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>g.ax_marg_x.remove()</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="co"># g = sns.jointplot(data=df_batch_path, x="t_i", y="X(t_i)", marginal_ticks=True)</span></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co"># sns.kdeplot(df_batch_path["X(t_i)"], ax=g.ax_marg_x, legend=False)</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>g.savefig(<span class="st">"marginal.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"gen_log_sde_batch_sample_path.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> grid <span class="op">=</span> sns.JointGrid(data<span class="op">=</span>distr, x<span class="op">=</span><span class="st">"time"</span>, y<span class="op">=</span><span class="st">"x_t"</span>)</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>g.plot_joint(sns.scatterplot)</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>g.plot_marginals(sns.kdeplot)</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>g.plot_marginals(sns.histplot)</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>g.ax_marg_x.remove()</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>g.savefig(<span class="st">"marginal.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="Figure_1_pf.png" class="img-fluid" alt="Comparacion de la solucion de EM y la determinista"> <img src="Figure_2_pf.png" class="img-fluid" alt="Histograma de 1000 trayectorias de la dsitrucion estacionaria"></p>
+</section>
+<section id="referencias" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="referencias"><span class="header-section-number">13.4</span> Referencias:</h2>
+<p>[1] Analytic Solution of a Stochastic Richards Equation driven by Brownian motion, H P Suryawan, 2018.<br>
+[2] H.-H. Kuo, Introduction to stochastic integration, Springer, New York, 2006.<br>
+[3] Oksendal B, 2003, Stochastic Differential Equations, sixth edition (Heidelberg: Springer)</p>
 
 
 </section>
